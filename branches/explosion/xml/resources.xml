@@ -1,0 +1,16 @@
+<resources>
+	<images>
+		<image code="icon" name="icon.png" alpha="True"/>
+		<image code="particle" name="particle.png" alpha="True"/>
+		<image code="particle2" name="particle2.png" alpha="True"/>
+	</images>
+    <sprites>
+    </sprites>
+	<fonts>
+	</fonts>
+	<musics>
+	</musics>
+	<sounds>
+	</sounds>
+</resources>
+
