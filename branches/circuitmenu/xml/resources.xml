@@ -1,0 +1,38 @@
+<resources>
+	<images>
+		<image code="icon" name="icon.png" alpha="True"/>
+		<!--CURSOR-->
+		<image code="normal_cursor" name="normal_cursor.png" alpha="True"/>
+		<image code="over_cursor" name="over_cursor.png" alpha="True"/>
+		<!--BOTONES-->
+		<image code="normal_generic" name="menu/normal_generic.png" alpha="True"/>
+		<image code="selected_generic" name="menu/selected_generic.png" alpha="True"/>
+		<image code="normal_circuit" name="menu/normal_circuit.png" alpha="True"/>
+		<image code="selected_circuit" name="menu/selected_circuit.png" alpha="True"/>
+		<image code="normal_box3" name="menu/normal_box3.png" alpha="True"/>
+		<image code="selected_box3" name="menu/selected_box3.png" alpha="True"/>
+		<!--ELEMENTOS DE MENÚ(FONDO, LOGOS, ICONOS, IMAGENES)-->
+		<image code="background_menu" name="menu/background_menu.png" alpha="True"/>
+		<image code="logo_timer" name="menu/logo_timer.png" alpha="True"/>
+		<image code="logo_menu" name="menu/logo_menu.png" alpha="True"/>
+		<image code="separator_line" name="menu/separator_line.png" alpha="True"/>
+		<image code="logo_beach" name="menu/logo_beach.png" alpha="True"/>
+		<image code="logo_kitchen" name="menu/logo_kitchen.png" alpha="True"/>
+		<image code="logo_garden" name="menu/logo_garden.png" alpha="True"/>
+		<image code="logo_beach1" name="menu/logo_beach1.png" alpha="True"/>
+		<image code="logo_beach2" name="menu/logo_beach2.png" alpha="True"/>
+		<image code="circuit1" name="circuit/circuit1.png" alpha="True"/>
+		<image code="circuit2" name="circuit/circuit2.png" alpha="True"/>
+		<image code="nodisponible" name="circuit/nodisponible.png" alpha="True"/>
+	</images>
+    <sprites>
+    </sprites>
+	<fonts>
+		<font code="cheesebu" name="cheesebu.ttf" size="20"/>
+	</fonts>
+	<musics>
+	</musics>
+	<sounds>
+	</sounds>
+</resources>
+
