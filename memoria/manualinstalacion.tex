@@ -1,0 +1,83 @@
+%%%%%%%%%%%%%%%%%%%%%% UBUNTU CÓDIGO FUENTE %%%%%%%%%%%%%%%%%%%%%%
+\section{Linux: Ubuntu. Desde código fuente.}
+
+\paragraph{}
+Para poder ejecutar \emph{Zycars} desde el código fuente, será necesario la instalación de varias
+dependencias, para el correcto funcionamiento de la aplicación.
+
+\paragraph{}
+La primera de las dependencias a instalar será \emph{Pygame}, que es la biblioteca principal con la que
+se ha desarrollado la aplicación. Para instalar, abrimos una terminal y ejecutamos el siguiente comando:
+
+\begin{lstlisting}[style=consola, numbers=none]
+sudo apt-get install python-pygame
+\end{lstlisting}
+
+\paragraph{}
+Una vez instalado \emph{Pygame}, la siguiente dependecia que instalaremos será \emph{Subversion} para poder
+obtener la versión más reciente del proyecto del repositorio del mismo. Para instalar subversion ejecutamos 
+la siguiente orden en una terminal:
+
+\begin{lstlisting}[style=consola, numbers=none]
+sudo apt-get install subversion
+\end{lstlisting}
+
+\paragraph{}
+Tras instalar \emph{Subversion}, hacemos checkout del repositorio del proyecto. Para ello ejecutamos en la terminal:
+
+\begin{lstlisting}[style=consola, numbers=none]
+svn checkout http://zycars.googlecode.com/svn/trunk/ zycars
+\end{lstlisting}
+
+\paragraph{}
+Con esto hemos obtenido la versión más reciente del código de la aplicación. Ahora accedemos a la carpeta generada
+anteriormente:
+
+\begin{lstlisting}[style=consola, numbers=none]
+cd zycars/
+\end{lstlisting}
+
+\paragraph{}
+Damos permisos de ejecución al fichero principal.
+
+\begin{lstlisting}[style=consola, numbers=none]
+chmod +x run_test.py
+\end{lstlisting}
+
+\paragraph{}
+Tras esto ya podremos jugar sin ningún problema haciendo doble click sobre \textbf{run\_test.py} o ejecutando en la terminal:
+\begin{lstlisting}[style=consola, numbers=none]
+./run_test.py
+\end{lstlisting}
+
+
+%%%%%%%%%%%%%%%%%%%%% UBUNTU PAQUETE DEBIAN %%%%%%%%%%%%%%%%%%%%5
+\section{Linux: Ubuntu. Desde paquete debian.}
+
+\paragraph{}
+Para poder realizar la instalación de la aplicación desde el paquete debian, debemos descargarnos el fichero debian para
+la arquitectura concreta de nuestro Sistema Operativo. Descargamos el fichero desde el siguiente enlace:\\\\
+
+http://code.google.com/p/zycars/downloads/list
+
+\paragraph{}
+Una vez completada la descarga del fichero, hacemos doble click sobre este, y nos indicará si es necesario la instalación 
+de algún paquete. Cuando ya estén instaladas todas las dependencias hacemos click en instalar y esperamos a la finalización
+de la instalación.
+
+\paragraph{}
+Para comenzar a jugar nos vamos a Aplicaciones -> Juegos -> Zycars.
+
+%%%%%%%%%%%%%%%%%%%%%% WINDOWS %%%%%%%%%%%%%%%%%%%%%%
+\section{Windows.}
+
+\paragraph{}
+Para jugar a \emph{Zycars} en el sistema operativo Windows no es necesario la instalación de ningún programa
+auxiliar, lo único que necesitaremos descargarnos será versión correspondiente a Windows y descomprimilar. La descargaremos
+del siguiente enlace:\\\\
+
+http://code.google.com/p/zycars/downloads/list
+
+\paragraph{}
+Tras descomprimir el archivo, accedemos a la carpeta generada llamada "zycars" y debemos hacer doble click 
+sobre el archivo \textbf{zycars.exe} para comenza a jugar.
