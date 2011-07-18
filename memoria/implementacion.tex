@@ -3,11 +3,10 @@ Durante todo el desarrollo del proyecto, han ido aparenciendo diversas dificulta
 resolviendo para el correcto y continuo avance del proyecto.
 
 \paragraph{}
-Por lo que en este capítulo se exlicarán las distintas soluciones, que se creian que podrían ser las mas acertadas,
-encontradas a los principales problemas encontrados. 
+Por lo que en este capítulo se exlicarán las distintas soluciones para los principales problemas encontrados. 
 
 %%%%%%%%%%%%%%%%% MOVIMIENTO COCHE %%%%%%%%%%%%%%%%%%%%
-\section{Movimiento vehículo}
+%\section{Movimiento vehículo}
 
 
 %%%%%%%%%%%%%%%%% CIRCUITOS %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -18,10 +17,10 @@ Una de las primeras dudas que surgieron al poco tiempo de comenzar el desarrollo
 tener los distintos circuitos o niveles que aparecerían a lo largo del juego. Para ellos tenía varias alternativas:
 
 \begin{itemize}
-    \item \textbf{Opción 1}: los circuitos estarían compuestos por una única imagen realizada posteriormente. En un fichero aparte se 
+    \item \textbf{Opción 1}: los circuitos estarían compuestos por una única imagen realizada previamente. En un fichero aparte se 
     podría indicar las zonas colisionables que tendría la imagen u otras características relevantes.
     
-    \item \textbf{Opción 2}: crear los circuitos mediante un sistema de tieles, de formas que en un fichero de texto plano, indicáramos 
+    \item \textbf{Opción 2}: crear los circuitos mediante un sistema de tiles, de formas que en un fichero de texto plano, indicaramos 
     los tieles que componen el circuito, así como la característica de estos.
     
     \item \textbf{Opción 3}: usar algún software que nos permitiera la creación y edición de niveles, de forma sencilla, mediante tiles.
@@ -37,7 +36,7 @@ superior o inferior. Para ello se debia crear una imagen con todos los tiles que
 Este programa generaba como resultado un archivo \emph{XML}, que se procesaría posteriormente en tiempo de ejecución. También hay
 que añadir que esta opción elegida era una de las que menos nos ocuparía en memoria, ya que no es lo mismo tener un circuito 
 completo en una única imagen, ya que para un circuito demasiado grande dicha imagen ocuparía bastante memoria. Mientras
-que con esta opción tendriamos una pequeña imagen con el conjunto necesario de tiles para el circuito en cuestión.
+que con esta opción tendrñiamos una imagen pequeña con el conjunto necesario de tiles para el circuito en cuestión.
 
 \paragraph{}
 Una de las únicas cosas que no propocionaba el programa era poder indicar cuales de los tiles eran colisionables, atravesables o
@@ -70,7 +69,7 @@ de que tipo son. A continuación se muestran dos imagenes como ejemplo:
 \end{itemize}
 
 \paragraph{}
-Como se puede apreciar la imagen inferior tiene las mismas características que la superior, solo que los tiles que contiene
+Como se puede apreciar la segunda imagen tiene las mismas características que la superior, solo que los tiles que contiene
 son de un único color para indicar el tipo de los tiles. Los tipos de tiles que se eligieron añadir fueron los siguientes:
 
 \begin{itemize}
@@ -176,6 +175,108 @@ A continuación se exponen las distintas situaciones que pueden suceder:
 %%%%%%%%%%%%%%%%%%%% INTELIGENCIA ARTIFICIAL %%%%%%%%%%%%%%%%%%%%%%%%
 \section{Inteligencia artificial}
 
-\subsection{Realización del recorrido. A*}
+\paragraph{}
+Otro de los aspectos más importante de un videojuego de las carácteristicas de \emph{Zycars}, es la inteligencia artificial,
+ya que en dos de los tres modos de juegos disponibles el objetivo es obtener la mejor clasificación posible, por delante
+de los demás coches manejados por la inteligencia artificial.
+
+\paragraph{}
+Entre las habilidades que debe tener la inteligencia artificial deben ser:
+
+\begin{itemize}
+    \item \textbf{Realización del recorrido}: la inteligencia artificial debe ser capaz de realizar los recorridos de los
+    circuitos.
+    
+    \item \textbf{Lanzamiento de items}: también debe poder tirar los items que reciba de las bolas de items.
+\end{itemize}
+
+\paragraph{}
+En los siguientes apartados se explicará de que forma se han afrontado los distintos problemas para obtener una inteligencia
+artificial que cumpla las espectativas básicas.
+
+\subsection{Realización del recorrido. Algoritmo de búsqueda A*}
+
+\paragraph{}
+Esta es la parte más importante de la inteligencia artificial, ya que en un juego de conducción y carreras, lo mínimo que se 
+espera es que la inteligencia artificial realice los recorridos de los circuitos disponibles, con el objetivo de vencer al
+jugador.
+
+\paragraph{}
+A lo largo de los circuitos existen unos puntos de control que cada uno de los vehículo de la inteligencia artificial
+debe pasar para realizar la vuelta al circuito, dichos puntos de control ocupan un tile.
+
+\paragraph{}
+Para ello, aprovechando que tenemos un circuito creado por tiles y que podemos saber en todo momendo en el tile actual
+que se puede encontrar cualquiera de los competidores, se decidió que se implementaría el algoritmo de búsqueda A*.
+
+\subsubsection{Algoritmo de búsqueda A*}
+
+\paragraph{}
+El objetivo del algoritmo A* es buscar el camino más corto y óptimo, en el caso de que exista, desde un nodo origen, hasta un
+nodo destino. A la hora de buscar dicho camino se tienen en cuenta factores como, el valor heurístico que poseen cada uno
+de los nodos, así como el coste real del recorrido.
+
+\paragraph{}
+Dicho algoritmo tiene la siguiente función de evaluación f(n) = g(n) + h'(n), siendo h'(n) el valor heurístico del nodo actual n,
+hasta el final y g(n) el coste real del camino desde el origen al nodo actual.
+
+\begin{figure}[H]
+  \label{a_star}
+  \begin{center}
+    \includegraphics[scale=0.5]{imagenes/a_star.png}
+  \end{center}
+  \caption{Implementación: Ejemplo del algoritmo A*}
+\end{figure}
+
+\paragraph{}
+En el A* se tiene dos estructuras diferencidas:
+
+\begin{itemize}
+    \item Lista de abiertos: donde se encuentran los nodos por los que aún no se han pasado
+    \item Lista de cerrados: donde se encuentran los nodos por los que ya se han pasado
+\end{itemize}
+
+\paragraph{}
+El funcionamiento general del algoritmo es el siguiente, partiendo de un nodo en el que nos encontramos actualmente,
+obtenemos todos los nodos vecinos de este, comprobamos que no se encuentren en la lista de abiertos, ni en la lista
+de cerrado para evitar ciclos, todos aquellos que cumplan dichos requisitos se añaden a la lista de abiertos. En el caso de que 
+alguno de los nodos se encuentren en la lista de abiertos, comparamos el valor de f(n), en el caso de que sea menor lo 
+sustituiremos. Una vez evaluado dicho nodo, pasamos a obtener de la lista de abiertos aquel nodo que tenga un f(n) menor y 
+comenzamos de nuevo todo el proceso anterior. En el momento en el que llegemos al nodo objetivo, detenemos la búsqueda y devolvemos
+el camino completo.
+
+\paragraph{}
+Dicho algoritmo se aplica en \emph{Zycars}, de forma que el vehículo controlado por la inteligencia artificial, tiene todos los
+puntos de chequeo, en orden, que debe atravesar para recorrer el circuito completo. Así que en cada momento se comprobará
+el tile actual en el que se encuentra y se obtendrá el camino más óptimo y corto hasta el siguiente punto de chequeo, una vez
+llegado a este se hará una nueva consulta al A* para obtener el camino al próximo y así sucesivamente.
 
 \subsection{Lanzamiento de items.}
+
+\paragraph{}
+La inteligencia artificial debe ser capaz de lanzar los items disponibles a los largo del juego, según las distintas 
+situaciones en la que se encuentre, en el momento que obtenga dicho item.
+
+\paragraph{}
+Por ejemplo, cuando obtenga un misil o una bola deberá lanzarlos en el momento que tenga algún oponente delante y a tiro. Pero si
+en cambio hemos obtenido como item una macha de aceite o un chicle, deberá lanzarlo en el momento que tenga un oponente detrás
+y lo más cerca posible para que no tenga tiempo para maniobrar y poder esquivar el obstaculo.
+
+\paragraph{}
+Como solución, se eligió una forma muy sencilla y eficiente a la hora de realizarlo. Para ello cada vehículo controlado por la
+inteligencia artificial, tiene tanto un segmento que va desde el centro del coche hacia unos pixeles por delante de la posición
+actual del vehículo, como otro segmento que también va desde el centro pero uno pixeles atrás de la posición del vehículo. 
+Si se pudieran ver dichos segmente, tendrían la siguiente forma:
+
+\begin{figure}[H]
+  \label{ia_segmentos}
+  \begin{center}
+    \includegraphics[scale=0.8]{imagenes/ia_segmentos.png}
+  \end{center}
+  \caption{Implementación: Segmentos de la inteligencia artificial}
+\end{figure}
+
+\paragraph{}
+De forma que en el momento que tengamos un item que se lanza por la parte delantera del vehículo, se comprobará si alguno de los 
+oponentes colisiona con la barra delantera de este. En el caso de que tengamos un item que se lanza por la parte trasera, haríamos
+la misma comparación pero con la barra trasera.
