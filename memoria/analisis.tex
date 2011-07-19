@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%% TOMA DE REQUISITOS %%%%%%%%%%%%%%%%%%%%%%%5
+\section{Toma de requisitos}
+
+\paragraph{}
+Para la creación de cualquier producto software, es necesario establecer las distintas condiciones y necesidades que
+ha de satisfacer. Seguiremos un esquema que nos permita describir los requisitos de una forma metódica y racional.
+%\paragraph{}
+
+\subsection{Requisitos de interfaces externas}
+
+\paragraph{}
+En este apartado se describirá los requisitos de conexión del software y el hardware, así como la interfaz de usuario.
+
+\paragraph{}
+La conexión entres el software y el hardware se encarga la librería \emph{SDL}, mediante el wrapper \emph{Pygame} para 
+el lenguaje de programación \emph{Python}. Por lo que al ser un sistema preestablecido, no será necesario realizar el diseño,
+ni el análisis, sólo haremos uso de él.
+
+\paragraph{}
+Así que pasamos a definir la interfaz entre el usuario y el videojuego. Todas las ventanas de la aplicación tendrán una 
+resolución de 800x600 píxeles, siendo posible establecer el modo de pantalla completa \footnote{El modo de pantalla completa
+se podrá establecer a través del menú de opciones}. A continuación se distinguen las distintas
+ventanas que el usuario encontrará en el sistema:
+
+\begin{description}
+    \item \textbf{Ventana de introducción} En esta primera ventana se mostrará únicamente el logotipo del juego, situando al usuario en
+    contexto para introducirlo en la ejecución de la apliación.
+    
+    \item \textbf{Ventana de menú principal} La ventana del menú principal muestra el menú de inicio de \emph{Zycars}, asi como 
+    todas las opciones generales del juego diponibles, que son las siguientes:
+        \begin{itemize}
+            \item Carrera Rápida
+            \item Campeonato
+            \item Contrarreloj
+            \item Opciones
+            \item Salir
+        \end{itemize}
+        En este menú y en los siguiente que se describan se usará el raton para navegar por ellos y solo será necesario
+        un click sobre la opción deseada para acceder a ella.
+    
+    \item \textbf{Ventana de opciones} Desde la ventana de opciones se podrán modificar las distintas carácteristicas de la 
+    configuración del juego como el audio o controles. Esta ventana se podría dividir en tres partes diferencias que se indican
+    a continuación:
+        \begin{itemize}
+            \item Opciones de audio: podremos modificar el volumen de efectos de sonido y música del juego. También estará la opción
+            de silenciar cualquier tipo de sonido.
+            
+            \item Opciones de pantalla: a través de esta ventana podremos activar o desactivar el modo de pantalla completa.
+            
+            \item Opciones de control: en esta ventana podremos modificar los controles del juego. Tanto de dirección, lanzamiento
+            de items y pausa del juego.
+        \end{itemize}
+    
+    \item \textbf{Ventana de selección de personaje} Esta ventana será compartida por los tres modos de juego disponibles. En ella 
+    podremos elegir al personaje que desearemos controlar a lo largo de las carreras. De estos jugadores se nos mostrarán sus 
+    distintas habilidades.
+    
+    \item \textbf{Ventana de selección de circuito} Ventana compartida por el modo carrera rápida y contrarreloj. En esta ventana
+    deberemos elegir el circuito en el que deseamos competir. Se nos mostrará una imagen de cada circuito que seleccionemos.
+    
+    \item \textbf{Ventana de selección de campeonato} Ventana muy similar a la descrita anteriormente. En ella se nos mostrarán
+    todos los circuitos de cada campeonato disponible. Pero al contrario que la anterior en esta ventana elegiremos el campeonato 
+    del circuito seleccionado en el momento.
+    
+    \item \textbf{Ventana de juego} Ventana principal de todo el juego. Mostrará la carrera actual que se esté disputando, así como
+    los distinto marcadores aclaratorios sobre el estado de la carrera, como pueden ser posiciones del mismo, item actual y
+    tiempos de carrera. Según la tecla índicada en los controles del menú de opciones (ESC o p) se podrá acceder al menú
+    de pausa del juego.
+    
+    \item \textbf{Ventana de pausa} Únicamente accesible desde la ventana de juego. Esta nos permitirá detener el juego en curso, 
+    siendo posible reaundar el juego, reiniciar el mismo o volver al menú principal del juego.
+    
+    \item \textbf{Ventana de posiciones de carrera} Ventana mostrada al terminar alguna de las carreras. En ella nos muestra el 
+    resultado de la última carrera disputada. Nos pertime continuar al siguiente circuito, en el caso del modo campeonato, o seguir
+    hacia el menú principal, en el modo carrera rápida. También se nos permite reniciar la última carrera disputada.
+    
+    \item \textbf{Ventana de posiciones de campeonato} Ventana mostrada en el modo campeonato tras la ventana de posiciones 
+    de carrera, en ella se nos muestra las posiciones de los competidores en el campeonato actual.
+    
+    \item \textbf{Ventana de tiempos de contrarreloj} Ventana mostrada al completar algún circuito en el modo contrarreloj. En ella
+    se nos muestran los distintos tiempos conseguidos a lo largo del circuito y se nos indicará si hemos batido algún record.
+    Esta ventana nos permite continuar hacia el menú principal, así como reiniciar el circuito disputado.
+    
+\end{description}
+
+\subsection{Requisitos funcionales}
+
+\subsection{Requisitos de rendimiento}
+
+\subsection{Restricciones de diseño}
+
+\subsection{Resquisitos del sistema software}
+
+%%%%%%%%%%%%%%%% MODELO DE CASOS DE USO %%%%%%%%%%%%%%%%%%%%%%%
+\section{Modelo de casos de uso}
+
+\subsection{Diagrama de los casos de uso}
+
+\subsection{Descripción de los casos de uso}
+
+%%%%%%%%%%%%%% MODELO CONCEPTUAL DE DATOS %%%%%%%%%%%%%%%%%%%5
+\section{Modelo conceptual de datos}
+
+\subsection{Diagrama de clases conceptuales}
+
+\subsection{Modelo de comportamiento del sistema}
