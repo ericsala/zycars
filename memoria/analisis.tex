@@ -63,12 +63,12 @@ ventanas que el usuario encontrará en el sistema:
     del circuito seleccionado en el momento.
     
     \item \textbf{Ventana de juego} Ventana principal de todo el juego. Mostrará la carrera actual que se esté disputando, así como
-    los distinto marcadores aclaratorios sobre el estado de la carrera, como pueden ser posiciones del mismo, item actual y
+    los distinto marcadores aclaratorios sobre el estado de la carrera, como pueden ser posiciones de los jugades, item actual y
     tiempos de carrera. Según la tecla índicada en los controles del menú de opciones (ESC o p) se podrá acceder al menú
     de pausa del juego.
     
     \item \textbf{Ventana de pausa} Únicamente accesible desde la ventana de juego. Esta nos permitirá detener el juego en curso, 
-    siendo posible reaundar el juego, reiniciar el mismo o volver al menú principal del juego.
+    siendo posible reaundar el juego, reiniciar el mismo o volver al menú principal.
     
     \item \textbf{Ventana de posiciones de carrera} Ventana mostrada al terminar alguna de las carreras. En ella nos muestra el 
     resultado de la última carrera disputada. Nos pertime continuar al siguiente circuito, en el caso del modo campeonato, o seguir
@@ -85,11 +85,84 @@ ventanas que el usuario encontrará en el sistema:
 
 \subsection{Requisitos funcionales}
 
+\paragraph{}
+Los requisitos funcionales que el sistema debe ofrecer son los siguientes:
+
+\begin{itemize}
+    \item Salir de la aplicación desde cualquier ventana.
+    \item Seleccionar los distintos modos de juego.
+    \item Permitir al jugador competir contra la inteligencia artificial.
+    \item Modificar la configuración (audio, pantalla y controles) del juego.
+    \item Pausar el juego.
+    \item Seleccionar uno de los jugadores propuestos.
+    \item Seleccionar cualquiera de los circuitos disponibles.
+    \item Seleccionar cualquiera de los campeonatos disponibles.
+    \item Reiniciar cualquier carrera una vez terminada o en curso.
+    \item Reiniciar cualquier campeonato una vez terminado o en curso.
+    \item Lanzamientos de items durante cualquier carrera.
+\end{itemize}
+
+\paragraph{}
+Los distintos tipos de jugadores son:
+
+\begin{itemize}
+    \item \textbf{Humano}: es el controlado por una persona
+    \item \textbf{Inteligencia artificial}: controlado por el ordenador.
+\end{itemize}
+
+\paragraph{}
+Existes tres modos de juego:
+
+\begin{itemize}
+	\item \textbf{Carrera rápida}: consiste en la realización de un único circuito, compitiendo contra la inteligencia artificial.
+	\item \textbf{Campeonato}: el jugador competirá contra la inteligencia artificial a lo largo de 4 carreras, en las que obtendrá una puntuación
+	según la posición obtenida en cada una de las carreras. El ganador será el que mejor puntuación haya conseguido al concluir
+	el campeonato.
+	\item \textbf{Contrarreloj}: en este modo de juego, el jugador competirá solo, con el fin de mejorar las marcas de tiempo de cada uno de los 
+	circuitos.
+\end{itemize}
+
+
 \subsection{Requisitos de rendimiento}
+
+\paragraph{}
+El rendimiento de la aplicación debe ser tal que permita un desempeño agradable de juego. 
+
+\begin{itemize}
+    \item Por lo que la respuesta a las acciones realizadas por el usuario deben ser respondidas lo mas rápido posible,
+    sacrificando en el caso de que sea necesesario el consumo de la memoria principal.
+    
+    \item La inteligencia artificial debe estar optimizada de forma que no se realentice la partida en el tiempo dedicado a los
+    cálculos necesarios para tomar decisiones.
+\end{itemize}
+    
 
 \subsection{Restricciones de diseño}
 
+\paragraph{}
+Como comento en uno de los puntos del apartado anterior el tiempo de respuesta tiene que primar sobre el consumo de 
+memoria principal o secundaria. Esta será la principal restricción de diseño que tendrá nuestra aplicación.
+
+\paragraph{}
+Los videojuegos están pensados como aplicación principal, de forma que no tenga que compartir recursos con otros procesos,
+por lo que se permitirá que consuma muchos recursos del sistema.
+
 \subsection{Resquisitos del sistema software}
+
+\paragraph{}
+La aplicación deberá cumplir los siguiente requisitos del sistema:
+
+\begin{itemize}
+    \item Deberá ser multiplataforma, al menos en los siguiente sistemas:
+    \begin{itemize}
+        \item \textbf{Microsoft Windows}: realizando las pruebas sobre la versión Windows 7.
+        \item \textbf{GNU/Linux}: usando la distribución Ubuntu 10.10 como principal sistema para pruebas.
+    \end{itemize}
+    
+    \item El código con el que se desarrolle la aplicación no debe ser dependiente del sistema en el que se desarolle.
+    
+    \item El código debe ser mantenible y facilmente ampliable para futuras versiones.
+\end{itemize}
 
 %%%%%%%%%%%%%%%% MODELO DE CASOS DE USO %%%%%%%%%%%%%%%%%%%%%%%
 \section{Modelo de casos de uso}
