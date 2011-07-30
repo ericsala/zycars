@@ -187,9 +187,9 @@ siguiente esquema:
 
 \begin{figure}[H]
   \label{diagrama_casos_uso}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/diagrama_casos.png}
-  \end{center}
+  \begin{flushleft}
+    \includegraphics[scale=0.45]{imagenes/diagrama_casos.png}
+  \end{flushleft}
   \caption{Análisis: Diagrama de casos de uso}
 \end{figure}
 
@@ -210,29 +210,36 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Postcondiciones] Ninguna
     \item[Escenario principal] $\quad$
         \begin{enumerate}
+            \item El usuario inicia la aplicación
             \item El sistema muestra el menú principal del juego en pantalla.
-            \item El usuario selecciona la opción \textbf{carrera rápida}.
+            \item El usuario selecciona la opción \textbf{carrera rápida}, \textbf{campeonato} o \textbf{contrarreloj}.
             \item El sistema inicia el modo de elección de personaje.
         \end{enumerate}
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
             \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
-            \item[2a ] El usuario seleccion la opción \textbf{campeonato}.
-            \begin{enumerate}
-                \item El sistema inicia el modo de elección de personaje
-            \end{enumerate}
             
-            \item[2b ] El usuario seleccion la opción \textbf{contrarreloj}.
-            \begin{enumerate}
-                \item El sistema inicia el modo de elección de personaje
-            \end{enumerate}
+            %\item[2a ] El usuario seleccion la opción \textbf{campeonato}.
+            %\begin{enumerate}
+            %    \item El sistema inicia el modo de elección de personaje
+            %\end{enumerate}
+            
+            %\item[2b ] El usuario seleccion la opción \textbf{contrarreloj}.
+            %\begin{enumerate}
+            %    \item El sistema inicia el modo de elección de personaje
+            %\end{enumerate}
             
             \item[2c ] El usuario seleccion la opción \textbf{opciones}.
             \begin{enumerate}
                 \item El sistema inicia las opciones
             \end{enumerate}
             
-            \item[2d ] El usuario seleccion la opción \textbf{salir}.
+            \item[2c ] El usuario seleccion la opción \textbf{créditos}.
+            \begin{enumerate}
+                \item El sistema inicia la opción créditos
+            \end{enumerate}
+            
+            \item[2e ] El usuario seleccion la opción \textbf{salir}.
             \begin{enumerate}
                 \item El sistema sale de la aplicación.
             \end{enumerate}
@@ -250,18 +257,17 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     
     \item[Actores] Usuario
     
-    \item[Precondiciones] El usuario ha elegido previamente en el menú principal una de las opciones: \textbf{carrera rápida},
-    \textbf{campeonato} o \textbf{contrarreloj}
+    \item[Precondiciones] Ninguna
     
-    \item[Postcondiciones] Se almacenará en la configuración de juego el jugador seleccionado para su posterior uso.
+    \item[Postcondiciones] Se selecciona un jugador y se almacenará en la configuración de juego.
     
     \item[Escenario principal] $\quad$
         \begin{enumerate}
-            \item El usuario debe seleccionar al jugador que usará en el juego.
-            \item El sistema muestra el primer personaje junto a sus características.
-            \item El usuario está satisfecho con su selección y pulsa el botón aceptar.
+            \item El usuario desea seleccionar al personaje que usará en el juego.
+            \item El sistema muestra la pantalla de elección de personaje y carga todos los personajes disponibles.
+            \item El usuario selecciona un personaje de la lista y pulsa la opción aceptar.
             \item El sistema almacena en la configuración el jugador seleccionado.
-            \item El sistema pasa a selección de circuito, si la precondición es \textbf{carrera rápida} o \textbf{contrarreloj}
+            \item El sistema pasa a selección de circuito%, si la precondición es \textbf{carrera rápida} o \textbf{contrarreloj}
         \end{enumerate}
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
@@ -272,15 +278,7 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
                 \item El sistema vuelve al menú principal
             \end{enumerate}
             
-            \item[3a ] El usuario no esta satisfecho con ese jugador y pulsa la flecha derecha.
-            \begin{enumerate}
-                \item El sistema muestra el siguiente jugador.
-            \end{enumerate}
-
-            \item[3b ] El usuario no esta satisfecho con ese jugador y pulsa la flecha izquierda.
-            \begin{enumerate}
-                \item El sistema muestra el anterior jugador.
-            \end{enumerate}
+            \item [5a ] El sistema pasa a selección de campeonato.
             
         \end{description}
 \end{description}
@@ -292,15 +290,16 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Descripción] El usuario desea seleccionar el circuito en el que desea competir.
     \item[Actores] Usuario
     \item[Precondiciones] El usuario ha elegido previamente en el menú principal una de las opciones: \textbf{carrera rápida} 
-    o \textbf{contrarreloj}
-    \item[Postcondiciones] El sistema almacena en la configuración el circuito seleccionado.
+    o \textbf{contrarreloj} y ya ha seleccionado un personaje.
+    
+    \item[Postcondiciones] Se selecciona un circuitp y se almacena en la configuración del juego.
     \item[Escenario principal] $\quad$
         \begin{enumerate}
             \item El usuario desea seleccionar el circuito en el que competir.
-            \item El sistema muestra el primer circuito de todos los circuitos del campeonato actual.
-            \item El usuario esta satisfecho con su elección, y pulsa el boton aceptar.
+            \item El sistem muestra todos los circuitos disponibles (icono e imagen) para cada campeonato.
+            \item El usuario selecciona un circuito y pulsa aceptar
             \item El sistema almacena el circuito en la configuración del sistema.
-            \item El sistema inicia la carrera.
+            \item El sistema accede a la pantalla de jugar carrera.
         \end{enumerate}
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
@@ -308,16 +307,6 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
             \item[*b ] El usuario pulsa la opcion cancelar.
             \begin{enumerate}
                 \item El sistema vuelve a la selección de personaje.
-            \end{enumerate}
-            
-            \item[3a ] El usuario no está satisfecho con ese circuito y pulsa sobre otro circuito del mismo campeonato.
-            \begin{enumerate}
-                \item El sistema muestra el nuevo circuito seleccionado.
-            \end{enumerate}
-            
-            \item[3b ] El usuario no está satisfecho con los circuitos de ese campeonato y seleccionado otro campeonato.
-            \begin{enumerate}
-                \item El sistema muestra el primer circuito de los del campeonato seleccionado.
             \end{enumerate}
         \end{description}
 \end{description}
@@ -328,15 +317,16 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Caso de uso] Elegir campeonato
     \item[Descripción] El usuario desea seleccionar el campeonato que desea realizar.
     \item[Actores] Usuario
-    \item[Precondiciones] El usuario ha elegido previamente en el menú principal una de las opciones: \textbf{campeonato}
-    \item[Postcondiciones] El sistema almacena en la configuración todos lo circuitos del campeonato seleccionado.
+    \item[Precondiciones] El usuario ha elegido previamente en el menú principal una de las opciones: \textbf{campeonato} y ha
+    elegido un personaje.
+    \item[Postcondiciones] Selecciona un campeonato y se almacena en la configuración del juego.
     \item[Escenario principal] $\quad$
         \begin{enumerate}
             \item El usuario desea seleccionar el circuito en el que competir.
-            \item El sistema muestra el primer circuito de todos los circuitos del campeonato actual.
-            \item El usuario esta satisfecho con su elección, y pulsa el boton aceptar.
+            \item El sistema muestra los campeonatos disponibles
+            \item El usuario selecciona un campeonato y pulsa sobre la opción aceptar.
             \item El sistema almacena todos los circuitos del campeonato en la configuración del sistema.
-            \item El sistema inicia la carrera.
+            \item El sistema inicia el modo jugar campeonato.
         \end{enumerate}
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
@@ -344,16 +334,6 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
             \item[*b ] El usuario pulsa la opcion cancelar.
             \begin{enumerate}
                 \item El sistema vuelve a la selección de personaje.
-            \end{enumerate}
-            
-            \item[3a ] El usuario pulsa sobre otro circuito del mismo campeonato.
-            \begin{enumerate}
-                \item El sistema muestra el nuevo circuito seleccionado.
-            \end{enumerate}
-            
-            \item[3b ] El usuario no está satisfecho con los circuitos de ese campeonato y seleccionado otro campeonato.
-            \begin{enumerate}
-                \item El sistema muestra el primer circuito de los del campeonato seleccionado.
             \end{enumerate}
         \end{description}
 \end{description}
@@ -364,30 +344,105 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Caso de uso] Jugar carrera
     \item[Descripción] El usuario juega una carrera
     \item[Actores] Usuario
-    \item[Precondiciones] El usuario ha elegido previamente el personaje y el circuito donde jugar.
-    \item[Postcondiciones] El usuario completa una carrera 
+    \item[Precondiciones] El usuario ha seleccionado un circuito o un campeonato.
+    \item[Postcondiciones] El usuario completa una carrera.
     \item[Escenario principal] $\quad$
         \begin{enumerate}
-            \item El sistema carga el circuito.
-            \item El sistema carga el jugador.
-            \item El sistema carga la inteligencia artificial.
+            \item El sistema carga el circuito, el jugador, inteligencia artificial y los ítems.
             \item El sistema muestra la pantalla de juego.
             \item El usuario y el sistema interactuan durante la carrera.
             \item El usuario completa la carrera.
             \item El sistema muestra las posiciones finales de la carrera.
             \item El usuario pulsa continuar.
-            \item El sistema pasa a la siguiente pantalla dependiendo del modo de juego.
+            \item El sistema pasa al menú principal
         \end{enumerate}
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
             \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
-            
-            \item[3a ] El sistema no carga la inteligencia artificial porque estamos en el modo campeonato.
-            
-            \item[8a ] El usuario pulsa reiniciar.
+            \item[*b] El usuario pulsa el botón de pausa.
                 \begin{enumerate}
-                    \item El sistema renicia la carrea.
-                    \item Volvemos al punto 1.
+                    \item El sistema muestra el menú de pausa.
+                \end{enumerate}
+            
+        \end{description}
+\end{description}
+
+\subsubsection{Caso de uso: Pausar}
+
+\begin{description}
+    \item[Caso de uso] Pausar
+    \item[Descripción] El usuario selecciona pausar el juego y puede reanudarlo, reiniciarlo o volver al menú principal.
+    \item[Actores] Usuario
+    \item[Precondiciones] Se está jugando una carrera
+    \item[Postcondiciones] Ninguna.
+    \item[Escenario principal] $\quad$
+        \begin{enumerate}
+            \item El usuario pulsa el botón de pausa.
+            \item El sistema detiene todos los elementos del juego y muestra el menú de pausa.
+            \item El usuario pulsa la opción reaundar.
+            \item El sistema reaunda la carrera.
+        \end{enumerate}
+    \item[Extensiones --- flujo alternativo] $\quad$
+        \begin{description}
+            \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
+
+            \item[*b] El usuario pulsa la opción reiniciar.
+                \begin{enumerate}
+                    \item El sistema reinicia la carrera.
+                \end{enumerate}
+                
+            \item[*b] El usuario pulsa la opción menú.
+                \begin{enumerate}
+                    \item El sistema vuelve al menú principal.
+                \end{enumerate}
+        \end{description}
+\end{description}
+
+\subsubsection{Caso de uso: Lanzar ítem}
+
+\begin{description}
+    \item[Caso de uso] Salir
+    \item[Descripción] El usuario lanza el ítem que tenga actualmente.
+    \item[Actores] Usuario
+    \item[Precondiciones] Se esta jugando una carrera y el usuario a recogido un ítem.
+    \item[Postcondiciones] Se añade el ítem a la carrera.
+    \item[Escenario principal] $\quad$
+        \begin{enumerate}
+            \item El usuario pulsa la opción de lanzar ítem.
+            \item El sistema comprueba que el usuario posee un ítem y añade el ítem a la carrera.
+        \end{enumerate}
+    \item[Extensiones --- flujo alternativo] $\quad$
+        \begin{description}
+            \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
+        \end{description}
+\end{description}
+
+\subsubsection{Caso de uso: Mover vehículo}
+
+\begin{description}
+    \item[Caso de uso] Mover vehículo
+    \item[Descripción] El usuario desplaza al vehículo por el circuito.
+    \item[Actores] Usuario
+    \item[Precondiciones] Se está jugando una carrera.
+    \item[Postcondiciones] Ninguna.
+    \item[Escenario principal] $\quad$
+        \begin{enumerate}
+            \item El usuario pulsa sobre una de las teclas de movimiento. W o Flecha hacia arriba, para mover el vehículo
+            hacia adelante o S o Flecha hacia abajo, para moverlo marcha atrás.
+            \item El sistema mueve al vehículo teniendo en cuenta su orientación, velocidad y ángulo.
+            \item El sistema comprueba que no ha colisionado con ningún obstáculo u otro competidor.
+        \end{enumerate}
+    \item[Extensiones --- flujo alternativo] $\quad$
+        \begin{description}
+            \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
+            \item[1a ] El usuario pulsa las teclas de dirección a la vez que avanza. D o Flecha hacia la derecha, para girar
+            a la derecha o, A o Felcha hacia la izquierda, para girar a la izquierda.
+                \begin{enumerate}
+                    \item El sistema gira al coche hacia la zona deseada.
+                \end{enumerate}
+            \item[3a ] El sistema detecta que ha colisionado con un competidor o con algun obstáculo.
+                \begin{enumerate}
+                    \item El sistema corrige la posición del vehículo.
                 \end{enumerate}
         \end{description}
 \end{description}
@@ -437,8 +492,8 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Escenario principal] $\quad$
         \begin{enumerate}
             \item El usuario desea modificar las opciones del juego.
-            \item El sistema muestra inicialmente las opciones de audio.
-            \item El usuario modifica las distintas opciones de audio.
+            \item El sistema muestra las opciones de juego.
+            \item El usuario modifica las distintas opciones de juego.
             \item El usuario esta conforme con los cambios realizados y pulsa sobre el botón aceptar.
             \item El sistema almacena todos los cambios en la configuración.
             \item El sistema vuelve al menú principal.
@@ -451,18 +506,38 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
                     \item El sistema vuelve al menú principal.
                 \end{enumerate}
             
-            \item [4a ] El usuario desea modificar las opciones de pantalla y pulsa sobre el boton de opciones de pantalla.
-                \begin{enumerate}
-                    \item El sistema muestra las opciones de pantalla.
-                    \item El usuario modifica las distintas opciones de pantalla.
-                \end{enumerate}
+            %\item [4a ] El usuario desea modificar las opciones de pantalla y pulsa sobre el boton de opciones de pantalla.
+             %   \begin{enumerate}
+              %      \item El sistema muestra las opciones de pantalla.
+               %     \item El usuario modifica las distintas opciones de pantalla.
+                %\end{enumerate}
             
-            \item [4b ] El usuario desea modificar las opciones de controles y pulsa sobre el boton de opciones de controles.
-                \begin{enumerate}
-                    \item El sistema muestra las opciones de controles.
-                    \item El usuario modifica las distintas opciones de control.
-                \end{enumerate}
+            %\item [4b ] El usuario desea modificar las opciones de controles y pulsa sobre el boton de opciones de controles.
+             %   \begin{enumerate}
+              %      \item El sistema muestra las opciones de controles.
+               %     \item El usuario modifica las distintas opciones de control.
+                %\end{enumerate}
             
+        \end{description}
+\end{description}
+
+\subsubsection{Caso de uso: Créditos}
+
+\begin{description}
+    \item[Caso de uso] Salir
+    \item[Descripción] Se muestran la pantalla de créditos donde se reflejan los creadores del juego.
+    \item[Actores] Usuario
+    \item[Precondiciones] Ninguna.
+    \item[Postcondiciones] Ninguna.
+    \item[Escenario principal] $\quad$
+        \begin{enumerate}
+            \item El sistema muestra la pantalla de créditos.
+            \item El usuario pulsa la opción volver.
+            \item El sistema vuelve al menú principal.
+        \end{enumerate}
+    \item[Extensiones --- flujo alternativo] $\quad$
+        \begin{description}
+            \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
         \end{description}
 \end{description}
 
@@ -514,10 +589,11 @@ las clases habrá una pequeña descripción sobre la labro que desempeña cada u
     \item [Menú selección personaje] Clase que gestiona el menú de selección de personaje.
     \item [Menú selección circuito] Clase que gestiona el menú de selección de circuito.
     \item [Menú opciones] Clase que gestiona el menú de opciones.
-    \item [Cursor] Curso de los menús.
+    \item [Menú de pausa] Clase que gestiona el menú de pausa.
+    \item [Cursor] Cursor de los menús.
     \item [Boton] Clase que representa el botón en los menús.
     
-    \item [Modo de juego] Clase virtual, con las necesidades básicas de los modos de juego.
+    \item [Modo de juego] Clase virtual, con las necesidades básicas de los distintos modos de juego.
     \item [Carrera rápida] Clase que gestiona el modo de juego carrera rápida.
     \item [Campeonato] Clase que gestiona el modo de juego campeonato.
     \item [Contrarreloj] Clase que gestiona el modo de juego contrarreloj.
@@ -525,6 +601,7 @@ las clases habrá una pequeña descripción sobre la labro que desempeña cada u
     \item [Control de juego] Clase encargada del control de la carrera, controlando la interacción del jugador con el circuito, así 
     como el jugador con la inteligencia artificial. Aspectos básico como colisiones, scroll de pantalla, control de vueltas, control
     de posiciones.
+    
     \item [Circuito] Clase encargada de cargar y dibujar el circuito.
     \item [Gestor de colisiones] Clase encargada de detectar y gestionar las colisiones.
     
@@ -538,11 +615,13 @@ las clases habrá una pequeña descripción sobre la labro que desempeña cada u
 \paragraph{}
 En la siguiente imagen podemos ver el diagrama de clases asociado a los requisitos obtenidos:
 
+\newpage
+
 \begin{figure}[H]
   \label{diagrama_clases_conceptuales}
-  \begin{flushleft}
-    \includegraphics[scale=0.25]{imagenes/diagrama_clases_conceptuales.png}
-  \end{flushleft}
+  \begin{center}
+    \includegraphics[scale=0.3]{imagenes/diagrama_clases_conceptuales.png}
+  \end{center}
   \caption{Análisis: Diagrama de clases conceptuales}
 \end{figure}
 
@@ -553,178 +632,21 @@ El modelo de comportamiento especifica como debe actuar el sistema. El sistema e
 consta de dos partes:
 
 \begin{itemize}
-    \item Diagramas de secuencias del sistema que muestra la secuencia de eventos entre el usuario y el sistema.
-    \item Contrato de las operaciones del sistema, describen el efecto que producen las operaciones en el sistema.
+    \item Diagramas de secuencias del sistema: muestran la secuencia de eventos entre el usuario y el sistema.
+    \item Contrato de las operaciones del sistema: describen el efecto que producen las operaciones en el sistema.
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Diagramas de secuencias del sistema y contrato de las operaciones del sistema.}
 
-\subsubsection{Modelo de comportamiento menú principal}
+\paragraph{}
+No todos los posibles diagramas de secuencia aparecerán, nos centraremos en los mas importantes, los que implican algún tipo de 
+cambio en el sistema.
 
-\textbf{Diagrama de secuencia}
-\begin{figure}[H]
-  \label{dia_menu_principal}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/dia_menu_principal.png}
-  \end{center}
-  \caption{Análisis: Diagrama de secuencia Menú principal}
-\end{figure}
-
-\textbf{Contrato operaciones}
-
-\begin{description}
-    \item[Operación] Menú principal
-    \item[Actores] Usuario, Sistema
-    \item[Responsabilidades] Selecciona la opción principal del juego.
-    \item[Precondiciones] Ninguna
-    \item[Postcondiciones] Ninguna
-\end{description}
-
-\subsubsection{Modelo de comportamiento elegir personaje}
-
-\textbf{Diagrama de secuencia}
-\begin{figure}[H]
-  \label{dia_elegir_jugador}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/dia_elegir_jugador.png}
-  \end{center}
-  \caption{Análisis: Diagrama de secuencia Elegir jugador}
-\end{figure}
-
-\textbf{Contrato operaciones}
-
-\begin{description}
-    \item[Operación] Elegir personaje
-    \item[Actores]  Usuario, sistema
-    \item[Responsabilidades] Selecciona el personaje a controlar en el juego.
-    \item[Precondiciones] Ha elegido previamente uno de los modos de juego en el menú principal.
-    \item[Postcondiciones] Selecciona al personaje.
-\end{description}
-
-\subsubsection{Modelo de comportamiento elegir circuito}
-
-\textbf{Diagrama de secuencia}
-\begin{figure}[H]
-  \label{dia_elegir_circuito}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/dia_elegir_circuito.png}
-  \end{center}
-  \caption{Análisis: Diagrama de secuencia Elegir circuito }
-\end{figure}
-
-\textbf{Contrato operaciones}
-
-\begin{description}
-    \item[Operación] Elegir circuito
-    \item[Actores] Usuario, sistema
-    \item[Responsabilidades] Selecciona el circuito donde competirá el jugador.
-    \item[Precondiciones] Ha elegido previamente el personaje que competirá y el modo de juego carrera rápida o contrarreloj
-    \item[Postcondiciones] Selecciona el circuito.
-\end{description}
-
-\subsubsection{Modelo de comportamiento elegir campeonato}
-
-\textbf{Diagrama de secuencia}
-\begin{figure}[H]
-  \label{dia_elegir_campeonato}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/dia_elegir_campeonato.png}
-  \end{center}
-  \caption{Análisis: Diagrama de secuencia Elegir campeonato}
-\end{figure}
-
-\textbf{Contrato operaciones}
-
-\begin{description}
-    \item[Operación] Elige campeonato
-    \item[Actores] Usuario, sistema
-    \item[Responsabilidades] Seleccionar el campeonato en el que competirá el jugador.
-    \item[Precondiciones] Ha elegido previamente el personaje que competirá y el modo de juego campeonato.
-    \item[Postcondiciones] Selecciona el campeonato.
-\end{description}
-
-\subsubsection{Modelo de comportamiento jugar carrera}
-
-\textbf{Diagrama de secuencia}
-\begin{figure}[H]
-  \label{dia_jugar}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/dia_jugar.png}
-  \end{center}
-  \caption{Análisis: Diagrama de secuencia Jugar carrera}
-\end{figure}
-
-\textbf{Contrato operaciones}
-
-\begin{description}
-    \item[Operación] Jugar
-    \item[Actores] Usuario, sistema
-    \item[Responsabilidades] Muestra la pantalla de juego desde la que el usuario puede jugar la partida.
-    \item[Precondiciones] Previamente se han elegido jugador y circuito.
-    \item[Postcondiciones] Un jugador gana la carrera.
-\end{description}
-
-\subsubsection{Modelo de comportamiento jugar campeonato}
-
-\textbf{Diagrama de secuencia}
-\begin{figure}[H]
-  \label{dia_jugar_campeonato}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/dia_jugar_campeonato.png}
-  \end{center}
-  \caption{Análisis: Diagrama de sencuancia Jugar campeonato}
-\end{figure}
-
-\textbf{Contrato operaciones}
-
-\begin{description}
-    \item[Operación] Jugar Campeonato
-    \item[Actores] Usuario, sistema
-    \item[Responsabilidades] Desarrolla todas la carreras del campeonato
-    \item[Precondiciones] Se eligió el modo campeonato en el menú principal.
-    \item[Postcondiciones] Un jugador gana el campeonato.
-\end{description}
-
-\subsubsection{Modelo de comportamiento opciones}
-
-\textbf{Diagrama de secuencia}
-\begin{figure}[H]
-  \label{dia_opciones}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/dia_opciones.png}
-  \end{center}
-  \caption{Análisis: Diagrama de secuencia opciones}
-\end{figure}
-
-\textbf{Contrato operaciones}
-
-\begin{description}
-    \item[Operación] Opciones
-    \item[Actores] Usuairo, sistema
-    \item[Responsabilidades] Se muestran las distintas opciones que el usuario puede modificar, como son el audio, pantalla y
-    controles.
-    \item[Precondiciones] Ninguna
-    \item[Postcondiciones] Se modifican las opciones del juego.
-\end{description}
-
-\subsubsection{Modelo de comportamiento salir}
-
-\textbf{Diagrama de secuencia}
-\begin{figure}[H]
-  \label{di_salir}
-  \begin{center}
-    \includegraphics[scale=0.5]{imagenes/dia_salir.png}
-  \end{center}
-  \caption{Análisis: Diagrama de secuencia Salir}
-\end{figure}
-
-\textbf{Contrato operaciones}
-
-\begin{description}
-    \item[Operación] Salir
-    \item[Actores] Usuario, Sistema
-    \item[Responsabilidades] Permite al usuario salir del sistema
-    \item[Precondiciones] Ninguna
-    \item[Postcondiciones] Se sale de la aplicación
-\end{description}
-
+\subsubsection{Caso de uso: Menu principal(escenario principal)}
