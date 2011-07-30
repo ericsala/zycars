@@ -8,6 +8,87 @@ Por lo que en este capítulo se exlicarán las distintas soluciones para los pri
 %%%%%%%%%%%%%%%%% MOVIMIENTO COCHE %%%%%%%%%%%%%%%%%%%%
 %\section{Movimiento vehículo}
 
+\section{Carga desde ficheros}
+
+\paragraph{}
+Desde un primer momento se penso en realizar el videojuego de forma que fuera facilmente ampliable siguiendo un manual adecuado, 
+donde se explicaran todos los pasos necesarios \footnote{En el apendice de este documento están los distintos manuales para
+añadir personajes y circuitos}.
+
+\paragraph{}
+Para ello se optó por realizar toda la carga de circuitos, personajes e interfaces de los menús desde archivos. El formato de 
+dichos archivos sería XML.
+
+\paragraph{}
+De esta forma cualquier persona ya sea programador o no, podrá modificar aspectos tan sencillos como el posicionamiento de los 
+botones en lo menús, y las distintas imagenes que pueden aparecer en estos. Respecto a los personaje podrán modificar las 
+características de estos, las imagenes que los representan o añadir nuevos personajes. En los circuitos podremos modificar objetos
+que aparezcan en estos, así como obstáculos o aparición de ítems.
+
+\paragraph{}
+Un ejemplo de fichero XML con la configuración de un menú se puede ver a continuación:
+
+\begin{lstlisting}[style=XML]
+<mainmenu background="background_menu" cursor="cursor.xml" 
+music='la maryjane - bob wizman.ogg'>
+    <title text="Menu Principal" font="cheesebu" size="30" r="0" g="0" b="0" 
+    x="15" y="15"/>
+    <images>
+        <image image_code="separator_line" x="0" y="240"></image>
+        <image image_code="logo_menu" x="130" y="5"></image>
+    </images>
+    <options>
+        <option xml_file="menu/mainoption2.xml" font="cheesebu" text="Carrera Rapida" 
+        center="True" x="400" y="295"></option>
+        <option xml_file="menu/mainoption1.xml" font="cheesebu" text="Campeonato" 
+        center="True" x="400" y="335"></option>
+        <option xml_file="menu/mainoption2.xml" font="cheesebu" text="Contrarreloj" 
+        center="True" x="400" y="400"></option>
+        <option xml_file="menu/mainoption1.xml" font="cheesebu" text="Opciones" 
+        center="True" x="400" y="440"></option>
+        <option xml_file="menu/mainoption2.xml" font="cheesebu" text="Creditos" 
+        center="True" x="400" y="505"></option>
+        <option xml_file="menu/mainoption1.xml" font="cheesebu" text="Salir" 
+        center="True" x="400" y="545"></option>
+    </options>
+</mainmenu>
+\end{lstlisting}
+
+\paragraph{}
+Como podemos ver podemos modificar las imagenes que aparecen en el menú o las posiciones de los botones.
+En el código únicamente deberiamos dar funcionalidad a cada uno de las opciones del menú.
+
+\paragraph{}
+Otro ejemplo de archivo de XMl para los personajes que aparecen en el juego sería el siguiente:
+
+\begin{lstlisting}[style=XML]
+<car name_character="Camaro Bun" sprite_code="yellow" max_speed="6.1" 
+min_speed="3" aceleration="0.5" desaceleration="0.08" rotation_angle="0.35" 
+avatar="avatar1" racer_image='car1'>
+<!--NORMAL, NOACTION, RUN, FORWARD, REVERSE, DAMAGED, ERASE, YAW-->
+    <animations>
+        <animation name="normal" frames="0" delay="1"/>
+        <animation name="noaction" frames="0" delay="1"/>
+        <animation name="foward" frames="0" delay="1"/>
+        <animation name="run" frames="0" delay="1"/>
+        <animation name="reverse" frames="0" delay="1"/>
+        <animation name="damaged" frames="0" delay="1"/>
+        <animation name="erase" frames="0" delay="1"/>
+        <animation name="yaw" frames="0" delay="1"/>
+        <animation name="fall" frames="0" delay="1"/>
+        <animation name="turbo" frames="0" delay="1"/>
+    </animations>
+</car>
+\end{lstlisting}
+
+\paragraph{}
+Como podemos ver se pueden modificar los aspectos mas básico del comportamiento de los personajes, como pueden ser la velocidad 
+máxima de este, velocidad en marcha atrás, aceleración, desaceleración y angulo de giro. También todas las imagenes que representan
+al jugador.
+
+\paragraph{}
+Incluso si la imagen del coche del personaje es un sprite podemos indicar que frames de este pertencen a cada uno de los posibles 
+estados del personaje.
 
 %%%%%%%%%%%%%%%%% CIRCUITOS %%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Formato y carga de circuitos}
@@ -52,7 +133,7 @@ de que tipo son. A continuación se muestran dos imagenes como ejemplo:
     \begin{figure}[H]
       \label{tileset}
       \begin{center}
-        \includegraphics[scale=1]{imagenes/tileset.png}
+        \includegraphics[scale=1.45]{imagenes/tileset.png}
       \end{center}
       \caption{Implementación: conjunto de tiles}
     \end{figure}
@@ -61,7 +142,7 @@ de que tipo son. A continuación se muestran dos imagenes como ejemplo:
     \begin{figure}[H]
       \label{collisionmap}
       \begin{center}
-        \includegraphics[scale=1]{imagenes/collisionmap.png}
+        \includegraphics[scale=1.45]{imagenes/collisionmap.png}
       \end{center}
       \caption{Implementación: Mapa de colisiones}
     \end{figure}
@@ -124,7 +205,7 @@ A continuación se expone un ejemplo visual para su correcta comprensión:
     \begin{figure}[H]
       \label{colision1}
       \begin{center}
-        \includegraphics[scale=0.4]{imagenes/colision1.png}
+        \includegraphics[scale=0.7]{imagenes/colision1.png}
       \end{center}
       \caption{Implementación: Colisión con el escenario 1/2}
     \end{figure}
@@ -133,7 +214,7 @@ A continuación se expone un ejemplo visual para su correcta comprensión:
     \begin{figure}[H]
       \label{colision2}
       \begin{center}
-        \includegraphics[scale=0.4]{imagenes/colision2.png}
+        \includegraphics[scale=0.7]{imagenes/colision2.png}
       \end{center}
       \caption{Implementación: Colisión con el escenario 2/2}
     \end{figure}
@@ -223,7 +304,7 @@ hasta el final y g(n) el coste real del camino desde el origen al nodo actual.
 \begin{figure}[H]
   \label{a_star}
   \begin{center}
-    \includegraphics[scale=0.5]{imagenes/a_star.png}
+    \includegraphics[scale=0.6]{imagenes/a_star.png}
   \end{center}
   \caption{Implementación: Ejemplo del algoritmo A*}
 \end{figure}
