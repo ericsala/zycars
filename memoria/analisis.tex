@@ -229,17 +229,17 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
             %    \item El sistema inicia el modo de elección de personaje
             %\end{enumerate}
             
-            \item[2c ] El usuario seleccion la opción \textbf{opciones}.
+            \item[2a ] El usuario seleccion la opción \textbf{opciones}.
             \begin{enumerate}
                 \item El sistema inicia las opciones
             \end{enumerate}
             
-            \item[2c ] El usuario seleccion la opción \textbf{créditos}.
+            \item[2b ] El usuario seleccion la opción \textbf{créditos}.
             \begin{enumerate}
                 \item El sistema inicia la opción créditos
             \end{enumerate}
             
-            \item[2e ] El usuario seleccion la opción \textbf{salir}.
+            \item[2c ] El usuario seleccion la opción \textbf{salir}.
             \begin{enumerate}
                 \item El sistema sale de la aplicación.
             \end{enumerate}
@@ -359,11 +359,10 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
             \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
-            \item[*b] El usuario pulsa el botón de pausa.
-                \begin{enumerate}
-                    \item El sistema muestra el menú de pausa.
-                \end{enumerate}
-            
+            %\item[*b] El usuario pulsa el botón de pausa.
+             %   \begin{enumerate}
+              %      \item El sistema muestra el menú de pausa.
+               % \end{enumerate}
         \end{description}
 \end{description}
 
@@ -643,10 +642,477 @@ consta de dos partes:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Diagramas de secuencias del sistema y contrato de las operaciones del sistema.}
+\subsection{Diagramas de secuencia y contrato de las operaciones del sistema.}
 
 \paragraph{}
 No todos los posibles diagramas de secuencia aparecerán, nos centraremos en los mas importantes, los que implican algún tipo de 
 cambio en el sistema.
 
 \subsubsection{Caso de uso: Menu principal(escenario principal)}
+
+\begin{figure}[H]
+  \label{secuencia_menu_principal1}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_menu_principal1.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Menu principal (escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] InicioAplicacion()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] inicia la aplicación y muestra el menú principal.
+    \item [Precondiciones] Ninguna
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item El sistema inicia todos los subsistemas necesarios para la correcta ejecución de la aplicación.
+            \item El sistema crea un objeto con el Menú principal
+        \end{itemize}
+\end{description}
+
+\begin{description}
+    \item [Operación] ElegirPersonaje()
+    \item [Actores] Jugador, Sistema.
+    \item [Responsabilidades] salir del menú principal y acceder a la pantalla de elección de personaje.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe u objeto del menú principal.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se destruye el objeto del menú principal.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Menu principal(escenario 2a)}
+
+\begin{figure}[H]
+  \label{secuencia_menu_principal2}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_menu_principal2.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Menu principal (escenario 2a)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] SeleccionarOpciones()
+    \item [Actores] Jugador, Sistema
+    \item [Responsabilidades] salir del menú principal y entrar en el menú de opciones.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto del menú principal.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se destruye el objeto del menú principal.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Menu principal(escenario 2b)}
+
+\begin{figure}[H] 
+  \label{secuencia_menu_principal3}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_menu_principal3.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Menu principal (escenario 2b)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] SeleccionarCréditos()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] salir del menú principal y entrar en la pantalla de créditos.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto del menú principal.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se destruye el objeto del menú principal.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Menu principal(escenario 2c)}
+
+\begin{figure}[H] 
+  \label{secuencia_menu_principal4}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_menu_principal4.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Menu principal (escenario 2c)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] SeleccionarSalir()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] Salir de menú principal y salir de la aplicación
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto del menú principal.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se destruye el objeto del menú principal.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Elegir personaje (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_elegir_personaje}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_elegir_personaje1.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Elegir personaje (escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] PantallaElegirPersonaje()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] carga y muestra la pantalla de elección de personaje
+    \item [Precondiciones] Ninguna
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Crea un objeto de la clase Menu personaje.
+        \end{itemize}
+\end{description}
+
+\begin{description}
+    \item [Operación] SeleccionarPersonaje()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] marca un personaje como seleccionado
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto del menu de personaje.
+            \item Existe el personaje seleccionado.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se marca el personaje como seleccionado.
+            \item Se destruye el objeto del menu de personaje.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Elegir circuito (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_elegir_circuito}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_elegir_circuito.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Elegir circuito (escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] PantallaElegirCircuito()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] crea y muestra la pantalla de elección de circuito.
+    \item [Precondiciones] Ninguna.
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Crea un objeto de la clase menú de circuito.
+        \end{itemize}
+\end{description}
+
+\begin{description}
+    \item [Operación] SeleccionarCircuito()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] marca un circuito como seleccionado.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe el circuito seleccionado.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se marca el circuito como seleccionado.
+            \item Se destruye el objeto de menú de circuito.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Elegir campeonato (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_elegir_campeonato}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_elegir_campeonato.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Elegir campeonato (escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] PantallaElegirCampeonato()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] crea y muestra la pantalla de seleccion de campeonato
+    \item [Precondiciones] Ninguna.
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Crea un objeto de la clase menu campeonato.
+        \end{itemize}
+\end{description}
+
+\begin{description}
+    \item [Operación] SeleccionarCampeonato()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] selecciona un campeonato.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe el campeonato seleccionado.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se marca el campeonato seleccionado.
+            \item Se destruye el objeto de menú campeonato.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Jugar carrera (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_jugar}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_jugar.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Jugar carrera (escenario principal)}
+\end{figure}
+
+\begin{description} 
+    \item [Operación] PantallaJuego()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] carga y muestra la pantalla de jugo con el circuito seleccionado, inicia el juego.
+    \item [Precondiciones] Ninguna
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se crea un objeto de Control de juego.
+            \item Se crea un objeto de Circuito
+            \item Se crea un objeto de Jugador.
+            \item Se crea un objeto de Gestor de colisiones.
+            \item Se crea un objeto de IA por cada competidor de carrera.
+            \item Se crea un objeto de Caja de ítem por cada caja del circuito.
+        \end{itemize}
+\end{description}
+
+\begin{description}
+    \item [Operación] Interactuar()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] permite al jugador interactuar con el mundo 2D y los elementos que este posee.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de Control de juego.
+            \item Existe un objeto de Jugador.
+        \end{itemize}
+    \item [Postcondiciones] Ninguna.
+\end{description}
+
+\subsubsection{Caso de uso: Pausar (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_pausar1}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_pausar1.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Pausr(escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] PausarJuego()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] pausa el juego y detiene todos los elementos de este.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de Control juego.
+            \item Se está jugando una carrera.
+        \end{itemize}
+    \item [Postcondiciones]
+        \begin{itemize}
+            \item Se crea un objeto de Menu de pausa.
+        \end{itemize}
+\end{description}
+
+\begin{description}
+    \item [Operación] ReanudarJuego()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] reanuda la partida y quita el menú de pausa.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de Control juego.
+            \item La carrera estaba pausada
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se destruye el objeto del menú de pausa.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Pausar (escenario *b)}
+
+\begin{figure}[H] 
+  \label{secuencia_pausar2}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_pausar2.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Pausar (escenario *b)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] ReiniciarJuego()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] reinicia la carrera que se estaba jugando.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de Control juego.
+            \item La carrera estaba pausada
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se destruye el objeto del menú de pausa.
+            \item Se reinicia la carrera.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Pausar (escenario *c)}
+
+\begin{figure}[H] 
+  \label{secuencia_pausar3}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_pausar3.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia (escenario )}
+\end{figure}
+
+\begin{description}
+    \item [Operación] VolverMenuPrincipal()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] se para la carrera jugada y se vuelve al menú principal.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de Control juego.
+            \item La carrera estaba pausada
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se destruye el objeto del menú de pausa.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Lanzar ítem (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_lanzar_item}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_lanzar_item.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Lanzar ítem (escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] LanzarItem()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] hace que el jugador lance el ítem que tiene en ese momento.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de Control juego.
+            \item Existe un objeto de jugador.
+            \item El jugador posee un item.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se crea un objeto ítem.
+            \item Se añade el objeto ítem a Contro de juego.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Mover vehículo (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_mover_vehiculo}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_mover_vehiculo.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Mover vehículo (escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] MoverVehiculo()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] mueve al personaje por el mundo 2D.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de Control juego.
+            \item Existe un objeto de jugador.        
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se modifica la posicion del objeto jugador.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Opciones (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_opciones}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_opciones.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia opciones (escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] PantallaOpciones()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] se crea y muestra la pantalla de opciones.
+    \item [Precondiciones] Ninguna.
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se crea un objeto de menú de opciones
+        \end{itemize}
+\end{description}
+
+\begin{description}
+    \item [Operación] ModificarOpciones
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] se modifican las opciones y se vuelve al menú principal.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de menú de opciones
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se aplican los cambios de opciones.
+            \item Se destruye el objeto de menú de opciones.
+        \end{itemize}
+\end{description}
+
+\subsubsection{Caso de uso: Créditos (escenario principal)}
+
+\begin{figure}[H] 
+  \label{secuencia_creditos}
+  \begin{center}
+    \includegraphics[scale=0.6]{imagenes/secuencia_creditos.png}
+  \end{center}
+  \caption{Análisis: Diagrama de secuencia Cŕeditos(escenario principal)}
+\end{figure}
+
+\begin{description}
+    \item [Operación] PantallaCréditos()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] crea y muestra la pantalla de créditos
+    \item [Precondiciones] Ninguna.
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se crea un objeto de Menú de créditos.
+        \end{itemize}
+\end{description}
+
+\begin{description}
+    \item [Operación] SeleccionarMenu()
+    \item [Actores] Jugador, sistema.
+    \item [Responsabilidades] destruye la pantalla de créditos y vuelve el menú principal.
+    \item [Precondiciones] $\quad$
+        \begin{itemize}
+            \item Existe un objeto de Menú de créditos.
+        \end{itemize}
+    \item [Postcondiciones] $\quad$
+        \begin{itemize}
+            \item Se destruye el objeto de Menú de créditos.
+        \end{itemize}
+\end{description}
