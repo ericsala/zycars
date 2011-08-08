@@ -24,10 +24,11 @@ ventanas que el usuario encontrará en el sistema:
 
 \begin{description}
     \item \textbf{Ventana de introducción} En esta primera ventana se mostrará únicamente el logotipo del juego, situando al usuario en
-    contexto para introducirlo en la ejecución de la apliación.
+    contexto para introducirlo en la ejecución de la aplicación.
     
-    \item \textbf{Ventana de menú principal} La ventana del menú principal muestra el menú de inicio de \emph{Zycars}, asi como 
-    todas las opciones generales del juego diponibles, que son las siguientes:
+    \item \textbf{Ventana de menú principal} La ventana del menú principal
+    muestra el menú de inicio de \emph{Zycars}, así como 
+    todas las opciones generales del juego disponibles, que son las siguientes:
         \begin{itemize}
             \item Carrera Rápida
             \item Campeonato
@@ -35,10 +36,11 @@ ventanas que el usuario encontrará en el sistema:
             \item Opciones
             \item Salir
         \end{itemize}
-        En este menú y en los siguiente que se describan se usará el raton para navegar por ellos y solo será necesario
-        un click sobre la opción deseada para acceder a ella.
+        En este menú y en los siguiente que se describan se usará el ratón para navegar por ellos y solo será necesario
+        hacer click sobre la opción deseada para acceder a ella.
     
-    \item \textbf{Ventana de opciones} Desde la ventana de opciones se podrán modificar las distintas carácteristicas de la 
+    \item \textbf{Ventana de opciones} Desde la ventana de opciones se podrán
+    modificar las distintas características de la 
     configuración del juego como el audio o controles. Esta ventana se podría dividir en tres partes diferencias que se indican
     a continuación:
         \begin{itemize}
@@ -48,7 +50,7 @@ ventanas que el usuario encontrará en el sistema:
             \item Opciones de pantalla: a través de esta ventana podremos activar o desactivar el modo de pantalla completa.
             
             \item Opciones de control: en esta ventana podremos modificar los controles del juego. Tanto de dirección, lanzamiento
-            de items y pausa del juego.
+            de ítems y pausa del juego.
         \end{itemize}
     
     \item \textbf{Ventana de selección de personaje} Esta ventana será compartida por los tres modos de juego disponibles. En ella 
@@ -63,16 +65,18 @@ ventanas que el usuario encontrará en el sistema:
     del circuito seleccionado en el momento.
     
     \item \textbf{Ventana de juego} Ventana principal de todo el juego. Mostrará la carrera actual que se esté disputando, así como
-    los distinto marcadores aclaratorios sobre el estado de la carrera, como pueden ser posiciones de los jugades, item actual y
-    tiempos de carrera. Según la tecla índicada en los controles del menú de opciones (ESC o p) se podrá acceder al menú
+    los distinto marcadores aclaratorios sobre el estado de la carrera, como
+    pueden ser posiciones de los jugadores, ítem actual y
+    tiempos de carrera. Según la tecla indicada en los controles del menú de opciones (ESC o p) se podrá acceder al menú
     de pausa del juego.
     
     \item \textbf{Ventana de pausa} Únicamente accesible desde la ventana de juego. Esta nos permitirá detener el juego en curso, 
-    siendo posible reaundar el juego, reiniciar el mismo o volver al menú principal.
+    siendo posible reanudar el juego, reiniciar el mismo o volver al menú principal.
     
     \item \textbf{Ventana de posiciones de carrera} Ventana mostrada al terminar alguna de las carreras. En ella nos muestra el 
-    resultado de la última carrera disputada. Nos pertime continuar al siguiente circuito, en el caso del modo campeonato, o seguir
-    hacia el menú principal, en el modo carrera rápida. También se nos permite reniciar la última carrera disputada.
+    resultado de la última carrera disputada. Nos permite continuar al siguiente circuito, en el caso del modo campeonato, o seguir
+    hacia el menú principal, en el modo carrera rápida. También se nos permite
+    reiniciar la última carrera disputada.
     
     \item \textbf{Ventana de posiciones de campeonato} Ventana mostrada en el modo campeonato tras la ventana de posiciones 
     de carrera, en ella se nos muestra las posiciones de los competidores en el campeonato actual.
@@ -99,7 +103,7 @@ Los requisitos funcionales que el sistema debe ofrecer son los siguientes:
     \item Seleccionar cualquiera de los campeonatos disponibles.
     \item Reiniciar cualquier carrera una vez terminada o en curso.
     \item Reiniciar cualquier campeonato una vez terminado o en curso.
-    \item Lanzamientos de items durante cualquier carrera.
+    \item Lanzamientos de ítems durante cualquier carrera.
 \end{itemize}
 
 \paragraph{}
@@ -129,10 +133,10 @@ Existes tres modos de juego:
 El rendimiento de la aplicación debe ser tal que permita un desempeño agradable de juego. 
 
 \begin{itemize}
-    \item Por lo que la respuesta a las acciones realizadas por el usuario deben ser respondidas lo mas rápido posible,
-    sacrificando en el caso de que sea necesesario el consumo de la memoria principal.
+    \item Por lo que la respuesta a las acciones realizadas por el usuario deben ser respondidas lo más rápido posible,
+    sacrificando en el caso de que sea necesario el consumo de la memoria principal.
     
-    \item La inteligencia artificial debe estar optimizada de forma que no se realentice la partida en el tiempo dedicado a los
+    \item La inteligencia artificial debe estar optimizada de forma que no se ralentice la partida en el tiempo dedicado a los
     cálculos necesarios para tomar decisiones.
 \end{itemize}
     
@@ -147,7 +151,7 @@ memoria principal o secundaria. Esta será la principal restricción de diseño 
 Los videojuegos están pensados como aplicación principal, de forma que no tenga que compartir recursos con otros procesos,
 por lo que se permitirá que consuma muchos recursos del sistema.
 
-\subsection{Resquisitos del sistema software}
+\subsection{Requisitos del sistema software}
 
 \paragraph{}
 La aplicación deberá cumplir los siguiente requisitos del sistema:
@@ -159,9 +163,10 @@ La aplicación deberá cumplir los siguiente requisitos del sistema:
         \item \textbf{GNU/Linux}: usando la distribución Ubuntu 10.10 como principal sistema para pruebas.
     \end{itemize}
     
-    \item El código con el que se desarrolle la aplicación no debe ser dependiente del sistema en el que se desarolle.
+    \item El código con el que se desarrolle la aplicación no debe ser
+    dependiente del sistema en el que se desarrolle.
     
-    \item El código debe ser mantenible y facilmente ampliable para futuras versiones.
+    \item El código debe ser mantenible y fácilmente ampliable para futuras versiones.
 \end{itemize}
 
 %%%%%%%%%%%%%%%% MODELO DE CASOS DE USO %%%%%%%%%%%%%%%%%%%%%%%
@@ -179,8 +184,8 @@ siguiente esquema:
 
 \begin{enumerate}
     \item Identificar los usuarios del sistema y los roles que pueden tener.
-    \item Para cada rol, identifiar las distintas formas de interecturar en el sistema. En el caso de \emph{Zycars} existe
-    un único rol de acceso a la aplicación, por lo que la espeficicación del usuario será única.
+    \item Para cada rol, identificar las distintas formas de interactuar en el sistema. En el caso de \emph{Zycars} existe
+    un único rol de acceso a la aplicación, por lo que la especificación del usuario será única.
     \item Creación de los casos de uso para todos los objetivos que queramos cumplir.
     \item Estructurar dichos casos de uso.
 \end{enumerate}
@@ -196,14 +201,15 @@ siguiente esquema:
 \subsection{Descripción de los casos de uso}
 
 \paragraph{}
-A continuación pasamos a la descripción de cada uno de los casoa de uso, para la cual usaremos una notación forma usando plantillas.
+A continuación pasamos a la descripción de cada uno de los casos de uso, para la cual usaremos una notación forma usando plantillas.
 El texto debe ser legible y comprendido por un usuario que no sea experto.
 
 \subsubsection{Caso de uso: Menú principal}
 
 \begin{description}
     \item[Caso de uso] Menú principal
-    \item[Descripción] Se muestra el menú principal de la aplicacion, donde es posible elegir uno de los modos de juego disponibles
+    \item[Descripción] Se muestra el menú principal de la aplicación, donde es
+    posible elegir uno de los modos de juego disponibles
     o acceder al menú de opciones.
     \item[Actores] Usuario
     \item[Precondiciones] Ninguna
@@ -229,17 +235,17 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
             %    \item El sistema inicia el modo de elección de personaje
             %\end{enumerate}
             
-            \item[2a ] El usuario seleccion la opción \textbf{opciones}.
+            \item[2a ] El usuario selección la opción \textbf{opciones}.
             \begin{enumerate}
                 \item El sistema inicia las opciones
             \end{enumerate}
             
-            \item[2b ] El usuario seleccion la opción \textbf{créditos}.
+            \item[2b ] El usuario selección la opción \textbf{créditos}.
             \begin{enumerate}
                 \item El sistema inicia la opción créditos
             \end{enumerate}
             
-            \item[2c ] El usuario seleccion la opción \textbf{salir}.
+            \item[2c ] El usuario selección la opción \textbf{salir}.
             \begin{enumerate}
                 \item El sistema sale de la aplicación.
             \end{enumerate}
@@ -292,11 +298,11 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Precondiciones] El usuario ha elegido previamente en el menú principal una de las opciones: \textbf{carrera rápida} 
     o \textbf{contrarreloj} y ya ha seleccionado un personaje.
     
-    \item[Postcondiciones] Se selecciona un circuitp y se almacena en la configuración del juego.
+    \item[Postcondiciones] Se selecciona un circuito y se almacena en la configuración del juego.
     \item[Escenario principal] $\quad$
         \begin{enumerate}
             \item El usuario desea seleccionar el circuito en el que competir.
-            \item El sistem muestra todos los circuitos disponibles (icono e imagen) para cada campeonato.
+            \item El sistema muestra todos los circuitos disponibles (icono e imagen) para cada campeonato.
             \item El usuario selecciona un circuito y pulsa aceptar
             \item El sistema almacena el circuito en la configuración del sistema.
             \item El sistema accede a la pantalla de jugar carrera.
@@ -304,7 +310,7 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
             \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
-            \item[*b ] El usuario pulsa la opcion cancelar.
+            \item[*b ] El usuario pulsa la opción cancelar.
             \begin{enumerate}
                 \item El sistema vuelve a la selección de personaje.
             \end{enumerate}
@@ -331,7 +337,7 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
             \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
-            \item[*b ] El usuario pulsa la opcion cancelar.
+            \item[*b ] El usuario pulsa la opción cancelar.
             \begin{enumerate}
                 \item El sistema vuelve a la selección de personaje.
             \end{enumerate}
@@ -350,7 +356,7 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
         \begin{enumerate}
             \item El sistema carga el circuito, el jugador, inteligencia artificial y los ítems.
             \item El sistema muestra la pantalla de juego.
-            \item El usuario y el sistema interactuan durante la carrera.
+            \item El usuario y el sistema interactúan durante la carrera.
             \item El usuario completa la carrera.
             \item El sistema muestra las posiciones finales de la carrera.
             \item El usuario pulsa continuar.
@@ -378,8 +384,8 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
         \begin{enumerate}
             \item El usuario pulsa el botón de pausa.
             \item El sistema detiene todos los elementos del juego y muestra el menú de pausa.
-            \item El usuario pulsa la opción reaundar.
-            \item El sistema reaunda la carrera.
+            \item El usuario pulsa la opción reanudar.
+            \item El sistema reanudar la carrera.
         \end{enumerate}
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
@@ -435,35 +441,36 @@ El texto debe ser legible y comprendido por un usuario que no sea experto.
         \begin{description}
             \item[*a ] El usuario cierra la ventana de la aplicación y sale de la aplicación
             \item[1a ] El usuario pulsa las teclas de dirección a la vez que avanza. D o Flecha hacia la derecha, para girar
-            a la derecha o, A o Felcha hacia la izquierda, para girar a la izquierda.
+            a la derecha o, A o Flecha hacia la izquierda, para girar a la izquierda.
                 \begin{enumerate}
                     \item El sistema gira al coche hacia la zona deseada.
                 \end{enumerate}
-            \item[3a ] El sistema detecta que ha colisionado con un competidor o con algun obstáculo.
+            \item[3a ] El sistema detecta que ha colisionado con un competidor
+            o con algún obstáculo.
                 \begin{enumerate}
                     \item El sistema corrige la posición del vehículo.
                 \end{enumerate}
         \end{description}
 \end{description}
 
-\subsubsection{Caso de uso: Jugar campenato}
+\subsubsection{Caso de uso: Jugar campeonato}
 
 \begin{description}
     \item[Caso de uso] Jugar campeonato
     \item[Descripción] El usuario juega un campeonato.
     \item[Actores] Usuario
-    \item[Precondiciones] El usuario selección previamente la opcion \textbf{campeonato} en el menú principal.
+    \item[Precondiciones] El usuario selección previamente la opción \textbf{campeonato} en el menú principal.
     \item[Postcondiciones] Se juega un campeonato.
     
     \item[Escenario principal] $\quad$
         \begin{enumerate}
-            \item El usuario desea jugar un campenato
+            \item El usuario desea jugar un campeonato
             \item El sistema carga el circuito actual
-            \item El sistema y usuario interactuan en la carrera. Include Jugar carrera.
+            \item El sistema y usuario interactúan en la carrera. Include Jugar carrera.
             \item Una vez terminada la carrera el sistema muestras las posiciones del campeonato.
-            \item El usuario seleccion la opción continuar.
+            \item El usuario selección la opción continuar.
             \item El sistema pasar al siguiente circuito.
-            \item Volvermos al punto 2.
+            \item Volveremos al punto 2.
         \end{enumerate}
     \item[Extensiones --- flujo alternativo] $\quad$
         \begin{description}
@@ -590,7 +597,7 @@ las clases habrá una pequeña descripción sobre la labro que desempeña cada u
     \item [Menú opciones] Clase que gestiona el menú de opciones.
     \item [Menú de pausa] Clase que gestiona el menú de pausa.
     \item [Cursor] Cursor de los menús.
-    \item [Boton] Clase que representa el botón en los menús.
+    \item [Botón] Clase que representa el botón en los menús.
     
     \item [Modo de juego] Clase virtual, con las necesidades básicas de los distintos modos de juego.
     \item [Carrera rápida] Clase que gestiona el modo de juego carrera rápida.
@@ -605,14 +612,20 @@ las clases habrá una pequeña descripción sobre la labro que desempeña cada u
     \item [Gestor de colisiones] Clase encargada de detectar y gestionar las colisiones.
     
     \item [Objeto de juego] Clase virtual con las necesidades básicas de los objetos del juego.
-    \item [Caja de item] Clase que representa las cajas que proporcionan items a los jugadores.
+    \item [Caja de ítem] Clase que representa las cajas que proporcionan ítems a los jugadores.
     \item [Vehículo básico] Clase virtual con las necesidades básicas de los vehículos del juego.
     \item [IA] Clase que representa el comportamiento de los vehículos controlados por inteligencia artificial.
     \item [Jugador] Clase que que representa al vehículo controlado por el jugador.
 \end{description}
 
 \paragraph{}
-En la siguiente imagen podemos ver el diagrama de clases asociado a los requisitos obtenidos:
+En las siguientes imágenes podemos ver los diagrama de clases asociado a los requisitos obtenidos. Por razones de espacio en el
+documento y para una mejor apreciación de las clases necesarias, se ha visto conveniente dividir en dos partes diferenciadas
+principalmente.
+
+\paragraph{}
+La primera figura muestra el primer diagrama las clases relacionadas con las pantalla de juego, como pueden ser menús y 
+modos de juego.
 
 \begin{figure}[H]
   \label{diagrama_clases_conceptuales}
@@ -621,6 +634,10 @@ En la siguiente imagen podemos ver el diagrama de clases asociado a los requisit
   \end{center}
   \caption{Análisis: Diagrama de clases conceptuales 1}
 \end{figure}
+
+\paragraph{}
+En la segunda figura vemos el diagrama de clases referente a las clases principales que intervienen en la gestión de la pantalla
+de juego.
 
 \begin{figure}[H]
   \label{diagrama_clases_conceptuales}
@@ -651,17 +668,17 @@ consta de dos partes:
 \subsection{Diagramas de secuencia y contrato de las operaciones del sistema.}
 
 \paragraph{}
-No todos los posibles diagramas de secuencia aparecerán, nos centraremos en los mas importantes, los que implican algún tipo de 
+No todos los posibles diagramas de secuencia aparecerán, nos centraremos en los más importantes, los que implican algún tipo de 
 cambio en el sistema.
 
-\subsubsection{Caso de uso: Menu principal(escenario principal)}
+\subsubsection{Caso de uso: Menú principal(escenario principal)}
 
 \begin{figure}[H]
   \label{secuencia_menu_principal1}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_menu_principal1.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_menu_principal1.png}
   \end{center}
-  \caption{Análisis: Diagrama de secuencia Menu principal (escenario principal)}
+  \caption{Análisis: Diagrama de secuencia Menú principal (escenario principal)}
 \end{figure}
 
 \begin{description}
@@ -690,14 +707,14 @@ cambio en el sistema.
         \end{itemize}
 \end{description}
 
-\subsubsection{Caso de uso: Menu principal(escenario 2a)}
+\subsubsection{Caso de uso: Menú principal(escenario 2a)}
 
 \begin{figure}[H]
   \label{secuencia_menu_principal2}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_menu_principal2.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_menu_principal2.png}
   \end{center}
-  \caption{Análisis: Diagrama de secuencia Menu principal (escenario 2a)}
+  \caption{Análisis: Diagrama de secuencia Menú principal (escenario 2a)}
 \end{figure}
 
 \begin{description}
@@ -714,14 +731,14 @@ cambio en el sistema.
         \end{itemize}
 \end{description}
 
-\subsubsection{Caso de uso: Menu principal(escenario 2b)}
+\subsubsection{Caso de uso: Menú principal(escenario 2b)}
 
 \begin{figure}[H] 
   \label{secuencia_menu_principal3}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_menu_principal3.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_menu_principal3.png}
   \end{center}
-  \caption{Análisis: Diagrama de secuencia Menu principal (escenario 2b)}
+  \caption{Análisis: Diagrama de secuencia Menú principal (escenario 2b)}
 \end{figure}
 
 \begin{description}
@@ -738,14 +755,14 @@ cambio en el sistema.
         \end{itemize}
 \end{description}
 
-\subsubsection{Caso de uso: Menu principal(escenario 2c)}
+\subsubsection{Caso de uso: Menú principal(escenario 2c)}
 
 \begin{figure}[H] 
   \label{secuencia_menu_principal4}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_menu_principal4.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_menu_principal4.png}
   \end{center}
-  \caption{Análisis: Diagrama de secuencia Menu principal (escenario 2c)}
+  \caption{Análisis: Diagrama de secuencia Menú principal (escenario 2c)}
 \end{figure}
 
 \begin{description}
@@ -767,7 +784,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_elegir_personaje}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_elegir_personaje1.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_elegir_personaje1.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia Elegir personaje (escenario principal)}
 \end{figure}
@@ -779,7 +796,7 @@ cambio en el sistema.
     \item [Precondiciones] Ninguna
     \item [Postcondiciones] $\quad$
         \begin{itemize}
-            \item Crea un objeto de la clase Menu personaje.
+            \item Crea un objeto de la clase Menú personaje.
         \end{itemize}
 \end{description}
 
@@ -789,13 +806,13 @@ cambio en el sistema.
     \item [Responsabilidades] marca un personaje como seleccionado
     \item [Precondiciones] $\quad$
         \begin{itemize}
-            \item Existe un objeto del menu de personaje.
+            \item Existe un objeto del menú de personaje.
             \item Existe el personaje seleccionado.
         \end{itemize}
     \item [Postcondiciones] $\quad$
         \begin{itemize}
             \item Se marca el personaje como seleccionado.
-            \item Se destruye el objeto del menu de personaje.
+            \item Se destruye el objeto del menú de personaje.
         \end{itemize}
 \end{description}
 
@@ -804,7 +821,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_elegir_circuito}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_elegir_circuito.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_elegir_circuito.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia Elegir circuito (escenario principal)}
 \end{figure}
@@ -840,7 +857,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_elegir_campeonato}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_elegir_campeonato.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_elegir_campeonato.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia Elegir campeonato (escenario principal)}
 \end{figure}
@@ -848,11 +865,11 @@ cambio en el sistema.
 \begin{description}
     \item [Operación] PantallaElegirCampeonato()
     \item [Actores] Jugador, sistema.
-    \item [Responsabilidades] crea y muestra la pantalla de seleccion de campeonato
+    \item [Responsabilidades] crea y muestra la pantalla de selección de campeonato
     \item [Precondiciones] Ninguna.
     \item [Postcondiciones] $\quad$
         \begin{itemize}
-            \item Crea un objeto de la clase menu campeonato.
+            \item Crea un objeto de la clase menú campeonato.
         \end{itemize}
 \end{description}
 
@@ -876,7 +893,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_jugar}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_jugar.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_jugar.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia Jugar carrera (escenario principal)}
 \end{figure}
@@ -914,9 +931,9 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_pausar1}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_pausar1.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_pausar1.png}
   \end{center}
-  \caption{Análisis: Diagrama de secuencia Pausr(escenario principal)}
+  \caption{Análisis: Diagrama de secuencia Pausar(escenario principal)}
 \end{figure}
 
 \begin{description}
@@ -930,7 +947,7 @@ cambio en el sistema.
         \end{itemize}
     \item [Postcondiciones]
         \begin{itemize}
-            \item Se crea un objeto de Menu de pausa.
+            \item Se crea un objeto de Menú de pausa.
         \end{itemize}
 \end{description}
 
@@ -954,7 +971,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_pausar2}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_pausar2.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_pausar2.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia Pausar (escenario *b)}
 \end{figure}
@@ -980,7 +997,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_pausar3}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_pausar3.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_pausar3.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia (escenario )}
 \end{figure}
@@ -1005,7 +1022,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_lanzar_item}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_lanzar_item.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_lanzar_item.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia Lanzar ítem (escenario principal)}
 \end{figure}
@@ -1018,12 +1035,12 @@ cambio en el sistema.
         \begin{itemize}
             \item Existe un objeto de Control juego.
             \item Existe un objeto de jugador.
-            \item El jugador posee un item.
+            \item El jugador posee un ítem.
         \end{itemize}
     \item [Postcondiciones] $\quad$
         \begin{itemize}
             \item Se crea un objeto ítem.
-            \item Se añade el objeto ítem a Contro de juego.
+            \item Se añade el objeto ítem a Control de juego.
         \end{itemize}
 \end{description}
 
@@ -1032,7 +1049,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_mover_vehiculo}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_mover_vehiculo.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_mover_vehiculo.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia Mover vehículo (escenario principal)}
 \end{figure}
@@ -1048,7 +1065,7 @@ cambio en el sistema.
         \end{itemize}
     \item [Postcondiciones] $\quad$
         \begin{itemize}
-            \item Se modifica la posicion del objeto jugador.
+            \item Se modifica la posición del objeto jugador.
         \end{itemize}
 \end{description}
 
@@ -1057,7 +1074,7 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_opciones}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_opciones.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_opciones.png}
   \end{center}
   \caption{Análisis: Diagrama de secuencia opciones (escenario principal)}
 \end{figure}
@@ -1093,9 +1110,9 @@ cambio en el sistema.
 \begin{figure}[H] 
   \label{secuencia_creditos}
   \begin{center}
-    \includegraphics[scale=0.6]{imagenes/analisis/secuencia_creditos.png}
+    \includegraphics[scale=0.7]{imagenes/analisis/secuencia_creditos.png}
   \end{center}
-  \caption{Análisis: Diagrama de secuencia Cŕeditos(escenario principal)}
+  \caption{Análisis: Diagrama de secuencia Créditos(escenario principal)}
 \end{figure}
 
 \begin{description}

@@ -1,20 +1,23 @@
 
 \paragraph{}
 El diseño de casos de pruebas para un videojuego es algo complicado, no sólo para \emph{Zyars}, si no para la mayoría de los
-distintos tipos de videojuegos existentes. Esto se debe a que estamos en un escenario simulando como interactuan muchísimos 
+distintos tipos de videojuegos existentes. Esto se debe a que estamos en un
+escenario simulando como interactúan muchísimos 
 elementos entre sí. Pero las pruebas son algo necesario si deseamos un software con una calidad aceptable.
 
 \paragraph{}
-Practicamente todos los módulos que componen la aplicación han sido probados individualmente, como pueden ser aquellos módulos 
+Prácticamente todos los módulos que componen la aplicación han sido probados individualmente, como pueden ser aquellos módulos 
 encargados de la gestión de colisiones, la inteligencia artificial, gestión de las carreras.
 
 \paragraph{}
-También se realizaron pruebas de integración, ya que habia módulos, una vez probado en solitario, debían realizar distintas acciones 
+También se realizaron pruebas de integración, ya que había módulos, una vez probado en solitario, debían realizar distintas acciones 
 junto con otros módulos. Como puede ser la búsqueda A* o el modulo de configuración.
 
 \paragraph{}
-Otras pruebas que se realizaron fueron las de jugabilidad, tanto yo como personjas ajenas al desarrollo de proyecto probaron el 
-mismo ofreciendo sus opiniones sobre aspectos que deberían ser modificados o errores que aparencian a lo largo de la ejecución
+Otras pruebas que se realizaron fueron las de jugabilidad, tanto yo como
+personas ajenas al desarrollo de proyecto probaron el 
+mismo ofreciendo sus opiniones sobre aspectos que deberían ser modificados o
+errores que aparecían a lo largo de la ejecución
 del juego.
 
 \paragraph{}
@@ -41,12 +44,12 @@ módulo, teniendo en cuenta aquellos que fueran más predispuesto a fallos.
 
 \paragraph{}
 De esta forma todas las sentencias se ejecutaban como mínimo una vez y los posibles fallos se encontraban de una forma más sencilla.
-Por lo que también eran mas facil localizar donde estbaba el problema y afronta la solución de este.
+Por lo que también eran más fácil localizar donde estaba el problema y afronta la solución de este.
 
 \section{Pruebas de integración}
 
 \paragraph{}
-Conforme aparecian nuevos módulos, cuya implementación era necesaria y a su vez estos requerían el uso de otro módulos que 
+Conforme aparecían nuevos módulos, cuya implementación era necesaria y a su vez estos requerían el uso de otro módulos que 
 posteriormente habían sido probados individualmente, se realizaban pruebas de integración entre dichos módulos.
 
 \paragraph{}
@@ -55,19 +58,22 @@ del mis sistema, sino entre varios sistemas del juego.
 
 \paragraph{}
 En este apartado los principales problemas se encontraron a la hora de integrar todas las pantallas del juego, como pueden ser todos
-los menús, los modos de juego y la pantalla de juego en sí. Pero la resolución de los errores que aparecian no tuvieron gran 
+los menús, los modos de juego y la pantalla de juego en sí. Pero la resolución
+de los errores que aparecían no tuvieron gran 
 dificultad.
 
 \section{Pruebas de jugabilidad}
 
 \paragraph{}
-Cada vez que estaban disponibles nuevas versiones jugables del juego, se pedian la ayuda a personas, totalmente ajenas al desarrollo
+Cada vez que estaban disponibles nuevas versiones jugables del juego, se pedían la ayuda a personas, totalmente ajenas al desarrollo
 de la aplicación, que probaran las distintas demos disponibles. De esta forma cada uno de los colaboradores daba su opinión sobre
 distintos aspectos como la jugabilidad, dificultad, respuesta del juego o nivel de la inteligencia artificial. Tras recopilar la
-información que todos ellos proporcionaron, se procedía a realizar los ajustes necesarios a los distintos parametros requeridos.
+información que todos ellos proporcionaron, se procedía a realizar los ajustes
+necesarios a los distintos parámetros requeridos.
 
 \paragraph{}
-Entre los distintos aspectos a probar que se le recomendaban a los colaboradores que hicieran especial incapié, son los siguiente:
+Entre los distintos aspectos a probar que se le recomendaban a los
+colaboradores que hicieran especial hincapié, son los siguiente:
 
 \begin{itemize}
     \item \textbf{Colisiones con escenario}: se les pedía que comprobarán que era imposible atravesar los objetos colisionables
@@ -96,17 +102,17 @@ Entre los distintos aspectos a probar que se le recomendaban a los colaboradores
 La mayor parte de las personas que probaron el juego, opinaron que este tenía la dificultad necesaria para que el juego fuera un 
 reto competir contra la inteligencia artificial, pero no hasta el punto de que fuera imposible vencer a esta. Aun así aconsejaron
 adaptar las velocidad de los distintos vehículos disponibles, para que la diferencia entre estos fuera menor y la posibilidad
-de adelantamientos fuera mayor. Tras relizar los cambios propuesto, los colaboradores se mostraron más contentos con los resultados.
+de adelantamientos fuera mayor. Tras realizar los cambios propuesto, los colaboradores se mostraron más contentos con los resultados.
 
 \section{Pruebas de interfaz}
 
 \paragraph{}
 Conforme se realizaban las distintas pantallas referentes a los menús que podemos encontrar en el juego, se realizaban pruebas 
 exhaustivas sobre estas. Sobre todo se comprobaban que las interfaces fueran intuitivas y claras. Así como probar a cambiar 
-valores erroneos de elementos que podríamos encontrar en el menú de opciones o a la hora de seleccionar las vueltas de carrera.
+valores erróneos de elementos que podríamos encontrar en el menú de opciones o a la hora de seleccionar las vueltas de carrera.
 
 \paragraph{}
-Se hizo especial incapié en las siguientes pantallas:
+Se hizo especial hincapié en las siguientes pantallas:
 
 \begin{itemize}
     \item \textbf{Menú principal}: comprobar si se accedía correctamente a las distintas opciones disponibles.
@@ -114,12 +120,12 @@ Se hizo especial incapié en las siguientes pantallas:
     \item \textbf{Menú de opciones}: se modificaban las opciones sin problemas y sin poder añadir valor errores, tras aceptar
     los cambios, estos se aplicaban correctamente.
     
-    \item \textbf{M. seleccion de personaje}: se elegía el personaje deaseado correctamente.
+    \item \textbf{Menú de selección de personaje}: se elegía el personaje deseado correctamente.
     
-    \item \textbf{M. selección de circuito}: se elegía correctamente el circuito deseado y la modificación del número de vueltas
+    \item \textbf{Menú de selección de circuito}: se elegía correctamente el circuito deseado y la modificación del número de vueltas
     se hacia correctamente.
 \end{itemize}
 
 \paragraph{}
 Se comprobó que la interfaz era bastante solida y no era necesario ningún manual de usuario para poder navegar sobre ella. El 
-sistema de opciones no admite valores erroneos.
+sistema de opciones no admite valores erróneos.

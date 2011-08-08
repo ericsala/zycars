@@ -1,5 +1,6 @@
 \paragraph{}
-En \emph{Zycars} es posible añadir nuevos personajes por cualquier persona, siguiengo unos pasos muy sencillos,
+En \emph{Zycars} es posible añadir nuevos personajes por cualquier persona,
+siguiendo unos pasos muy sencillos,
 sin necesidad de tocar una sola linea de código.
 
 \paragraph{}
@@ -7,14 +8,15 @@ A continuación se detallan los distintos pasos que debemos llevar a cabo para a
 al juego.
 
 %%%%%%%%%%%%%%%%%%%%% IMAGENES NECESARIAS %%%%%%%%%%%%%%%%%%%%%%%
-\section{Imagenes necesarias}
+\section{Imágenes necesarias}
 
 \paragraph{}
-En primer lugar deberemos recopilar todas las imagenes necesarias para las distinas pantallas en las que sale el personaje, a 
-continuación se explican las características que deben tener esas imagenes.
+En primer lugar deberemos recopilar todas las imágenes necesarias para las
+distintas pantallas en las que sale el personaje, a 
+continuación se explican las características que deben tener esas imágenes.
 
 \paragraph{}
-Anter de comenzar, dejar claro que todas las imagenes deben tener formato ''.png'', con cualquier otro formato se pueden tener 
+Antes de comenzar, dejar claro que todas las imágenes deben tener formato ''.png'', con cualquier otro formato se pueden tener 
 problemas a la hora de ejecutar el juego.
 
 \subsubsection{Vehículo del jugador}
@@ -27,7 +29,7 @@ nuevo personaje añadido.
 Por su puesto debe representar la imagen de un coche visto desde arriba, la imagen debe estar en horizontal con la parte delantera
 del coche mirando hacia la derecha. La dimensiones que debe tener esta imagen son 47 píxeles de ancho y 24 píxeles de alto como 
 máximo, cualquier imagen que tenga menor medida que las anterior dadas, no habrá ningún problema. Aunque hay que tener cuidado de no
-añadir una imagen demasiado pequeña, para que se pueda ver correctamente. A continuación se muestra un ejemplo para que quede mas 
+añadir una imagen demasiado pequeña, para que se pueda ver correctamente. A continuación se muestra un ejemplo para que quede más 
 claro:
 
 \begin{figure}[H]
@@ -59,7 +61,7 @@ ancho por 246 píxeles de alto. A continuación un ejemplo:
   \begin{center}
     \includegraphics[scale=0.5]{imagenes/ejemplo_personaje.png}
   \end{center}
-  \caption{Manual para añadir personajes: Ejemplo de imagen de corredo.}
+  \caption{Manual para añadir personajes: Ejemplo de imagen de corredor.}
 \end{figure}
 
 \paragraph{}
@@ -69,7 +71,7 @@ La imagen debemos añadirla a la carpeta Zycars/multimedia/image/character.
 
 \paragraph{}
 Los avatares los usaremos para representar al jugador en el menú de selección, y también al jugador en carrera. Para ello son 
-necesario dos avatares, ambas imagenes son idénticas y lo único que las diferencia son el tamaño que deben tener. La imagen debe
+necesario dos avatares, ambas imágenes son idénticas y lo único que las diferencia son el tamaño que deben tener. La imagen debe
 mostrar el rostro claro del corredor.
 
 \paragraph{}
@@ -92,15 +94,15 @@ un corredor seria el siguiente.
 La imagen debemos añadirla a la carpeta Zycars/multimedia/image/character.
 
 %%%%%%%%%%%%%%%%%%%%%% AÑADIR RECURSOS %%%%%%%%%%%%%%%%%%%%%%
-\section{Añadir imagenes a los recursos del juego}
+\section{Añadir imágenes a los recursos del juego}
 
 \paragraph{}
-Una vez que hemos reunido todas las imagenes necesarias del nuevo corredor que deseamos añadir, el siguiente paso será indicar
-dichas imagenes como recursos del juego para que se puedan usar sin problemas durante la ejecución de este.
+Una vez que hemos reunido todas las imágenes necesarias del nuevo corredor que deseamos añadir, el siguiente paso será indicar
+dichas imágenes como recursos del juego para que se puedan usar sin problemas durante la ejecución de este.
 
 \paragraph{}
 Para ello debemos abrir el archivo llamado resources.xml que se encuentra en Zycars/xml, dicho archivo es muy extenso, ya que 
-contiende todos los recursos que hace uso el juego, ya sean imagenes, sprites o sonidos.
+contiende todos los recursos que hace uso el juego, ya sean imágenes, sprites o sonidos.
 
 \paragraph{}
 En primer lugar añadiremos la imagen que representa al vehículo, buscamos <sprites>, y justo tras de ella añadimos la siguiente 
@@ -115,7 +117,7 @@ Suponiendo que la imagen del vehículo del corredor se llama ''new\_car.png''. E
 dicho recurso, por lo que no se debe repetir.
 
 \paragraph{}
-El siguiente paso será añadir las imagenes referentes al personaje, como los avatares y el del personaje completo. Para ello en el 
+El siguiente paso será añadir las imágenes referentes al personaje, como los avatares y el del personaje completo. Para ello en el 
 fichero resources.xml buscamos la etiqueta <image> y añadimos las siguientes lineas tras esta:
 
 \begin{lstlisting}[style=XML]
@@ -130,7 +132,7 @@ Suponiendo que la imagen completa del personaje se llama ''character\_image.png'
 
 \paragraph{}
 Una vez hecho esto ya hemos añadido todos los recursos necesarios que necesita el personaje. Debemos tener cuidado de nuevo con el
-código de cada una de las imagenes y que no esteń repetidas en ningún otro recurso.
+código de cada una de las imágenes y que no estén repetidas en ningún otro recurso.
 
 %%%%%%%%%%%%%%%%%%%%% CREACION FICHERO PERSONAJE %%%%%%%%%%%%%%%%%%%%55
 \section{Creación del fichero del personaje}
@@ -169,14 +171,14 @@ Sólo debemos preocuparnos de las dos primeras lineas en las que deberemos relle
     el del avatar pequeño.
     \item \textbf{max\_speed}: Velocidad máxima del personaje, su valor debe estar entre 5.7 y 6.5.
     \item \textbf{min\_speed}: Velocidad marcha atrás del personaje, valor entre 2.8 y 3.4.
-    \item \textbf{aceleration}: Aceleración del vehículo, valor entr 0.1 y 1.
+    \item \textbf{aceleration}: Aceleración del vehículo, valor entre 0.1 y 1.
     \item \textbf{desaceleration}: Desaceleración del vehículo cuando no se acelera y ni se da marcha atrás. Valor 
     entre 0.05 y 0.1.
     \item \textbf{rotation\_angle}: Ángulo de rotación, valor recomendado entre 0.2 y 0.4.
 \end{itemize}
 
 \paragraph{}
-Una vez completado el fichero del personaje, deberemos guardarlo con extension ''.xml'' y almacenarlo en el directorio
+Una vez completado el fichero del personaje, deberemos guardarlo con extensión ''.xml'' y almacenarlo en el directorio
 zycars/xml/cars.
 
 \section{Añadir al personaje para que sea seleccionable.}
@@ -202,7 +204,7 @@ speed='' aceleration='' rotation=''/>
 \end{lstlisting}
 
 \paragraph{}
-Los distintos parametros que debemos completar se explican a continuación:
+Los distintos parámetros que debemos completar se explican a continuación:
 
 \begin{itemize}
     \item \textbf{image}: Código de la imagen del avatar grande que representa al personaje.

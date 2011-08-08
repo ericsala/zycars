@@ -82,7 +82,7 @@ avatar="avatar1" racer_image='car1'>
 \end{lstlisting}
 
 \paragraph{}
-Como podemos ver se pueden modificar los aspectos mas básico del comportamiento de los personajes, como pueden ser la velocidad 
+Como podemos ver se pueden modificar los aspectos más básico del comportamiento de los personajes, como pueden ser la velocidad 
 máxima de este, velocidad en marcha atrás, aceleración, desaceleración y angulo de giro. También todas las imagenes que representan
 al jugador.
 
@@ -116,8 +116,53 @@ superior o inferior. Para ello se debia crear una imagen con todos los tiles que
 \paragraph{}
 Este programa generaba como resultado un archivo \emph{XML}, que se procesaría posteriormente en tiempo de ejecución. También hay
 que añadir que esta opción elegida era una de las que menos nos ocuparía en memoria, ya que no es lo mismo tener un circuito 
-completo en una única imagen, ya que para un circuito demasiado grande dicha imagen ocuparía bastante memoria. Mientras
-que con esta opción tendrñiamos una imagen pequeña con el conjunto necesario de tiles para el circuito en cuestión.
+completo en una única imagen, dicha imagen sería demasiado grande y ocuparía bastante memoria. Mientras
+que con esta opción tendriamos una imagen pequeña con el conjunto necesario de tiles para el circuito en cuestión.
+
+\paragraph{}
+El formato de los XML generados por el programa son de la siguiente forma:
+
+\begin{lstlisting}[style=XML]
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="88" height="74" tilewidth="45" tileheight="45">
+ <properties>
+  <property name="ancho_meta" value="5"/>
+  <property name="ancho_pista" value="5"/>
+  <property name="collision_map" value="collisionmapgarden.png"/>
+  <property name="grado_coche" value="270"/>
+  <property name="tileset_alto" value="35"/>
+  <property name="tileset_ancho" value="21"/>
+ </properties>
+ <tileset firstgid="1" name="tilesetgarden" tilewidth="45" tileheight="45">
+  <image source="tilesetgarden.png" width="945" height="1575"/>
+ </tileset>
+ <layer name="Capa 1" width="88" height="74">
+  <data>   
+   <tile gid="1"/>
+   <tile gid="2"/>
+   ....
+  </data>   
+ </layer>
+ <layer name="Capa 2" width="88" height="74">
+  <data>
+   <tile gid="0"/>
+   <tile gid="0"/>
+   ...
+ </layer>
+ <layer name="Capa 3" width="88" height="74">
+  <data>
+   <tile gid="74"/>
+   <tile gid="75"/>
+   ...
+  </data>
+ </layer>
+ <objectgroup name="checkpoints" width="88" height="74" opacity="0.2">
+  <object name="1" type="Horizontal" x="180" y="1035" width="45" height="45"/>
+  <object name="1" type="check" x="450" y="225" width="45" height="45"/>
+  <object name="2" type="check" x="2205" y="405" width="45" height="45"/>
+ </objectgroup>
+</map>
+\end{lstlisting}
 
 \paragraph{}
 Una de las únicas cosas que no propocionaba el programa era poder indicar cuales de los tiles eran colisionables, atravesables o
@@ -175,7 +220,7 @@ ser desde dos vehículos entre si, o algún vehículo por algun item lanzado por
 
 \paragraph{}
 Indicar que cada uno de los objetos que intervienen en el juego y puede colisionar con cualquier elemento, tienen
-un rectangulo asociado a su forma, de manera que sea mas sencilla la detección de colisiones.
+un rectangulo asociado a su forma, de manera que sea más sencilla la detección de colisiones.
 
 \paragraph{}
 En las siguiente subsecciones se explicará cuales son las soluciones que se llevaron a cabo para la gestión de las colisiones 

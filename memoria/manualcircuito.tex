@@ -14,14 +14,16 @@ Para descargarlo, nos vamos a la página principal de la aplicación: http://www
 página podemos encontrar las distintas versiones de la aplicación para los sistemas operativos Windows y MAC OS X.
 
 \paragraph{}
-Si deseamos usar la aplicación en alguna distribucion GNU/Linux deberemos bajarmos los fuentes de esta, pinchando en el enlace
+Si deseamos usar la aplicación en alguna distribución GNU/Linux deberemos
+bajarnos los fuentes de esta, pinchando en el enlace
 \textbf{Tiled Qt 0.7.0 source}.
 
 \subsubsection{Instalación}
 
 \paragraph{}
-Para la instalación de Tiled en windows, únicamente deberemos ejecutar el archivo ejecutable que peviamente hemos descargado
-previamente y seguir los pasos que se nos insdica en el gestor de instalación.
+Para la instalación de Tiled en windows, únicamente deberemos ejecutar el
+archivo ejecutable que previamente hemos descargado
+previamente y seguir los pasos que se nos indica en el gestor de instalación.
 
 \paragraph{}
 Si deseamos ejecutar la aplicación en GNU/Linux, deberemos descomprimir el archivo descargado y acceder a la carpeta generada, 
@@ -90,7 +92,7 @@ de izquierda a derecha.
 
 \paragraph{}
 Esta será la zona donde iremos dibujando el circuito con los tiles disponibles en el tileset. Podremos hacer uso de las capas
-para poder situar elementos por encima de otros y crear sensación de lejania.
+para poder situar elementos por encima de otros y crear sensación de lejanía.
 
 \paragraph{}
 Podremos usar zoom in y zoom out con la rueda del ratón a la vez que pulsamos la tecla cntrl.
@@ -99,7 +101,7 @@ Podremos usar zoom in y zoom out con la rueda del ratón a la vez que pulsamos l
 
 \paragraph{}
 En esta otra parte de la interfaz, tendremos las distintas capas que dispondremos para crear el circuito. Se pueden añadir
-el número de capas q se desee, pero en la realización de circuito para \emph{Zycars}, sólo usaremos las que se ven en la imagen 
+el número de capas que se desee, pero en la realización de circuito para \emph{Zycars}, sólo usaremos las que se ven en la imagen 
 a continuación:
 
 \begin{figure}[H]
@@ -112,7 +114,8 @@ a continuación:
 
 \paragraph{}
 Podemos diferenciar entre dos tipos de capas, las capas de tiles, donde dibujaremos los tiles que tengamos en el tileset y la 
-capa de objetos, donde marcaremos donde se situarán alguno objetos necesarios de carreras, como pueden ser las cajas de items
+capa de objetos, donde marcaremos donde se situarán alguno objetos necesarios
+de carreras, como pueden ser las cajas de ítems
 o los puntos de control de la carrera.
 
 \paragraph{}
@@ -123,14 +126,14 @@ El papel de cada una de ellas es el siguiente:
     \item \textbf{Capa 2}: capa donde podremos los tiles atravesables formando el recorrido del circuito y tiles de decoración.
     \item \textbf{Capa 3}: aquí podremos tiles que queramos que se vean por encima de los jugadores.
     \item \textbf{Capa 4}: sin uso actualmente.
-    \item \textbf{checpoints}: capa de objetos donde podremos los puntos de control del circuito.
-    \item \textbf{objetos}: capa de objetos donde podremos las cajas de items y los puntos de la inteligencia artificial.
+    \item \textbf{Checkpoints}: capa de objetos donde podremos los puntos de control del circuito.
+    \item \textbf{Objetos}: capa de objetos donde podremos las cajas de items y los puntos de la inteligencia artificial.
 \end{itemize}
 
 \subsubsection{Zona derecha-inferior -- Tileset}
 
 \paragraph{}
-En esta zona tendremos el tileset, es decir, la imagen que contiene el conjuto de tiles con el que crearemos el circuito.
+En esta zona tendremos el tileset, es decir, la imagen que contiene el conjunto de tiles con el que crearemos el circuito.
 Al igual que en el lienzo, podremos hacer zoom in y zoom out con la ayuda de la rueda del ratón mientras pulsamos la tecla
 cntrl.
 
@@ -142,14 +145,15 @@ Antes de comenzar deberemos diferenciar claramente los distintos tipos de tiles 
 \begin{itemize}
     \item \textbf{Atravesables}: son los tiles usados para añadir decoración al circuito, como fondo u otros elementos.
     \item \textbf{Colisionables}: aquellos tiles que el jugador no podrá atravesar, se usarán para hacer el trazado del circuito
-    y añadir obstaculos en este.
-    \item \textbf{Realentizadores}: tiles por los que al pasar por encima realentizarán cosiderablemente la velocidad del jugador.
+    y añadir obstáculos en este.
+    \item \textbf{Realentizadores}: tiles por los que al pasar por encima
+    ralentizarán considerablemente la velocidad del jugador.
 \end{itemize}
 
 \paragraph{}
 Para diferencia bien cada uno de los distintos tipos, en la carpeta zycars/multimedia/image/, tenemos una imagen de guia, sólo
 y únicamente sirve de guia, para saber de que tipo son los distintos tiles del tileset. En el caso de la playa, que es el que nos
-ocupa, la imagen se llama mixedbeach.png, en el caso del jardin y la cocina mixedgarden.png y mixedkitchen.png, respectivamente.
+ocupa, la imagen se llama mixedbeach.png, en el caso del jardín y la cocina mixedgarden.png y mixedkitchen.png, respectivamente.
 A continuación un ejemplo de este tipo de imagen:
 
 \begin{figure}[H]
@@ -166,7 +170,7 @@ Como se puede ver e la imagen, tenemos 3 tipos de colores, para los tres tipos d
 \begin{itemize}
     \item \textbf{Rojo}: indican los tiles atravesables
     \item \textbf{Verdes}: indican los tiles colisionables
-    \item \textbf{Azules}: indican los tiles que realentizan
+    \item \textbf{Azules}: indican los tiles que ralentizan
 \end{itemize}
 
 \paragraph{}
@@ -176,7 +180,8 @@ de circuitos.
 \subsection{Añadiendo el fondo. Capa 1.}
 
 \paragraph{}
-En primer lugar nos centraremos en la capa 1, en esta capa podremos el fondo del escenario, es conveniente que no pongamos ningun 
+En primer lugar nos centraremos en la capa 1, en esta capa podremos el fondo
+del escenario, es conveniente que no pongamos ningún 
 tile colisionables, nos centraremos únicamente en los tiles atravesables.
 
 \paragraph{}
@@ -185,7 +190,7 @@ capa. Una vez hecho esto, podremos empezar a rellenar el fondo del circuito. Par
 de distintos tonos para diferenciar entre arena mojada y arena seca.
 
 \paragraph{}
-El resultado que obtendriamos sería el siguiente:
+El resultado que obtendríamos sería el siguiente:
 
 \begin{figure}[H]
   \label{circuito_fondo2}
@@ -207,7 +212,7 @@ tiles son colisionables, ya que el trazado siempre se realizara con tiles colisi
 del circuito.
 
 \paragraph{}
-En el caso concreto de la playa, tenemos disinto tiles para realizar el trazado, como conchas tanto amarillas, como rojas o las 
+En el caso concreto de la playa, tenemos distinto tiles para realizar el trazado, como conchas tanto amarillas, como rojas o las 
 lineas marrones y blancas del tileset. Una vez claro los tiles disponibles, podemos comenzar a dibujar el trazado.
 
 \paragraph{}
@@ -228,20 +233,23 @@ Un ejemplo de un posible trazado se muestra a continuación:
 \end{figure}
 
 \paragraph{}
-Bueno tras este paso, ya tenemos lo mas esencial de cualquier circuito que se precie. En el siguiente paso añadiremos elementos
-de decoración por todo el mapa y obstáculos, para hacer mas atrativo el trazado del circuito y mas ameno a la hora de 
+Bueno tras este paso, ya tenemos lo más esencial de cualquier circuito que se precie. En el siguiente paso añadiremos elementos
+de decoración por todo el mapa y obstáculos, para hacer más atractivo el
+trazado del circuito y más ameno a la hora de 
 competir en él.
 
 \subsection{Añadiendo decorado. Capa 2.}
 
 \paragraph{}
-En esta sección y como se ha comentado en la sección anterior, nos dedicaremos ha añadir obstaculos en el circuito, como pueden ser
-tiles que realenticen la velocidad de los jugadores u objeto colisionables en medio del trazado del circuito. Como podemos ver en
-el tileset que estamos usando, tiles realentizadores son aquellos que parecen manchas de humedad o los tiles que tiene un cojunto 
-de piedrecitas pequeñas.
+En esta sección y como se ha comentado en la sección anterior, nos dedicaremos
+ha añadir obstáculos en el circuito, como pueden ser
+tiles que ralenticen la velocidad de los jugadores u objeto colisionables en medio del trazado del circuito. Como podemos ver en
+el tileset que estamos usando, tiles realentizadores son aquellos que parecen
+manchas de humedad o los tiles que tiene un conjunto 
+de pequeñas piedras.
 
 \paragraph{}
-También añadiremos objetos de decoración fuera del circuito, para hacer al escenario mas agradable y vistoso. Tiles de adorno,
+También añadiremos objetos de decoración fuera del circuito, para hacer al escenario más agradable y vistoso. Tiles de adorno,
 tenemos las gafas de sol, la chancla o por ejemplo la lata de refresco.
 
 \paragraph{}
@@ -284,10 +292,10 @@ Por ello, en las siguiente secciones sólo trabajaremos con las capas de objetos
 \paragraph{}
 Como hemos comentado en la sección anterior, en las secciones que viene a continuación nos centraremos en añadir todos los 
 objetos necesarios en el circuito. Trabajaremos con las capa de objetos y la de checkpoints disponible en la plantilla. 
-Centrandonos en primer lugar en la capa de checkpoints.
+Centrándonos en primer lugar en la capa de checkpoints.
 
 \paragraph{}
-Este puede ser uno de los pasos mas importante y trabajosos a la hora de crear un circuito. En este paso, indicaremos donde se 
+Este puede ser uno de los pasos más importante y trabajosos a la hora de crear un circuito. En este paso, indicaremos donde se 
 situará la meta y todos los puntos de control del circuito, que controlen que las vueltas se realizan de forma correcta.
 
 \subsubsection{Indicando la salida.}
@@ -321,12 +329,12 @@ caso al ser la salida horizontal el resultado es el siguiente:
 \end{figure}
 
 \paragraph{}
-Una vez añadido la salida, tendremos que indicar el ancho máximo de la pista, ancho de la pisa en la meta y la horientación en la 
+Una vez añadido la salida, tendremos que indicar el ancho máximo de la pista, ancho de la pisa en la meta y la orientación en la 
 que saldrán los jugadores, si hacia arriba(270)\footnote{Entre paréntesis se indica el valor que tendremos que añadir en función 
 de la orientación}, abajo(90), izquierda(180) o derecha(0). En este caso a ser la salida horizontal, 
 los jugadores sólo podrán salir hacia arriba o abajo. Por lo que en la parte superior de Tiled seleccionamos Mapa y propiedades 
 del mapa y completamos las propiedades necesarias, que son "ancho\_meta" cuyo valor será 5, "ancho\_pista" que también será 5 y 
-"grado\_coche" que deberá ser en nuesto caso 90 o 270. Para este ejemplo se ha elegido que los jugadores saldrán hacia arriba por lo
+"grado\_coche" que deberá ser en nuestro caso 90 o 270. Para este ejemplo se ha elegido que los jugadores saldrán hacia arriba por lo
 que daremos el valor 270.
 
 \begin{figure}[H]
@@ -340,7 +348,7 @@ que daremos el valor 270.
 \subsubsection{Añadiendo puntos de control.}
 
 \paragraph{}
-Una vez que hemos indicado donde se encontrará la salida y en que horientación saldrán los jugadores, deberemos añadir todos los
+Una vez que hemos indicado donde se encontrará la salida y en que orientación saldrán los jugadores, deberemos añadir todos los
 puntos de control necesario para el control correcto de las vueltas.
 
 \paragraph{}
@@ -395,7 +403,8 @@ y los puntos de control de la inteligencia artificial.
 \paragraph{}
 Comenzaremos indicando mediante objetos donde se colocarán las cajas de ítems. Para ello nos situamos en la capa de objetos y 
 seleccionamos en la barra de objetos añadir herramientas. Ahora hacemos click en alguna parte de escenario que esté dentro del
-trazado del circuito. Tras hacer esto aparecerá un elemento transparente, al que podremos dar el tamaño que desemos (el tamaño no
+trazado del circuito. Tras hacer esto aparecerá un elemento transparente, al
+que podremos dar el tamaño que deseemos (el tamaño no
 afectará). Personalmente siempre le doy el tamaño de un tile, para que quede más claro.
 
 \begin{figure}[H]
@@ -408,7 +417,7 @@ afectará). Personalmente siempre le doy el tamaño de un tile, para que quede m
 
 \paragraph{}
 Una vez lo tengamos como la imagen anterior, pulsamos con el botón derecho del ratón sobre este y seleccionamos "Las propiedades
-del objeto". Una vez se nos habra la ventana, añadiremos tanto en nombre como en tipo la palabra "Item\_box". Debe quedar como en la
+del objeto". Una vez se nos habrá la ventana, añadiremos tanto en nombre como en tipo la palabra "Item\_box". Debe quedar como en la
 siguiente imagen:
 
 \begin{figure}[H]
@@ -421,7 +430,7 @@ siguiente imagen:
 
 \paragraph{}
 Una vez hecho esto, solo nos quedará hacer lo mismo con tantas cajas de ítems que deseemos añadir. También podremos copiar el 
-primer elemento e ir pegandolo por todo el circuito.
+primer elemento e ir pegándolo por todo el circuito.
 
 \subsubsection{Añadiendo control de la inteligencia artificial}
 
@@ -465,9 +474,10 @@ En esta línea deberemos borrar el siguiente trozo: "../../multimedia/image/", s
 
 \paragraph{}
 Por último, para añadir el circuito al juego, deberemos acceder al xml "fastracemenu.xml" que se encuentra en 
-"zycars/xml/menu", una vez en el archivo deberemos buscar la etiqueta <layers>, dentro de esta estaŕan las distintas capas
+"zycars/xml/menu", una vez en el archivo deberemos buscar la etiqueta <layers>,
+dentro de esta estarán las distintas capas
 con los circuitos para cada uno de los campeonatos, si vamos añadir un circuito de playa nos centraremos en la capa cuyo atributo
-name sea "Copa Chancla", si es un circuito de jardin será "Copa arbusto" y si es de cocina será "Copa rodillo".
+name sea "Copa Chancla", si es un circuito de jardín será "Copa arbusto" y si es de cocina será "Copa rodillo".
 
 \paragraph{}
 Para cada una de ellas tenemos 4 circuito, por lo que deberemos sustituir el que queramos, modificando el atributo circuit\_file,

@@ -8,7 +8,7 @@ Al igual que en el apartado referente al análisis del sistema, en el diseño de
 a objetos mediante UML.
 
 \paragraph{}
-Este proceso es mucho mas sencillo una vez que ya se ha especificado que hace el sistema en el capítulo anterior. También decir, que
+Este proceso es mucho más sencillo una vez que ya se ha especificado que hace el sistema en el capítulo anterior. También decir, que
 al igual que el análisis del sistema, el diseño no contempla muchos detalles del sistema final, sólo una idea orientativa de como
 se implementará el sistema.
 
@@ -19,9 +19,10 @@ documentación del código, donde esta toda la información necesaria referente 
 \section{Interfaz gráfica}
 
 \paragraph{}
-Tras los resultado que se han obtenido en la fase de analisis del sistema, es necesario desarrolar una interfaz sencilla y agradable
+Tras los resultado que se han obtenido en la fase de análisis del sistema, es
+necesario desarrollar una interfaz sencilla y agradable
 para el usuario de la misma. En el diseño de estos, se intentará en todo momento que el usuario no tenga la posibilidad de insertar
-datos erroneos que lleven a una ejecución anómala de la aplicación.
+datos erróneos que lleven a una ejecución anómala de la aplicación.
 
 \begin{figure}[H]
   \label{interfaz}
@@ -34,7 +35,8 @@ datos erroneos que lleven a una ejecución anómala de la aplicación.
 \subsection{Diagrama de interacción entre interfaces}
 
 \paragraph{}
-En la imagen que se muestra a continuación podemos observar la interacción entre las distintas interfaces graficas que se han 
+En la imagen que se muestra a continuación podemos observar la interacción
+entre las distintas interfaces gráficas que se han 
 desarrollado para la aplicación.
 
 \begin{figure}[H]
@@ -47,9 +49,17 @@ desarrollado para la aplicación.
 
 \section{Diagrama de clases de diseño}
 
-A continuación se presenta el diagrama de clases de diseño de \emph{Zycars}.
+\paragraph{}
+Dividiremos el diagrama de clases de diseño en dos partes, para verlo con una mayor claridad, dicha separación se basará en el 
+cometido de las clases que interfieran.
 
-\newpage
+\paragraph{}
+En primer lugar mostraremos todas las clases, encargada de inicializar el juego, y la gestión de los distintos estados que
+podemos encontrar en este. Como pueden ser todos los menús en los que podremos interactuar en el sistema, mostrando la jerarquía 
+de los mismos. Y también la clases encargadas de gestionar los tres modos de juego existentes, carrera rápida, contrarreloj y 
+campeonato.
+
+%\newpage
 
 \begin{figure}[H]
   \label{diagrama_clases_diseno}
@@ -58,6 +68,11 @@ A continuación se presenta el diagrama de clases de diseño de \emph{Zycars}.
   \end{center}
   \caption{Diseño: Diagrama de clases de diseño 1}
 \end{figure}
+
+\paragraph{}
+En el segundo diagrama mostraremos todas las clases relacionas con el sistema de juego. Podremos observar los distintos objetos que
+intervienen en el juego, así como la jerarquía de estos. Y también todas las clases necesarias para el correcto funcionamiento del
+juego.
 
 \begin{figure}[H]
   \label{diagrama_clases_diseno}
