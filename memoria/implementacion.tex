@@ -55,11 +55,11 @@ music='la maryjane - bob wizman.ogg'>
 \end{lstlisting}
 
 \paragraph{}
-Como podemos ver podemos modificar las imagenes que aparecen en el menú o las posiciones de los botones.
-En el código únicamente deberiamos dar funcionalidad a cada uno de las opciones del menú.
+Como se pude ver, podemos modificar las imagenes que aparecen en el menú o las posiciones de los botones.
+En el código únicamente deberíamos dar funcionalidad a cada uno de las opciones del menú.
 
 \paragraph{}
-Otro ejemplo de archivo de XMl para los personajes que aparecen en el juego sería el siguiente:
+Otro ejemplo de archivo de XML para los personajes que aparecen en el juego sería el siguiente:
 
 \begin{lstlisting}[style=XML]
 <car name_character="Camaro Bun" sprite_code="yellow" max_speed="6.1" 
@@ -82,8 +82,8 @@ avatar="avatar1" racer_image='car1'>
 \end{lstlisting}
 
 \paragraph{}
-Como podemos ver se pueden modificar los aspectos más básico del comportamiento de los personajes, como pueden ser la velocidad 
-máxima de este, velocidad en marcha atrás, aceleración, desaceleración y angulo de giro. También todas las imagenes que representan
+Como podemos ver ,se pueden modificar los aspectos más básico del comportamiento de los personajes, como pueden ser la velocidad 
+máxima de este, velocidad en marcha atrás, aceleración, desaceleración y ángulo de giro. También todas las imagenes que representan
 al jugador.
 
 \paragraph{}
@@ -101,10 +101,11 @@ tener los distintos circuitos o niveles que aparecerían a lo largo del juego. P
     \item \textbf{Opción 1}: los circuitos estarían compuestos por una única imagen realizada previamente. En un fichero aparte se 
     podría indicar las zonas colisionables que tendría la imagen u otras características relevantes.
     
-    \item \textbf{Opción 2}: crear los circuitos mediante un sistema de tiles, de formas que en un fichero de texto plano, indicaramos 
-    los tieles que componen el circuito, así como la característica de estos.
+    \item \textbf{Opción 2}: crear los circuitos mediante un sistema de tiles, de formas que en un fichero de texto plano, 
+    indicaramos los tiles que componen el circuito, así como la característica de estos.
     
-    \item \textbf{Opción 3}: usar algún software que nos permitiera la creación y edición de niveles, de forma sencilla, mediante tiles.
+    \item \textbf{Opción 3}: usar algún software que nos permitiera la creación y edición de niveles, de forma sencilla, 
+    mediante tiles.
 \end{itemize}
 
 \paragraph{}
@@ -167,7 +168,7 @@ El formato de los XML generados por el programa son de la siguiente forma:
 \paragraph{}
 Una de las únicas cosas que no propocionaba el programa era poder indicar cuales de los tiles eran colisionables, atravesables o
 de cualquier otro tipo. Así que para solventar este problema se elijió tener a parte de la imagen que contendría el conjunto de 
-tiles otra imagen con las mismas características, como tamaño y el tamaño de los tiles, solo que esta ultima lo tiles tendrían 
+tiles otra imagen con las mismas características, como tamaño y el tamaño de los tiles, solo que esta última, lo tiles tendrían 
 colores planos indicando de que tipo serían. Así cuando cargaramos el circuito que necesitaramos en ese momento y con ello
 el conjunto de tiles relacionado, se comprobaría que color tiene cada uno de los tiles en la otra imagen y así almacenar
 de que tipo son. A continuación se muestran dos imagenes como ejemplo:
@@ -216,10 +217,10 @@ recorren mapas o niveles.
 \paragraph{}
 En \emph{Zycars} debemos de gestionar varios tipos de colisiones, entre esos tipos estaría la colisión que se produciría 
 entre cualquier vehículo y el escenario en el que se encuentre, así como la colisión entres dos objetos del juego, como podrían
-ser desde dos vehículos entre si, o algún vehículo por algun item lanzado por otro jugador.
+ser desde dos vehículos entre si, o algún vehículo por algún ítem lanzado por otro jugador.
 
 \paragraph{}
-Indicar que cada uno de los objetos que intervienen en el juego y puede colisionar con cualquier elemento, tienen
+Indicar que cada uno de los objetos que intervienen en el juego y pueden colisionar con cualquier elemento, tienen
 un rectangulo asociado a su forma, de manera que sea más sencilla la detección de colisiones.
 
 \paragraph{}
@@ -235,7 +236,7 @@ que indica de que tipo es cada uno de los tiles que nos podemos encontrar a lo l
 \paragraph{}
 Así que a la hora de cargar el circuito en el que vayamos a competir almacenabamos cada uno de los tiles que componían el circuito,
 así como el tipo que eran. Dada esta situación debemos ir comprobando si el jugador esta atravensando algún tile colisionable. 
-Si es el caso debemos corregir la posición del objeto con respecto al tile con el que estaba colisionando.
+Si es el caso, debemos corregir la posición del objeto con respecto al tile con el que estaba colisionando.
 
 \paragraph{}
 A la hora de realizar la correción de la colisión, debemos tener en cuenta aspectos como, ángulo del vehículo, dirección del 
@@ -267,9 +268,8 @@ A continuación se expone un ejemplo visual para su correcta comprensión:
 \end{itemize}
 
 \paragraph{}
-En el caso de que se colisione con un tile que atravesable pero era del tipo que realentizaban la velocidad, únicamente
+En el caso de que se colisione con un tile que no es atravesable pero es del tipo que realentizaban la velocidad, únicamente
 se reducirá la velocidad del vehículo y no se corregira su posición para este tile.
-
 
 \subsection{Colisiones entre objetos}
 
@@ -375,7 +375,7 @@ el camino completo.
 Dicho algoritmo se aplica en \emph{Zycars}, de forma que el vehículo controlado por la inteligencia artificial, tiene todos los
 puntos de chequeo, en orden, que debe atravesar para recorrer el circuito completo. Así que en cada momento se comprobará
 el tile actual en el que se encuentra y se obtendrá el camino más óptimo y corto hasta el siguiente punto de chequeo, una vez
-llegado a este se hará una nueva consulta al A* para obtener el camino al próximo y así sucesivamente.
+llegado a este punto, se hará una nueva consulta al A* para obtener el camino al próximo y así sucesivamente.
 
 \subsection{Lanzamiento de items.}
 
@@ -386,13 +386,13 @@ situaciones en la que se encuentre, en el momento que obtenga dicho item.
 \paragraph{}
 Por ejemplo, cuando obtenga un misil o una bola deberá lanzarlos en el momento que tenga algún oponente delante y a tiro. Pero si
 en cambio hemos obtenido como item una macha de aceite o un chicle, deberá lanzarlo en el momento que tenga un oponente detrás
-y lo más cerca posible para que no tenga tiempo para maniobrar y poder esquivar el obstaculo.
+y lo más cerca posible para que no tenga tiempo para maniobrar y poder esquivar el obstáculo.
 
 \paragraph{}
 Como solución, se eligió una forma muy sencilla y eficiente a la hora de realizarlo. Para ello cada vehículo controlado por la
 inteligencia artificial, tiene tanto un segmento que va desde el centro del coche hacia unos pixeles por delante de la posición
 actual del vehículo, como otro segmento que también va desde el centro pero uno pixeles atrás de la posición del vehículo. 
-Si se pudieran ver dichos segmente, tendrían la siguiente forma:
+Si se pudieran ver dichos segmentos, tendrían la siguiente forma:
 
 \begin{figure}[H]
   \label{ia_segmentos}
@@ -405,4 +405,5 @@ Si se pudieran ver dichos segmente, tendrían la siguiente forma:
 \paragraph{}
 De forma que en el momento que tengamos un item que se lanza por la parte delantera del vehículo, se comprobará si alguno de los 
 oponentes colisiona con la barra delantera de este. En el caso de que tengamos un item que se lanza por la parte trasera, haríamos
-la misma comparación pero con la barra trasera.
+la misma comparación pero con la barra trasera. En el momento que tenga lugar una de las colisiones, el personaje lanzaría
+automáticamente el ítem disponible.
