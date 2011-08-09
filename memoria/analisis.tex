@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%% TOMA DE REQUISITOS %%%%%%%%%%%%%%%%%%%%%%%5
-\section{Toma de requisitos}
+\section{Especificación de requisitos del sistema}
 
 \paragraph{}
 Para la creación de cualquier producto software, es necesario establecer las distintas condiciones y necesidades que
@@ -39,6 +39,14 @@ ventanas que el usuario encontrará en el sistema:
         En este menú y en los siguiente que se describan se usará el ratón para navegar por ellos y solo será necesario
         hacer click sobre la opción deseada para acceder a ella.
     
+        \begin{figure}[H]
+          \label{diagrama_casos_uso}
+          \begin{center}
+            \includegraphics[scale=0.42]{imagenes/analisis/boceto_menu_principal.png}
+          \end{center}
+          \caption{Análisis: Boceto del menú principal.}
+        \end{figure}
+    
     \item \textbf{Ventana de opciones} Desde la ventana de opciones se podrán
     modificar las distintas características de la 
     configuración del juego como el audio o controles. Esta ventana se podría dividir en tres partes diferencias que se indican
@@ -52,13 +60,37 @@ ventanas que el usuario encontrará en el sistema:
             \item Opciones de control: en esta ventana podremos modificar los controles del juego. Tanto de dirección, lanzamiento
             de ítems y pausa del juego.
         \end{itemize}
+
+        \begin{figure}[H]
+          \label{diagrama_casos_uso}
+          \begin{center}
+            \includegraphics[scale=0.42]{imagenes/analisis/boceto_opciones.png}
+          \end{center}
+          \caption{Análisis: Boceto del menú de opciones.}
+        \end{figure}
     
     \item \textbf{Ventana de selección de personaje} Esta ventana será compartida por los tres modos de juego disponibles. En ella 
     podremos elegir al personaje que desearemos controlar a lo largo de las carreras. De estos jugadores se nos mostrarán sus 
     distintas habilidades.
+
+        \begin{figure}[H]
+          \label{diagrama_casos_uso}
+          \begin{center}
+            \includegraphics[scale=0.42]{imagenes/analisis/boceto_menu_personaje.png}
+          \end{center}
+          \caption{Análisis: Boceto del menú de selección de personaje.}
+        \end{figure}
     
     \item \textbf{Ventana de selección de circuito} Ventana compartida por el modo carrera rápida y contrarreloj. En esta ventana
     deberemos elegir el circuito en el que deseamos competir. Se nos mostrará una imagen de cada circuito que seleccionemos.
+
+        \begin{figure}[H]
+          \label{diagrama_casos_uso}
+          \begin{center}
+            \includegraphics[scale=0.42]{imagenes/analisis/boceto_menu_circuito.png}
+          \end{center}
+          \caption{Análisis: Boceto del menú de selección de circuito.}
+        \end{figure}
     
     \item \textbf{Ventana de selección de campeonato} Ventana muy similar a la descrita anteriormente. En ella se nos mostrarán
     todos los circuitos de cada campeonato disponible. Pero al contrario que la anterior en esta ventana elegiremos el campeonato 
@@ -69,21 +101,53 @@ ventanas que el usuario encontrará en el sistema:
     pueden ser posiciones de los jugadores, ítem actual y
     tiempos de carrera. Según la tecla indicada en los controles del menú de opciones (ESC o p) se podrá acceder al menú
     de pausa del juego.
+
+        \begin{figure}[H]
+          \label{diagrama_casos_uso}
+          \begin{center}
+            \includegraphics[scale=0.42]{imagenes/analisis/boceto_juego.png}
+          \end{center}
+          \caption{Análisis: Boceto de ventana de juego.}
+        \end{figure}
     
     \item \textbf{Ventana de pausa} Únicamente accesible desde la ventana de juego. Esta nos permitirá detener el juego en curso, 
     siendo posible reanudar el juego, reiniciar el mismo o volver al menú principal.
+
+        \begin{figure}[H]
+          \label{diagrama_casos_uso}
+          \begin{center}
+            \includegraphics[scale=0.42]{imagenes/analisis/boceto_pausa.png}
+          \end{center}
+          \caption{Análisis: Boceto del menú de pausa.}
+        \end{figure}
     
     \item \textbf{Ventana de posiciones de carrera} Ventana mostrada al terminar alguna de las carreras. En ella nos muestra el 
     resultado de la última carrera disputada. Nos permite continuar al siguiente circuito, en el caso del modo campeonato, o seguir
     hacia el menú principal, en el modo carrera rápida. También se nos permite
     reiniciar la última carrera disputada.
-    
+
+        \begin{figure}[H]
+          \label{diagrama_casos_uso}
+          \begin{center}
+            \includegraphics[scale=0.42]{imagenes/analisis/boceto_resultados_carrera.png}
+          \end{center}
+          \caption{Análisis: Boceto de la ventana de posiciones.}
+        \end{figure}
+        
     \item \textbf{Ventana de posiciones de campeonato} Ventana mostrada en el modo campeonato tras la ventana de posiciones 
     de carrera, en ella se nos muestra las posiciones de los competidores en el campeonato actual.
     
     \item \textbf{Ventana de tiempos de contrarreloj} Ventana mostrada al completar algún circuito en el modo contrarreloj. En ella
     se nos muestran los distintos tiempos conseguidos a lo largo del circuito y se nos indicará si hemos batido algún record.
     Esta ventana nos permite continuar hacia el menú principal, así como reiniciar el circuito disputado.
+
+        \begin{figure}[H]
+          \label{diagrama_casos_uso}
+          \begin{center}
+            \includegraphics[scale=0.42]{imagenes/analisis/boceto_tiempos.png}
+          \end{center}
+          \caption{Análisis: Boceto de la ventana de tiempos.}
+        \end{figure}
     
 \end{description}
 
