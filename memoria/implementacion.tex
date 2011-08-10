@@ -11,8 +11,8 @@ Por lo que en este capítulo se exlicarán las distintas soluciones para los pri
 \section{Carga desde ficheros}
 
 \paragraph{}
-Desde un primer momento se penso en realizar el videojuego de forma que fuera facilmente ampliable siguiendo un manual adecuado, 
-donde se explicaran todos los pasos necesarios \footnote{En el apendice de este documento están los distintos manuales para
+Desde un primer momento se pensó en realizar el videojuego de forma que fuera facilmente ampliable siguiendo un manual adecuado, 
+donde se explicaran todos los pasos necesarios \footnote{En el apéndice de este documento están los distintos manuales para
 añadir personajes y circuitos}.
 
 \paragraph{}
@@ -21,8 +21,8 @@ dichos archivos sería XML.
 
 \paragraph{}
 De esta forma cualquier persona ya sea programador o no, podrá modificar aspectos tan sencillos como el posicionamiento de los 
-botones en lo menús, y las distintas imagenes que pueden aparecer en estos. Respecto a los personaje podrán modificar las 
-características de estos, las imagenes que los representan o añadir nuevos personajes. En los circuitos podremos modificar objetos
+botones en lo menús, y las distintas imágenes que pueden aparecer en estos. Respecto a los personaje podrán modificar las 
+características de estos, las imágenes que los representan o añadir nuevos personajes. En los circuitos podremos modificar objetos
 que aparezcan en estos, así como obstáculos o aparición de ítems.
 
 \paragraph{}
@@ -55,7 +55,7 @@ music='la maryjane - bob wizman.ogg'>
 \end{lstlisting}
 
 \paragraph{}
-Como se pude ver, podemos modificar las imagenes que aparecen en el menú o las posiciones de los botones.
+Como se pude ver, podemos modificar las imágenes que aparecen en el menú o las posiciones de los botones.
 En el código únicamente deberíamos dar funcionalidad a cada uno de las opciones del menú.
 
 \paragraph{}
@@ -83,11 +83,13 @@ avatar="avatar1" racer_image='car1'>
 
 \paragraph{}
 Como podemos ver ,se pueden modificar los aspectos más básico del comportamiento de los personajes, como pueden ser la velocidad 
-máxima de este, velocidad en marcha atrás, aceleración, desaceleración y ángulo de giro. También todas las imagenes que representan
+máxima de este, velocidad en marcha atrás, aceleración, desaceleración y ángulo
+de giro. También todas las imágenes que representan
 al jugador.
 
 \paragraph{}
-Incluso si la imagen del coche del personaje es un sprite podemos indicar que frames de este pertencen a cada uno de los posibles 
+Incluso si la imagen del coche del personaje es un sprite podemos indicar que
+frames de este pertenecen a cada uno de los posibles 
 estados del personaje.
 
 %%%%%%%%%%%%%%%%% CIRCUITOS %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -102,7 +104,7 @@ tener los distintos circuitos o niveles que aparecerían a lo largo del juego. P
     podría indicar las zonas colisionables que tendría la imagen u otras características relevantes.
     
     \item \textbf{Opción 2}: crear los circuitos mediante un sistema de tiles, de formas que en un fichero de texto plano, 
-    indicaramos los tiles que componen el circuito, así como la característica de estos.
+    indicáramos los tiles que componen el circuito, así como la característica de estos.
     
     \item \textbf{Opción 3}: usar algún software que nos permitiera la creación y edición de niveles, de forma sencilla, 
     mediante tiles.
@@ -112,13 +114,13 @@ tener los distintos circuitos o niveles que aparecerían a lo largo del juego. P
 Finalmente se optó por la opción 3, para ello se usó el programa \emph{Tiled} \footnote{Se comenta su uso y características en el
 apéndice relacionado con las herramientas utilizadas}, dicho programa me proporcionaba todas las necesidades básicas, como una 
 sencilla edición y creación de niveles, así como la gestión de capas, para poder poner elementos en el circuito a un nivel 
-superior o inferior. Para ello se debia crear una imagen con todos los tiles que compondrían un circuito.
+superior o inferior. Para ello se debía crear una imagen con todos los tiles que compondrían un circuito.
 
 \paragraph{}
 Este programa generaba como resultado un archivo \emph{XML}, que se procesaría posteriormente en tiempo de ejecución. También hay
 que añadir que esta opción elegida era una de las que menos nos ocuparía en memoria, ya que no es lo mismo tener un circuito 
 completo en una única imagen, dicha imagen sería demasiado grande y ocuparía bastante memoria. Mientras
-que con esta opción tendriamos una imagen pequeña con el conjunto necesario de tiles para el circuito en cuestión.
+que con esta opción tendríamos una imagen pequeña con el conjunto necesario de tiles para el circuito en cuestión.
 
 \paragraph{}
 El formato de los XML generados por el programa son de la siguiente forma:
@@ -166,12 +168,13 @@ El formato de los XML generados por el programa son de la siguiente forma:
 \end{lstlisting}
 
 \paragraph{}
-Una de las únicas cosas que no propocionaba el programa era poder indicar cuales de los tiles eran colisionables, atravesables o
-de cualquier otro tipo. Así que para solventar este problema se elijió tener a parte de la imagen que contendría el conjunto de 
+Una de las únicas cosas que no proporcionaba el programa era poder indicar cuales de los tiles eran colisionables, atravesables o
+de cualquier otro tipo. Así que para solventar este problema se eligió tener a parte de la imagen que contendría el conjunto de 
 tiles otra imagen con las mismas características, como tamaño y el tamaño de los tiles, solo que esta última, lo tiles tendrían 
-colores planos indicando de que tipo serían. Así cuando cargaramos el circuito que necesitaramos en ese momento y con ello
+colores planos indicando de que tipo serían. Así cuando cargáramos el circuito
+que necesitáramos en ese momento y con ello
 el conjunto de tiles relacionado, se comprobaría que color tiene cada uno de los tiles en la otra imagen y así almacenar
-de que tipo son. A continuación se muestran dos imagenes como ejemplo:
+de que tipo son. A continuación se muestran dos imágenes como ejemplo:
 
 \begin{itemize}
 
@@ -200,12 +203,12 @@ Como se puede apreciar la segunda imagen tiene las mismas características que l
 son de un único color para indicar el tipo de los tiles. Los tipos de tiles que se eligieron añadir fueron los siguientes:
 
 \begin{itemize}
-    \item \textbf{Rojo}: tiles completamentes atravesables, su única función es decorativa.
+    \item \textbf{Rojo}: tiles completamente atravesables, su única función es decorativa.
     
     \item \textbf{Verde}: tiles colisionables, aquellos que no pueden ser atravesados, normalmente marcan el recorrido
     del circuito, también usados como obstáculos.
     
-    \item \textbf{Azul}: tiles atravesables, pero realentizan de forma considerable al vehículo que pase sobre ellos.
+    \item \textbf{Azul}: tiles atravesables, pero ralentizan de forma considerable al vehículo que pase sobre ellos.
 \end{itemize}
 
 \section{Colisiones}
@@ -221,10 +224,10 @@ ser desde dos vehículos entre si, o algún vehículo por algún ítem lanzado p
 
 \paragraph{}
 Indicar que cada uno de los objetos que intervienen en el juego y pueden colisionar con cualquier elemento, tienen
-un rectangulo asociado a su forma, de manera que sea más sencilla la detección de colisiones.
+un rectángulo asociado a su forma, de manera que sea más sencilla la detección de colisiones.
 
 \paragraph{}
-En las siguiente subsecciones se explicará cuales son las soluciones que se llevaron a cabo para la gestión de las colisiones 
+En el siguiente apartado se explicará cuales son las soluciones que se llevaron a cabo para la gestión de las colisiones 
 en cada una de las situaciones posibles.
 
 \subsection{Colisión con el escenario}
@@ -234,14 +237,14 @@ Como se comento en el apartado dedicado a la carga y formato de los circuitos, c
 que indica de que tipo es cada uno de los tiles que nos podemos encontrar a lo largo del circuito.
 
 \paragraph{}
-Así que a la hora de cargar el circuito en el que vayamos a competir almacenabamos cada uno de los tiles que componían el circuito,
-así como el tipo que eran. Dada esta situación debemos ir comprobando si el jugador esta atravensando algún tile colisionable. 
+Así que a la hora de cargar el circuito en el que vayamos a competir almacenábamos cada uno de los tiles que componían el circuito,
+así como el tipo que eran. Dada esta situación debemos ir comprobando si el jugador esta atravesando algún tile colisionable. 
 Si es el caso, debemos corregir la posición del objeto con respecto al tile con el que estaba colisionando.
 
 \paragraph{}
-A la hora de realizar la correción de la colisión, debemos tener en cuenta aspectos como, ángulo del vehículo, dirección del 
+A la hora de realizar la corrección de la colisión, debemos tener en cuenta aspectos como, ángulo del vehículo, dirección del 
 vehículo, así como el lado del tile por el que se produce la colisión, ya sea por la parte superior, inferior o alguno 
-de los laterales. Según estos parámetros la collisión se corregirá en una dirección u otra.
+de los laterales. Según estos parámetros la colisión se corregirá en una dirección u otra.
 
 \paragraph{}
 A continuación se expone un ejemplo visual para su correcta comprensión:
@@ -256,7 +259,8 @@ A continuación se expone un ejemplo visual para su correcta comprensión:
       \caption{Implementación: Colisión con el escenario 1/2}
     \end{figure}
     
-    \item Se corrige la colisión en función del ángulo y dirección del vehículo, asi como el lado por el que colisiona del tile:
+    \item Se corrige la colisión en función del ángulo y dirección del
+    vehículo, así como el lado por el que colisiona del tile:
     \begin{figure}[H]
       \label{colision2}
       \begin{center}
@@ -268,8 +272,8 @@ A continuación se expone un ejemplo visual para su correcta comprensión:
 \end{itemize}
 
 \paragraph{}
-En el caso de que se colisione con un tile que no es atravesable pero es del tipo que realentizaban la velocidad, únicamente
-se reducirá la velocidad del vehículo y no se corregira su posición para este tile.
+En el caso de que se colisione con un tile que no es atravesable pero es del tipo que ralentizaban la velocidad, únicamente
+se reducirá la velocidad del vehículo y no se corregirá su posición para este tile.
 
 \subsection{Colisiones entre objetos}
 
@@ -286,15 +290,17 @@ A continuación se exponen las distintas situaciones que pueden suceder:
     corregiremos la posición de ese vehículo y produciremos algún tipo de rebote en función de la velocidad que llevara
     en ese momento.
     
-    \item \textbf{Colisión vehículo-item}: en este caso se responderá a la colision dependiendo del tipo de item con el que
+    \item \textbf{Colisión vehículo-ítem}: en este caso se responderá a la
+    colisión dependiendo del tipo de ítem con el que
     hemos colisionado.
     \begin{itemize}
-        \item Si el item es un misil o una bola, el item pasará a su estado de explosión, mientras que el vehículo parasa a un estado de daño
+        \item Si el ítem es un misil o una bola, el ítem pasará a su estado de
+        explosión, mientras que el vehículo pasará a un estado de daño
         
-        \item Si el item es una mancha de aceite, el item no cambiará su estado, pero el coche pasar a un estado de descontrol durante
+        \item Si el ítem es una mancha de aceite, el ítem no cambiará su estado, pero el coche pasar a un estado de descontrol durante
         unos instantes
         
-        \item Si el item es un chicle, se reducirá de forma considerable la velocidad del vehículo.
+        \item Si el ítem es un chicle, se reducirá de forma considerable la velocidad del vehículo.
     \end{itemize}
 \end{itemize}
 
@@ -302,7 +308,7 @@ A continuación se exponen las distintas situaciones que pueden suceder:
 \section{Inteligencia artificial}
 
 \paragraph{}
-Otro de los aspectos más importante de un videojuego de las carácteristicas de \emph{Zycars}, es la inteligencia artificial,
+Otro de los aspectos más importante de un videojuego de las características de \emph{Zycars}, es la inteligencia artificial,
 ya que en dos de los tres modos de juegos disponibles el objetivo es obtener la mejor clasificación posible, por delante
 de los demás coches manejados por la inteligencia artificial.
 
@@ -313,12 +319,13 @@ Entre las habilidades que debe tener la inteligencia artificial deben ser:
     \item \textbf{Realización del recorrido}: la inteligencia artificial debe ser capaz de realizar los recorridos de los
     circuitos.
     
-    \item \textbf{Lanzamiento de items}: también debe poder tirar los items que reciba de las bolas de items.
+    \item \textbf{Lanzamiento de ítems}: también debe poder tirar los ítems que
+    reciba de las bolas de ítems.
 \end{itemize}
 
 \paragraph{}
 En los siguientes apartados se explicará de que forma se han afrontado los distintos problemas para obtener una inteligencia
-artificial que cumpla las espectativas básicas.
+artificial que cumpla las expectativas básicas.
 
 \subsection{Realización del recorrido. Algoritmo de búsqueda A*}
 
@@ -332,7 +339,8 @@ A lo largo de los circuitos existen unos puntos de control que cada uno de los v
 debe pasar para realizar la vuelta al circuito, dichos puntos de control ocupan un tile.
 
 \paragraph{}
-Para ello, aprovechando que tenemos un circuito creado por tiles y que podemos saber en todo momendo en el tile actual
+Para ello, aprovechando que tenemos un circuito creado por tiles y que podemos
+saber en todo momento en el tile actual
 que se puede encontrar cualquiera de los competidores, se decidió que se implementaría el algoritmo de búsqueda A*.
 
 \subsubsection{Algoritmo de búsqueda A*}
@@ -355,7 +363,7 @@ hasta el final y g(n) el coste real del camino desde el origen al nodo actual.
 \end{figure}
 
 \paragraph{}
-En el A* se tiene dos estructuras diferencidas:
+En el A* se tiene dos estructuras diferencias:
 
 \begin{itemize}
     \item Lista de abiertos: donde se encuentran los nodos por los que aún no se han pasado
@@ -368,7 +376,7 @@ obtenemos todos los nodos vecinos de este, comprobamos que no se encuentren en l
 de cerrado para evitar ciclos, todos aquellos que cumplan dichos requisitos se añaden a la lista de abiertos. En el caso de que 
 alguno de los nodos se encuentren en la lista de abiertos, comparamos el valor de f(n), en el caso de que sea menor lo 
 sustituiremos. Una vez evaluado dicho nodo, pasamos a obtener de la lista de abiertos aquel nodo que tenga un f(n) menor y 
-comenzamos de nuevo todo el proceso anterior. En el momento en el que llegemos al nodo objetivo, detenemos la búsqueda y devolvemos
+comenzamos de nuevo todo el proceso anterior. En el momento en el que lleguemos al nodo objetivo, detenemos la búsqueda y devolvemos
 el camino completo.
 
 \paragraph{}
@@ -377,21 +385,23 @@ puntos de chequeo, en orden, que debe atravesar para recorrer el circuito comple
 el tile actual en el que se encuentra y se obtendrá el camino más óptimo y corto hasta el siguiente punto de chequeo, una vez
 llegado a este punto, se hará una nueva consulta al A* para obtener el camino al próximo y así sucesivamente.
 
-\subsection{Lanzamiento de items.}
+\subsection{Lanzamiento de ítems.}
 
 \paragraph{}
-La inteligencia artificial debe ser capaz de lanzar los items disponibles a los largo del juego, según las distintas 
-situaciones en la que se encuentre, en el momento que obtenga dicho item.
+La inteligencia artificial debe ser capaz de lanzar los ítems disponibles a los largo del juego, según las distintas 
+situaciones en la que se encuentre, en el momento que obtenga dicho ítem.
 
 \paragraph{}
 Por ejemplo, cuando obtenga un misil o una bola deberá lanzarlos en el momento que tenga algún oponente delante y a tiro. Pero si
-en cambio hemos obtenido como item una macha de aceite o un chicle, deberá lanzarlo en el momento que tenga un oponente detrás
+en cambio hemos obtenido como ítem una macha de aceite o un chicle, deberá lanzarlo en el momento que tenga un oponente detrás
 y lo más cerca posible para que no tenga tiempo para maniobrar y poder esquivar el obstáculo.
 
 \paragraph{}
 Como solución, se eligió una forma muy sencilla y eficiente a la hora de realizarlo. Para ello cada vehículo controlado por la
-inteligencia artificial, tiene tanto un segmento que va desde el centro del coche hacia unos pixeles por delante de la posición
-actual del vehículo, como otro segmento que también va desde el centro pero uno pixeles atrás de la posición del vehículo. 
+inteligencia artificial, tiene tanto un segmento que va desde el centro del
+coche hacia unos píxeles por delante de la posición
+actual del vehículo, como otro segmento que también va desde el centro pero uno
+píxeles atrás de la posición del vehículo. 
 Si se pudieran ver dichos segmentos, tendrían la siguiente forma:
 
 \begin{figure}[H]
@@ -403,7 +413,8 @@ Si se pudieran ver dichos segmentos, tendrían la siguiente forma:
 \end{figure}
 
 \paragraph{}
-De forma que en el momento que tengamos un item que se lanza por la parte delantera del vehículo, se comprobará si alguno de los 
-oponentes colisiona con la barra delantera de este. En el caso de que tengamos un item que se lanza por la parte trasera, haríamos
+De forma que en el momento que tengamos un ítem que se lanza por la parte delantera del vehículo, se comprobará si alguno de los 
+oponentes colisiona con la barra delantera de este. En el caso de que tengamos
+un ítem que se lanza por la parte trasera, haríamos
 la misma comparación pero con la barra trasera. En el momento que tenga lugar una de las colisiones, el personaje lanzaría
 automáticamente el ítem disponible.
