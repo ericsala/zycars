@@ -1,5 +1,7 @@
 NOM = memoria
 DOC = $(NOM).tex
+RES = resumen
+RESU = $(RES).tex
 
 PDF = pdflatex
 BIB = bibtex
@@ -19,6 +21,12 @@ latex-bib:
 
 latex: 
 	$(LATEX) $(DOC) && $(LATEX) $(DOC)
+
+resumen: 
+	$(PDF) $(RESU) && $(BIB) $(RES) | make resumen-pdf
+
+resumen-pdf:
+	$(PDF) $(RESU) && $(PDF) $(RESU)
 
 # Pasa de .dvi a .pdf
 dvi-pdf: 
