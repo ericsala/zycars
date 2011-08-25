@@ -168,6 +168,11 @@
         <predecessor id="1" predecessor-id="7" type="FS"/>
       </predecessors>
     </task>
+    <task id="36" name="Redacci&#xF3;n de la memoria" note="" work="7401600" start="20100820T170000Z" end="20110816T170000Z" work-start="20100823T080000Z" percent-complete="0" priority="0" type="normal" scheduling="fixed-work">
+      <predecessors>
+        <predecessor id="1" predecessor-id="7" type="FS"/>
+      </predecessors>
+    </task>
   </tasks>
   <resource-groups/>
   <resources/>

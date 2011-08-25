@@ -26,7 +26,7 @@ ventanas que el usuario encontrará en el sistema:
     \item \textbf{Ventana de introducción} En esta primera ventana se mostrará únicamente el logotipo del juego, situando al usuario en
     contexto para introducirlo en la ejecución de la aplicación.
     
-    \item \textbf{Ventana de menú principal} La ventana del menú principal
+    \item \textbf{Ventana de menú principal} La ventana del menú principal (figura \ref{fig:boceto-menu-principal})
     muestra el menú de inicio de \emph{Zycars}, así como 
     todas las opciones generales del juego disponibles, que son las siguientes:
         \begin{itemize}
@@ -39,16 +39,10 @@ ventanas que el usuario encontrará en el sistema:
         \end{itemize}
         En este menú y en los siguiente que se describan se usará el ratón para navegar por ellos y solo será necesario
         hacer click sobre la opción deseada para acceder a ella.
+
+        \figura{imagenes/analisis/boceto_menu_principal.png}{scale=0.5}{Análisis: Boceto del menú principal}{fig:boceto-menu-principal}{H}
     
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_menu_principal.png}
-          \end{center}
-          \caption{Análisis: Boceto del menú principal.}
-        \end{figure}
-    
-    \item \textbf{Ventana de opciones} Desde la ventana de opciones se podrán
+    \item \textbf{Ventana de opciones} Desde la ventana de opciones (figura \ref{fig:boceto-opciones}) se podrán
     modificar las distintas características de la 
     configuración del juego como el audio o controles. Esta ventana se podría dividir en tres partes diferencias que se indican
     a continuación:
@@ -62,105 +56,57 @@ ventanas que el usuario encontrará en el sistema:
             de ítems y pausa del juego.
         \end{itemize}
 
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_opciones.png}
-          \end{center}
-          \caption{Análisis: Boceto del menú de opciones.}
-        \end{figure}
+        \figura{imagenes/analisis/boceto_opciones.png}{scale=0.5}{Análisis: Boceto del menú de opciones}{fig:boceto-opciones}{}
 
-    \item \textbf{Ventana de créditos} En esta pantalla se mostrarán los creadores de \emph{Zycars}. Tendremos a nuestra 
+    \item \textbf{Ventana de créditos} En esta pantalla (figura \ref{fig:boceto-creditos})se mostrarán los creadores de \emph{Zycars}. Tendremos a nuestra 
     disposición un botón para volver al menú principal.
 
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_creditos.png}
-          \end{center}
-          \caption{Análisis: Boceto de la pantalla de créditos.}
-        \end{figure}
+        \figura{imagenes/analisis/boceto_creditos.png}{scale=0.5}{Análisis: Boceto de la pantalla de créditos}{fig:boceto-creditos}{}
     
-    \item \textbf{Ventana de selección de personaje} Esta ventana será compartida por los tres modos de juego disponibles. En ella 
+    \item \textbf{Ventana de selección de personaje} Esta ventana (figura \ref{fig:boceto_menu_personaje}) será compartida por los tres modos de juego disponibles. En ella 
     podremos elegir al personaje que desearemos controlar a lo largo de las carreras. De estos jugadores se nos mostrarán sus 
     distintas habilidades.
 
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_menu_personaje.png}
-          \end{center}
-          \caption{Análisis: Boceto del menú de selección de personaje.}
-        \end{figure}
+        \figura{imagenes/analisis/boceto_menu_personaje.png}{scale=0.5}{Análisis: Boceto del menú de selección de personaje}{fig:boceto_menu_personaje}{H}
     
-    \item \textbf{Ventana de selección de circuito} Ventana compartida por el modo carrera rápida y contrarreloj. En esta ventana
+    \item \textbf{Ventana de selección de circuito} Ventana (figura \ref{fig:boceto_menu_circuito}) compartida por el modo carrera rápida y contrarreloj. En esta ventana
     deberemos elegir el circuito en el que deseamos competir. Se nos mostrará una imagen de cada circuito que seleccionemos.
 
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_menu_circuito.png}
-          \end{center}
-          \caption{Análisis: Boceto del menú de selección de circuito.}
-        \end{figure}
+        \figura{imagenes/analisis/boceto_menu_circuito.png}{scale=0.5}{Análisis: Boceto del menú de selección de circuito}{fig:boceto_menu_circuito}{H}
     
     \item \textbf{Ventana de selección de campeonato} Ventana muy similar a la descrita anteriormente. En ella se nos mostrarán
     todos los circuitos de cada campeonato disponible. Pero al contrario que la anterior en esta ventana elegiremos el campeonato 
     del circuito seleccionado en el momento.
     
-    \item \textbf{Ventana de juego} Ventana principal de todo el juego. Mostrará la carrera actual que se esté disputando, así como
+    \item \textbf{Ventana de juego} Ventana principal de todo el juego (figura \ref{fig:boceto_juego}). Mostrará la carrera actual que se esté disputando, así como
     los distinto marcadores aclaratorios sobre el estado de la carrera, como
     pueden ser posiciones de los jugadores, ítem actual y
     tiempos de carrera. Según la tecla indicada en los controles del menú de opciones (ESC o p) se podrá acceder al menú
     de pausa del juego.
 
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_juego.png}
-          \end{center}
-          \caption{Análisis: Boceto de ventana de juego.}
-        \end{figure}
+        \figura{imagenes/analisis/boceto_juego.png}{scale=0.5}{Análisis: Boceto de ventana de juego}{fig:boceto_juego}{}
     
-    \item \textbf{Ventana de pausa} Únicamente accesible desde la ventana de juego. Esta nos permitirá detener el juego en curso, 
+    \item \textbf{Ventana de pausa} Únicamente accesible desde la ventana de juego (figura \ref{fig:boceto_pausa}). Esta nos permitirá detener el juego en curso, 
     siendo posible reanudar el juego, reiniciar el mismo o volver al menú principal.
 
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_pausa.png}
-          \end{center}
-          \caption{Análisis: Boceto del menú de pausa.}
-        \end{figure}
+        \figura{imagenes/analisis/boceto_pausa.png}{scale=0.5}{Análisis: Boceto de menú de pausa}{fig:boceto_pausa}{}
     
-    \item \textbf{Ventana de posiciones de carrera} Ventana mostrada al terminar alguna de las carreras. En ella nos muestra el 
+    \item \textbf{Ventana de posiciones de carrera} Ventana mostrada (figura \ref{fig:boceto_resultados_carrera}) al terminar alguna de las carreras. En ella nos muestra el 
     resultado de la última carrera disputada. Nos permite continuar al siguiente circuito, en el caso del modo campeonato, o seguir
     hacia el menú principal, en el modo carrera rápida. También se nos permite
     reiniciar la última carrera disputada.
 
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_resultados_carrera.png}
-          \end{center}
-          \caption{Análisis: Boceto de la ventana de posiciones.}
-        \end{figure}
+        \figura{imagenes/analisis/boceto_resultados_carrera.png}{scale=0.5}{Análisis: Boceto de la ventana de posiciones}{fig:boceto_resultados_carrera}{H}
         
     \item \textbf{Ventana de posiciones de campeonato} Ventana mostrada en el modo campeonato tras la ventana de posiciones 
     de carrera, en ella se nos muestra las posiciones de los competidores en el campeonato actual.
     
-    \item \textbf{Ventana de tiempos de contrarreloj} Ventana mostrada al completar algún circuito en el modo contrarreloj. En ella
+    \item \textbf{Ventana de tiempos de contrarreloj} Ventana (figura \ref{fig:boceto_tiempos}) mostrada al completar algún circuito en el modo contrarreloj. En ella
     se nos muestran los distintos tiempos conseguidos a lo largo del circuito y
     se nos indicará si hemos batido algún récord.
     Esta ventana nos permite continuar hacia el menú principal, así como reiniciar el circuito disputado.
 
-        \begin{figure}[H]
-          \label{diagrama_casos_uso}
-          \begin{center}
-            \includegraphics[scale=0.42]{imagenes/analisis/boceto_tiempos.png}
-          \end{center}
-          \caption{Análisis: Boceto de la ventana de tiempos.}
-        \end{figure}
+        \figura{imagenes/analisis/boceto_tiempos.png}{scale=0.5}{Análisis: Boceto de la ventana de tiempos}{fig:boceto_tiempos}{H}
     
 \end{description}
 
@@ -172,7 +118,7 @@ Los requisitos funcionales que el sistema debe ofrecer son los siguientes:
 \begin{itemize}
     \item Salir de la aplicación desde cualquier ventana.
     \item Seleccionar los distintos modos de juego.
-    \item Permitir al jugador competir contra la inteligencia artificial.
+    \item Permitir al jugador competir contra coches dirigidos por el ordenador.
     \item Modificar la configuración (audio, pantalla y controles) del juego.
     \item Pausar el juego.
     \item Seleccionar uno de los jugadores propuestos.
@@ -181,6 +127,7 @@ Los requisitos funcionales que el sistema debe ofrecer son los siguientes:
     \item Reiniciar cualquier carrera una vez terminada o en curso.
     \item Reiniciar cualquier campeonato una vez terminado o en curso.
     \item Lanzamientos de ítems durante cualquier carrera.
+    \item Extender el juego mediante la incorporación de nuevos circuitos y personajes.
 \end{itemize}
 
 \paragraph{}
@@ -188,15 +135,17 @@ Los distintos tipos de jugadores son:
 
 \begin{itemize}
     \item \textbf{Humano}: es el controlado por una persona
-    \item \textbf{Inteligencia artificial}: controlado por el ordenador.
+    \item \textbf{Máquina}: controlado por el ordenador.
 \end{itemize}
 
 \paragraph{}
 Existes tres modos de juego:
 
 \begin{itemize}
-	\item \textbf{Carrera rápida}: consiste en la realización de un único circuito, compitiendo contra la inteligencia artificial.
-	\item \textbf{Campeonato}: el jugador competirá contra la inteligencia artificial a lo largo de 4 carreras, en las que obtendrá una puntuación
+	\item \textbf{Carrera rápida}: consiste en la realización de un único circuito, compitiendo contra coches dirigidos 
+    por el ordenador.
+	\item \textbf{Campeonato}: el jugador competirá contra coches dirigidos por el ordenador a lo largo de 4 carreras, 
+    en las que obtendrá una puntuación
 	según la posición obtenida en cada una de las carreras. El ganador será el que mejor puntuación haya conseguido al concluir
 	el campeonato.
 	\item \textbf{Contrarreloj}: en este modo de juego, el jugador competirá solo, con el fin de mejorar las marcas de tiempo de cada uno de los 
@@ -256,7 +205,7 @@ representa los requisitos funcionales del sistema, centrando en que hace y no c�
 \subsection{Diagrama de los casos de uso}
 
 \paragraph{}
-En primer lugar mostramos el modelo de casos de uso, que representa la funcionalidad completa de la aplicación. Se ha usado el 
+En primer lugar mostramos el modelo de casos de uso (figura \ref{fig:diagrama_casos_uso}), que representa la funcionalidad completa de la aplicación. Se ha usado el 
 siguiente esquema:
 
 \begin{enumerate}
@@ -267,13 +216,7 @@ siguiente esquema:
     \item Estructurar dichos casos de uso.
 \end{enumerate}
 
-\begin{figure}[H]
-  \label{diagrama_casos_uso}
-  \begin{flushleft}
-    \includegraphics[scale=0.45]{imagenes/analisis/diagrama_casos.png}
-  \end{flushleft}
-  \caption{Análisis: Diagrama de casos de uso}
-\end{figure}
+\figura{imagenes/analisis/diagrama_casos.png}{scale=0.56, angle=90}{Análisis: Diagrama de casos de uso}{fig:diagrama_casos_uso}{}
 
 \subsection{Descripción de los casos de uso}
 
@@ -682,7 +625,8 @@ las clases habrá una pequeña descripción sobre la labro que desempeña cada u
     \item [Contrarreloj] Clase que gestiona el modo de juego contrarreloj.
     
     \item [Control de juego] Clase encargada del control de la carrera, controlando la interacción del jugador con el circuito, así 
-    como el jugador con la inteligencia artificial. Aspectos básico como colisiones, scroll de pantalla, control de vueltas, control
+    como el jugador con los coches dirigidos por el ordenador. Aspectos básico como colisiones, scroll de pantalla, 
+    control de vueltas, control
     de posiciones.
     
     \item [Circuito] Clase encargada de cargar y dibujar el circuito.
@@ -691,7 +635,7 @@ las clases habrá una pequeña descripción sobre la labro que desempeña cada u
     \item [Objeto de juego] Clase virtual con las necesidades básicas de los objetos del juego.
     \item [Caja de ítem] Clase que representa las cajas que proporcionan ítems a los jugadores.
     \item [Vehículo básico] Clase virtual con las necesidades básicas de los vehículos del juego.
-    \item [IA] Clase que representa el comportamiento de los vehículos controlados por inteligencia artificial.
+    \item [IA] Clase que representa el comportamiento de los vehículos dirigidos por el ordenador
     \item [Jugador] Clase que que representa al vehículo controlado por el jugador.
 \end{description}
 
