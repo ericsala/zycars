@@ -1,0 +1,797 @@
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl}{
+\section{\-Referencia de la \-Clase engine\-:\-:gamecontrol\-:\-:\-Game\-Control}
+\label{classengine_1_1gamecontrol_1_1GameControl}\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}}
+}
+
+
+\-Clase encargada de controlar los aspectos básicos de una carrera, desde las colisiones hasta el control de las vueltas.  
+
+
+\-Diagrama de herencias de engine\-:\-:gamecontrol\-:\-:\-Game\-Control\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classengine_1_1gamecontrol_1_1GameControl}
+\end{center}
+\end{figure}
+\subsection*{\-Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_ae8cc2a551c798ba23c5c4dba8558f802}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a00a70a7c19d5b19d7103b2d7b23e94c7}{
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a00a70a7c19d5b19d7103b2d7b23e94c7}{update}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a00a70a7c19d5b19d7103b2d7b23e94c7}
+
+\begin{DoxyCompactList}\small\item\em \-Método encargado de actualizar todos los componentes del circuito. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a137905fbe1021930896898dc603a108a}{draw}
+\begin{DoxyCompactList}\small\item\em \-Método encargado de dibujar todos los elementos en pantalla. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ab67eeeeb97077bdaf2f4e964af3acfb7}{
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_ab67eeeeb97077bdaf2f4e964af3acfb7}{check\-\_\-collisions}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ab67eeeeb97077bdaf2f4e964af3acfb7}
+
+\begin{DoxyCompactList}\small\item\em \-Encargado de gestionar las distintas colisiones, de los elemento del juego, entre ellos y el escenario. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_af717dfd4c17165e6632f33bc0e1214da}{
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_af717dfd4c17165e6632f33bc0e1214da}{scroll\-\_\-control}}
+\label{classengine_1_1gamecontrol_1_1GameControl_af717dfd4c17165e6632f33bc0e1214da}
+
+\begin{DoxyCompactList}\small\item\em \-Método encargado de controlar el scroll de la pantalla según la posición del coche. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a2b38980fce670780232abac1e8e89c2b}{add\-\_\-bullet}
+\begin{DoxyCompactList}\small\item\em \-Método que añade una nueva bala al grupo de balas. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_ac5bccabc612709ab5385ed569bd7a609}{add\-\_\-oil}
+\begin{DoxyCompactList}\small\item\em \-Añade una nueva mancha de aceite en el juego y actualiza el mapa de costes. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a1d0b27dc3f25c918f02b888c5c855683}{add\-\_\-gum}
+\begin{DoxyCompactList}\small\item\em \-Añade un chicle en el juego y actualiza el mapa de costes. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_ae3871a6345ea4c73c35d56bf2664aa8d}{add\-\_\-ball}
+\begin{DoxyCompactList}\small\item\em \-Añade una nueva bola al juego. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a99610d227ed036ed3c9f52ada1b9adb0}{add\-\_\-ia\-\_\-car}
+\begin{DoxyCompactList}\small\item\em \-Método que añade un nuevo coche controlado por la \-I\-A al grupo. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a894da94eb621c16c5c4409329dbc7ea2}{add\-\_\-item\-\_\-box}
+\begin{DoxyCompactList}\small\item\em \-Método que añade una nueva caja de items al grupo. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a081c3e7f12eef5557c17cd8b9568906a}{add\-\_\-player}
+\begin{DoxyCompactList}\small\item\em étodo que define quien es el jugador principal \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a152f9a80073c0c9bb845bc634750cb64}{add\-\_\-checkpoint}
+\begin{DoxyCompactList}\small\item\em \-Método que añade un nuevo punto de control al circuito. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_aca070da852fec28cc99a2e2aca73974f}{add\-\_\-animation}
+\begin{DoxyCompactList}\small\item\em \-Añade una nueva animación al juego. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a22ef821012eaa77ce4968b2545488132}{update\-\_\-astar\-\_\-map}
+\begin{DoxyCompactList}\small\item\em \-Actualiza el mapa de pesos del \-A$\ast$. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_aad81d8bc068795cf73186e26b7d7884c}{
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_aad81d8bc068795cf73186e26b7d7884c}{order\-\_\-checkpoints}}
+\label{classengine_1_1gamecontrol_1_1GameControl_aad81d8bc068795cf73186e26b7d7884c}
+
+\begin{DoxyCompactList}\small\item\em \-Ordena todos los checkpoints de los competidores. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a667acfb0f91ca114af19686cf7e9d308}{set\-\_\-goal}
+\begin{DoxyCompactList}\small\item\em \-Método que asigna la meta del circuito. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a9b51c78cc49fd614e5c81ba303e7b802}{set\-\_\-start}
+\begin{DoxyCompactList}\small\item\em \-Método que situa la linea de salida y los coches en meta. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_addb048ca79e4a1fc6048ead27ec7f7fb}{circuit\-\_\-x}
+\begin{DoxyCompactList}\small\item\em \-Método que devuelve la x actual del circuito. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_adb0b3dc36ac39cccf5defcd25570477b}{circuit\-\_\-y}
+\begin{DoxyCompactList}\small\item\em \-Método que devuelve la y actual del circuito. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a3c2545503a66f88f56883b69542d8a81}{set\-\_\-state}
+\begin{DoxyCompactList}\small\item\em \-Función que cambia el estado actual de juego. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_aa6089a881363e34b42d2e84435f83a35}{get\-\_\-state}
+\begin{DoxyCompactList}\small\item\em \-Consulta el estado del juego. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ad71a93e62a765d90514c4fe2e985c06f}{
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_ad71a93e62a765d90514c4fe2e985c06f}{lap\-\_\-complete}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ad71a93e62a765d90514c4fe2e985c06f}
+
+\begin{DoxyCompactList}\small\item\em \-Método que es llamado cuando el jugador ha dado una vuelta al circuito. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a5bc6b0d4423caee608f3892ea241afe1}{
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a5bc6b0d4423caee608f3892ea241afe1}{update\-\_\-laps\-\_\-counter}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a5bc6b0d4423caee608f3892ea241afe1}
+
+\begin{DoxyCompactList}\small\item\em \-Método que se llama para actualizar el contador visible de las vueltas. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_afa6b2d1e883f298c47e1db8a4e321860}{on\-\_\-screen}
+\begin{DoxyCompactList}\small\item\em \-Método que comprueba si un elemento del juego se encuentra en pantalla. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_af493acc51f8a9db941235c627cf2408f}{current\-\_\-tile}
+\begin{DoxyCompactList}\small\item\em \-Calcula el tile actual que se encuentra el sprite. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ac0c1ae80cf0db6a534351a51e83ea732}{
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_ac0c1ae80cf0db6a534351a51e83ea732}{reboot\-\_\-race}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ac0c1ae80cf0db6a534351a51e83ea732}
+
+\begin{DoxyCompactList}\small\item\em \-Reinicia la carrera actual. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_ad480dbd4fb553b63f537877fa4618746}{get\-\_\-music\-\_\-file}
+\begin{DoxyCompactList}\small\item\em \-Consulta el archivo de música. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a567d83b3a136b088101689a4f2ca24f6}{set\-\_\-music\-\_\-file}
+\begin{DoxyCompactList}\small\item\em \-Estable un nuevo archivo de música. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_aa3e5004491ef1dbedbfaa47e84598d14}{get\-\_\-player}
+\begin{DoxyCompactList}\small\item\em \-Constultor jugador. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1gamecontrol_1_1GameControl_afa2cb69ab6df9fd45baf782db11ca950}{get\-\_\-ia\-\_\-cars}
+\begin{DoxyCompactList}\small\item\em \-Constultor ia. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ac6f73f6afc25360ba31603e197cc26d5}{
+{\bfseries music\-\_\-file}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ac6f73f6afc25360ba31603e197cc26d5}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a13c70bdc802bb889da06213e669172a9}{
+{\bfseries game\-\_\-mode}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a13c70bdc802bb889da06213e669172a9}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a8fbdf2193d4c5a8cd7b947197a4dfc41}{
+{\bfseries ia\-\_\-cars}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a8fbdf2193d4c5a8cd7b947197a4dfc41}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a27de611694b3217c864936f7350af470}{
+{\bfseries ia\-\_\-checkpoints}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a27de611694b3217c864936f7350af470}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a2842abf8f10d0be7dfc57f282eb6cb03}{
+{\bfseries items\-\_\-box}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a2842abf8f10d0be7dfc57f282eb6cb03}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a91c291dfe7c071d80e7a86c30ada4f67}{
+{\bfseries checkpoints}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a91c291dfe7c071d80e7a86c30ada4f67}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_aad16aad6d8f7ed758ac55c0a76263263}{
+{\bfseries ia\-\_\-checks}}
+\label{classengine_1_1gamecontrol_1_1GameControl_aad16aad6d8f7ed758ac55c0a76263263}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_abf67801f8c026c2450b441b57f648817}{
+{\bfseries bullets}}
+\label{classengine_1_1gamecontrol_1_1GameControl_abf67801f8c026c2450b441b57f648817}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a158d81e79aaf30b20bd7b5b3ab4ca312}{
+{\bfseries oils}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a158d81e79aaf30b20bd7b5b3ab4ca312}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a22b96014a2346a4593be2eb52346008d}{
+{\bfseries balls}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a22b96014a2346a4593be2eb52346008d}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a164862cd5a4fd65db833c76b6bbc1102}{
+{\bfseries gums}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a164862cd5a4fd65db833c76b6bbc1102}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a5da44d16edf78ea42799b7f12805b883}{
+{\bfseries static\-\_\-animations}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a5da44d16edf78ea42799b7f12805b883}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a6f9f8f7f2fd69e4122409b090bfbe8a3}{
+{\bfseries advices}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a6f9f8f7f2fd69e4122409b090bfbe8a3}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a87f6c4652a38c6ee866864c4482bb562}{
+{\bfseries collision\-\_\-manager}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a87f6c4652a38c6ee866864c4482bb562}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ab39c1e7b8e3265f4a78eb3d6c95872e7}{
+{\bfseries start}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ab39c1e7b8e3265f4a78eb3d6c95872e7}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a69f35ffd884ec94555f352706c8fb90b}{
+{\bfseries complete}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a69f35ffd884ec94555f352706c8fb90b}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a383012d9f9c90d2296364b6636eab57f}{
+{\bfseries max\-\_\-laps}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a383012d9f9c90d2296364b6636eab57f}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a4529202d97e79680ca590a14f2039397}{
+{\bfseries actual\-\_\-laps}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a4529202d97e79680ca590a14f2039397}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a628a1bbb17d7f45c39d1c2c206172a08}{
+{\bfseries font}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a628a1bbb17d7f45c39d1c2c206172a08}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a35e9ae4c296f578c4200abf38b5228a5}{
+{\bfseries font2}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a35e9ae4c296f578c4200abf38b5228a5}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_aae61c767bc29dac11646d305f0ae58a8}{
+{\bfseries laps\-\_\-counter}}
+\label{classengine_1_1gamecontrol_1_1GameControl_aae61c767bc29dac11646d305f0ae58a8}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_aa7bf2dfad15cf4cea2db3fb9a83928e1}{
+{\bfseries laps\-\_\-counter\-\_\-rect}}
+\label{classengine_1_1gamecontrol_1_1GameControl_aa7bf2dfad15cf4cea2db3fb9a83928e1}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ae018b7f2f51c2374398f2877511dad8b}{
+{\bfseries fade\-\_\-surface}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ae018b7f2f51c2374398f2877511dad8b}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a2a2b58a3aaaef7d279502106c5b5e764}{
+{\bfseries fadein}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a2a2b58a3aaaef7d279502106c5b5e764}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_abd02046fc97ba70a89b9a5948d7a724c}{
+{\bfseries fadeout}}
+\label{classengine_1_1gamecontrol_1_1GameControl_abd02046fc97ba70a89b9a5948d7a724c}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_aba5448a15b1573cf58dd7a442bcf4a1c}{
+{\bfseries fade\-\_\-speed}}
+\label{classengine_1_1gamecontrol_1_1GameControl_aba5448a15b1573cf58dd7a442bcf4a1c}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ac85b9f0a80ddcccaf6f8862317314fa5}{
+{\bfseries fadeout\-\_\-speed}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ac85b9f0a80ddcccaf6f8862317314fa5}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a78874883a06ac4a76cca5d3e02816d50}{
+{\bfseries actual\-\_\-alpha}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a78874883a06ac4a76cca5d3e02816d50}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a85efffd9f8bbfd9a5f6290bd54883249}{
+{\bfseries actual\-\_\-time}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a85efffd9f8bbfd9a5f6290bd54883249}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a0cef3346a415868b185a4f280ffc81b1}{
+{\bfseries total\-\_\-time}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a0cef3346a415868b185a4f280ffc81b1}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a0ff88483cb0bf49048b8220d24639e4d}{
+{\bfseries best\-\_\-total\-\_\-time}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a0ff88483cb0bf49048b8220d24639e4d}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ac5f0fc1d6115e0185f320c502bf00cc0}{
+{\bfseries best\-\_\-time}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ac5f0fc1d6115e0185f320c502bf00cc0}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ab569914fd156e7b763b3133634ac3c90}{
+{\bfseries best\-\_\-lap\-\_\-player}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ab569914fd156e7b763b3133634ac3c90}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a024cd94962ef1f2180ff74137defde35}{
+{\bfseries lap\-\_\-times}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a024cd94962ef1f2180ff74137defde35}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ad71ffe68963b889652a69f373adeeb7a}{
+{\bfseries circuit}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ad71ffe68963b889652a69f373adeeb7a}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a0a94d5ebb04e1ce543833150d7201e77}{
+{\bfseries pause}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a0a94d5ebb04e1ce543833150d7201e77}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a22d3f8e3ae58522479f306bbd7e5379a}{
+{\bfseries count\-\_\-down}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a22d3f8e3ae58522479f306bbd7e5379a}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ad5d63e1e5b4bc1edf49cf8999c142d4e}{
+{\bfseries position\-\_\-board}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ad5d63e1e5b4bc1edf49cf8999c142d4e}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a08260c17d05c420c4ff903255325e245}{
+{\bfseries actual\-\_\-state}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a08260c17d05c420c4ff903255325e245}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a49e8093a7a9ef1251eddab2f63325bba}{
+{\bfseries position}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a49e8093a7a9ef1251eddab2f63325bba}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a6c0392aa61e7fc96d6dd383f38863f2d}{
+{\bfseries player\-\_\-position}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a6c0392aa61e7fc96d6dd383f38863f2d}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a85730118d25fb97276b9253496578ea5}{
+{\bfseries sounds}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a85730118d25fb97276b9253496578ea5}
+
+\item 
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_abb3e7f632f467c079f4d34679dc324eb}{
+{\bfseries player}}
+\label{classengine_1_1gamecontrol_1_1GameControl_abb3e7f632f467c079f4d34679dc324eb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Descripción detallada}
+\-Clase encargada de controlar los aspectos básicos de una carrera, desde las colisiones hasta el control de las vueltas. 
+
+\subsection{\-Documentación del constructor y destructor}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ae8cc2a551c798ba23c5c4dba8558f802}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{game, }
+\item[{}]{game\-\_\-mode, }
+\item[{}]{path, }
+\item[{}]{best\-\_\-total\-\_\-time, }
+\item[{}]{best\-\_\-lap, }
+\item[{}]{laps = {\ttfamily 3}}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ae8cc2a551c798ba23c5c4dba8558f802}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em game} & \-Referencia a game \\
+\hline
+{\em path} & archivo xml del circuito en cuestión \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Documentación de las funciones miembro}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_aca070da852fec28cc99a2e2aca73974f}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-animation@{add\-\_\-animation}}
+\index{add\-\_\-animation@{add\-\_\-animation}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-animation}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-animation (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{animation}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_aca070da852fec28cc99a2e2aca73974f}
+
+
+\-Añade una nueva animación al juego. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em animation} & \-Animación a añadir \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ae3871a6345ea4c73c35d56bf2664aa8d}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-ball@{add\-\_\-ball}}
+\index{add\-\_\-ball@{add\-\_\-ball}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-ball}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-ball (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{ball}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ae3871a6345ea4c73c35d56bf2664aa8d}
+
+
+\-Añade una nueva bola al juego. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em ball} & \-Bola a añadir en el juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a2b38980fce670780232abac1e8e89c2b}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-bullet@{add\-\_\-bullet}}
+\index{add\-\_\-bullet@{add\-\_\-bullet}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-bullet}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-bullet (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{bullet}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a2b38980fce670780232abac1e8e89c2b}
+
+
+\-Método que añade una nueva bala al grupo de balas. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em bullet} & \-Bala a añadir \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a152f9a80073c0c9bb845bc634750cb64}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-checkpoint@{add\-\_\-checkpoint}}
+\index{add\-\_\-checkpoint@{add\-\_\-checkpoint}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-checkpoint}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-checkpoint (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{checkpoint, }
+\item[{}]{position}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a152f9a80073c0c9bb845bc634750cb64}
+
+
+\-Método que añade un nuevo punto de control al circuito. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em checkpoint} & \-Nuevo punto de control a añadir \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a1d0b27dc3f25c918f02b888c5c855683}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-gum@{add\-\_\-gum}}
+\index{add\-\_\-gum@{add\-\_\-gum}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-gum}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-gum (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{gum}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a1d0b27dc3f25c918f02b888c5c855683}
+
+
+\-Añade un chicle en el juego y actualiza el mapa de costes. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em gum} & \-Chicle a añadir \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a99610d227ed036ed3c9f52ada1b9adb0}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-ia\-\_\-car@{add\-\_\-ia\-\_\-car}}
+\index{add\-\_\-ia\-\_\-car@{add\-\_\-ia\-\_\-car}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-ia\-\_\-car}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-ia\-\_\-car (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{ia\-\_\-car}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a99610d227ed036ed3c9f52ada1b9adb0}
+
+
+\-Método que añade un nuevo coche controlado por la \-I\-A al grupo. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em ia\-\_\-car} & \-Nuevo coche \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a894da94eb621c16c5c4409329dbc7ea2}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-item\-\_\-box@{add\-\_\-item\-\_\-box}}
+\index{add\-\_\-item\-\_\-box@{add\-\_\-item\-\_\-box}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-item\-\_\-box}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-item\-\_\-box (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{item\-\_\-box}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a894da94eb621c16c5c4409329dbc7ea2}
+
+
+\-Método que añade una nueva caja de items al grupo. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em item\-\_\-box} & \-Caja a añadir \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ac5bccabc612709ab5385ed569bd7a609}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-oil@{add\-\_\-oil}}
+\index{add\-\_\-oil@{add\-\_\-oil}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-oil}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-oil (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{oil}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ac5bccabc612709ab5385ed569bd7a609}
+
+
+\-Añade una nueva mancha de aceite en el juego y actualiza el mapa de costes. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em oil} & \-Mancha a añadir \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a081c3e7f12eef5557c17cd8b9568906a}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!add\-\_\-player@{add\-\_\-player}}
+\index{add\-\_\-player@{add\-\_\-player}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{add\-\_\-player}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::add\-\_\-player (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{player}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a081c3e7f12eef5557c17cd8b9568906a}
+
+
+étodo que define quien es el jugador principal 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em player} & \-Jugador \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_addb048ca79e4a1fc6048ead27ec7f7fb}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!circuit\-\_\-x@{circuit\-\_\-x}}
+\index{circuit\-\_\-x@{circuit\-\_\-x}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{circuit\-\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::circuit\-\_\-x (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_addb048ca79e4a1fc6048ead27ec7f7fb}
+
+
+\-Método que devuelve la x actual del circuito. 
+
+\begin{DoxyReturn}{\-Devuelve}
+posicion x del circuito 
+\end{DoxyReturn}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_adb0b3dc36ac39cccf5defcd25570477b}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!circuit\-\_\-y@{circuit\-\_\-y}}
+\index{circuit\-\_\-y@{circuit\-\_\-y}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{circuit\-\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::circuit\-\_\-y (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_adb0b3dc36ac39cccf5defcd25570477b}
+
+
+\-Método que devuelve la y actual del circuito. 
+
+\begin{DoxyReturn}{\-Devuelve}
+posicion y del circuito 
+\end{DoxyReturn}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_af493acc51f8a9db941235c627cf2408f}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!current\-\_\-tile@{current\-\_\-tile}}
+\index{current\-\_\-tile@{current\-\_\-tile}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{current\-\_\-tile}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::current\-\_\-tile (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{rect}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_af493acc51f8a9db941235c627cf2408f}
+
+
+\-Calcula el tile actual que se encuentra el sprite. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em sprite} & \-Sprite del que deseamos averiguar en que tile se encuentra \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a137905fbe1021930896898dc603a108a}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!draw@{draw}}
+\index{draw@{draw}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::draw (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{screen}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a137905fbe1021930896898dc603a108a}
+
+
+\-Método encargado de dibujar todos los elementos en pantalla. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em screen} & \-Superficie destino \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplementado de \hyperlink{classengine_1_1state_1_1State_a26fb497a55923aef2cf9f30252b0d1c5}{engine\-::state\-::\-State}.
+
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_afa2cb69ab6df9fd45baf782db11ca950}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!get\-\_\-ia\-\_\-cars@{get\-\_\-ia\-\_\-cars}}
+\index{get\-\_\-ia\-\_\-cars@{get\-\_\-ia\-\_\-cars}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{get\-\_\-ia\-\_\-cars}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::get\-\_\-ia\-\_\-cars (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_afa2cb69ab6df9fd45baf782db11ca950}
+
+
+\-Constultor ia. 
+
+\begin{DoxyReturn}{\-Devuelve}
+\-I\-A 
+\end{DoxyReturn}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_ad480dbd4fb553b63f537877fa4618746}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!get\-\_\-music\-\_\-file@{get\-\_\-music\-\_\-file}}
+\index{get\-\_\-music\-\_\-file@{get\-\_\-music\-\_\-file}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{get\-\_\-music\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::get\-\_\-music\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_ad480dbd4fb553b63f537877fa4618746}
+
+
+\-Consulta el archivo de música. 
+
+\begin{DoxyReturn}{\-Devuelve}
+\-Nombre del archivo de música 
+\end{DoxyReturn}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_aa3e5004491ef1dbedbfaa47e84598d14}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!get\-\_\-player@{get\-\_\-player}}
+\index{get\-\_\-player@{get\-\_\-player}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{get\-\_\-player}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::get\-\_\-player (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_aa3e5004491ef1dbedbfaa47e84598d14}
+
+
+\-Constultor jugador. 
+
+\begin{DoxyReturn}{\-Devuelve}
+\-Jugador 
+\end{DoxyReturn}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_aa6089a881363e34b42d2e84435f83a35}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!get\-\_\-state@{get\-\_\-state}}
+\index{get\-\_\-state@{get\-\_\-state}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{get\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::get\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_aa6089a881363e34b42d2e84435f83a35}
+
+
+\-Consulta el estado del juego. 
+
+\begin{DoxyReturn}{\-Devuelve}
+\-Estado del juedo 
+\end{DoxyReturn}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_afa6b2d1e883f298c47e1db8a4e321860}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!on\-\_\-screen@{on\-\_\-screen}}
+\index{on\-\_\-screen@{on\-\_\-screen}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{on\-\_\-screen}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::on\-\_\-screen (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{element}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_afa6b2d1e883f298c47e1db8a4e321860}
+
+
+\-Método que comprueba si un elemento del juego se encuentra en pantalla. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em element} & \-Elemento a comprobar si se encuentra en pantalla o no\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+\-True si está en pantalla, \-False en caso contrario 
+\end{DoxyReturn}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a667acfb0f91ca114af19686cf7e9d308}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!set\-\_\-goal@{set\-\_\-goal}}
+\index{set\-\_\-goal@{set\-\_\-goal}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{set\-\_\-goal}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::set\-\_\-goal (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{goal}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a667acfb0f91ca114af19686cf7e9d308}
+
+
+\-Método que asigna la meta del circuito. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em goal} & \-Meta a asignar \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a567d83b3a136b088101689a4f2ca24f6}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!set\-\_\-music\-\_\-file@{set\-\_\-music\-\_\-file}}
+\index{set\-\_\-music\-\_\-file@{set\-\_\-music\-\_\-file}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{set\-\_\-music\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::set\-\_\-music\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{music\-\_\-file}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a567d83b3a136b088101689a4f2ca24f6}
+
+
+\-Estable un nuevo archivo de música. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em music\-\_\-file} & nombre del nuevo fichero de música \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a9b51c78cc49fd614e5c81ba303e7b802}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!set\-\_\-start@{set\-\_\-start}}
+\index{set\-\_\-start@{set\-\_\-start}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{set\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::set\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{circuit, }
+\item[{}]{x, }
+\item[{}]{y, }
+\item[{}]{image\-\_\-code, }
+\item[{}]{orientation, }
+\item[{}]{car\-\_\-angle}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a9b51c78cc49fd614e5c81ba303e7b802}
+
+
+\-Método que situa la linea de salida y los coches en meta. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em x} & \-Posición x \\
+\hline
+{\em y} & \-Posición y \\
+\hline
+{\em image\-\_\-code} & \-Código de la imagen \\
+\hline
+{\em orientation} & \-Orientación de la linea de salida \\
+\hline
+{\em circuit\-\_\-width} & \-Ancho del circuito \\
+\hline
+{\em car\-\_\-angle} & \-Angulo de los coches \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a3c2545503a66f88f56883b69542d8a81}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!set\-\_\-state@{set\-\_\-state}}
+\index{set\-\_\-state@{set\-\_\-state}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{set\-\_\-state}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::set\-\_\-state (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{new\-\_\-state}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a3c2545503a66f88f56883b69542d8a81}
+
+
+\-Función que cambia el estado actual de juego. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em new\-\_\-state} & \-Nuevo estado para el juego \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1gamecontrol_1_1GameControl_a22ef821012eaa77ce4968b2545488132}{
+\index{engine\-::gamecontrol\-::\-Game\-Control@{engine\-::gamecontrol\-::\-Game\-Control}!update\-\_\-astar\-\_\-map@{update\-\_\-astar\-\_\-map}}
+\index{update\-\_\-astar\-\_\-map@{update\-\_\-astar\-\_\-map}!engine::gamecontrol::GameControl@{engine\-::gamecontrol\-::\-Game\-Control}}
+\subsubsection[{update\-\_\-astar\-\_\-map}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::gamecontrol\-::\-Game\-Control\-::update\-\_\-astar\-\_\-map (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{sprite, }
+\item[{}]{type}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1gamecontrol_1_1GameControl_a22ef821012eaa77ce4968b2545488132}
+
+
+\-Actualiza el mapa de pesos del \-A$\ast$. 
+
+sprite \-Sprite con el que actualizaremos el mapa. type \-Tipo del sprite. 
+
+\-La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/jose/\-Dropbox/programacion/zycars/trunk/engine/\hyperlink{gamecontrol_8py}{gamecontrol.\-py}\end{DoxyCompactItemize}

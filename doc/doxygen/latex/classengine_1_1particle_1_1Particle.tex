@@ -1,0 +1,153 @@
+\hypertarget{classengine_1_1particle_1_1Particle}{
+\section{\-Referencia de la \-Clase engine\-:\-:particle\-:\-:\-Particle}
+\label{classengine_1_1particle_1_1Particle}\index{engine\-::particle\-::\-Particle@{engine\-::particle\-::\-Particle}}
+}
+
+
+\-Clase que controla el comportamiento de una particula.  
+
+
+\subsection*{\-Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classengine_1_1particle_1_1Particle_a12f0fdd509d4a93fbd43da2008874e79}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1particle_1_1Particle_ae473776b225c3412c37bdda69fe98b51}{
+def \hyperlink{classengine_1_1particle_1_1Particle_ae473776b225c3412c37bdda69fe98b51}{update}}
+\label{classengine_1_1particle_1_1Particle_ae473776b225c3412c37bdda69fe98b51}
+
+\begin{DoxyCompactList}\small\item\em \-Método que actualiza lógicamente el comportamiento de la particula. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1particle_1_1Particle_a22a494bd84fbfdde87ef83f0813b5d21}{draw}
+\begin{DoxyCompactList}\small\item\em \-Método encargado de dibujar la particula en pantalla. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1particle_1_1Particle_a32ddc69ff9ebf679325f79e78dfdc7cb}{get\-\_\-status}
+\begin{DoxyCompactList}\small\item\em \-Método que indica el estado actual de la particula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classengine_1_1particle_1_1Particle_a9a80e4f33ba453f501b67895bae9342f}{
+{\bfseries angle}}
+\label{classengine_1_1particle_1_1Particle_a9a80e4f33ba453f501b67895bae9342f}
+
+\item 
+\hypertarget{classengine_1_1particle_1_1Particle_aa443e6696b4b3f178a2a9e4407c69304}{
+{\bfseries distance}}
+\label{classengine_1_1particle_1_1Particle_aa443e6696b4b3f178a2a9e4407c69304}
+
+\item 
+\hypertarget{classengine_1_1particle_1_1Particle_a5fd443e70c7beccd17d131277a05be71}{
+{\bfseries scale}}
+\label{classengine_1_1particle_1_1Particle_a5fd443e70c7beccd17d131277a05be71}
+
+\item 
+\hypertarget{classengine_1_1particle_1_1Particle_a52b360e873eb7a95652e8a5cfa1a5291}{
+{\bfseries image}}
+\label{classengine_1_1particle_1_1Particle_a52b360e873eb7a95652e8a5cfa1a5291}
+
+\item 
+\hypertarget{classengine_1_1particle_1_1Particle_ab9196c9dc924a7690781ea528d290a80}{
+{\bfseries speed}}
+\label{classengine_1_1particle_1_1Particle_ab9196c9dc924a7690781ea528d290a80}
+
+\item 
+\hypertarget{classengine_1_1particle_1_1Particle_ae44ae4bdefe991cf891e3e1a697c4fc9}{
+{\bfseries x}}
+\label{classengine_1_1particle_1_1Particle_ae44ae4bdefe991cf891e3e1a697c4fc9}
+
+\item 
+\hypertarget{classengine_1_1particle_1_1Particle_aa562b993dd4957deb29e889aeadf21b3}{
+{\bfseries y}}
+\label{classengine_1_1particle_1_1Particle_aa562b993dd4957deb29e889aeadf21b3}
+
+\item 
+\hypertarget{classengine_1_1particle_1_1Particle_ac48f68986dcf0fabe8e8e79efb25454b}{
+{\bfseries status}}
+\label{classengine_1_1particle_1_1Particle_ac48f68986dcf0fabe8e8e79efb25454b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Descripción detallada}
+\-Clase que controla el comportamiento de una particula. 
+
+\subsection{\-Documentación del constructor y destructor}
+\hypertarget{classengine_1_1particle_1_1Particle_a12f0fdd509d4a93fbd43da2008874e79}{
+\index{engine\-::particle\-::\-Particle@{engine\-::particle\-::\-Particle}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!engine::particle::Particle@{engine\-::particle\-::\-Particle}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::particle\-::\-Particle\-::\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{angle, }
+\item[{}]{distance, }
+\item[{}]{scale, }
+\item[{}]{image, }
+\item[{}]{speed, }
+\item[{}]{rotation}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1particle_1_1Particle_a12f0fdd509d4a93fbd43da2008874e79}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em angle} & Ángulo de desplazamiento \\
+\hline
+{\em distance} & \-Distancia máxima que puede alcanzar desde el origen \\
+\hline
+{\em scale} & \-Escala que tendrá la imagen \\
+\hline
+{\em speed} & \-Velocidad de la particula \\
+\hline
+{\em rotation} & \-Rotación de la imagen \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Documentación de las funciones miembro}
+\hypertarget{classengine_1_1particle_1_1Particle_a22a494bd84fbfdde87ef83f0813b5d21}{
+\index{engine\-::particle\-::\-Particle@{engine\-::particle\-::\-Particle}!draw@{draw}}
+\index{draw@{draw}!engine::particle::Particle@{engine\-::particle\-::\-Particle}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::particle\-::\-Particle\-::draw (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{screen, }
+\item[{}]{source\-\_\-x, }
+\item[{}]{source\-\_\-y}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1particle_1_1Particle_a22a494bd84fbfdde87ef83f0813b5d21}
+
+
+\-Método encargado de dibujar la particula en pantalla. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em screen} & \-Superficie destino \\
+\hline
+{\em source\-\_\-x} & \-Origen x \\
+\hline
+{\em source\-\_\-y} & \-Origen y \\
+\hline
+\end{DoxyParams}
+\hypertarget{classengine_1_1particle_1_1Particle_a32ddc69ff9ebf679325f79e78dfdc7cb}{
+\index{engine\-::particle\-::\-Particle@{engine\-::particle\-::\-Particle}!get\-\_\-status@{get\-\_\-status}}
+\index{get\-\_\-status@{get\-\_\-status}!engine::particle::Particle@{engine\-::particle\-::\-Particle}}
+\subsubsection[{get\-\_\-status}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::particle\-::\-Particle\-::get\-\_\-status (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1particle_1_1Particle_a32ddc69ff9ebf679325f79e78dfdc7cb}
+
+
+\-Método que indica el estado actual de la particula. 
+
+\begin{DoxyReturn}{\-Devuelve}
+\-Estado actual del elemento 
+\end{DoxyReturn}
+
+
+\-La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/jose/\-Dropbox/programacion/zycars/trunk/engine/\hyperlink{particle_8py}{particle.\-py}\end{DoxyCompactItemize}

@@ -1,0 +1,148 @@
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu}{
+\section{\-Referencia de la \-Clase engine\-:\-:classificationmenu\-:\-:\-Classification\-Menu}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu}\index{engine\-::classificationmenu\-::\-Classification\-Menu@{engine\-::classificationmenu\-::\-Classification\-Menu}}
+}
+
+
+\-Muestra las posiciones de los corredores tras una carrera.  
+
+
+\-Diagrama de herencias de engine\-:\-:classificationmenu\-:\-:\-Classification\-Menu\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.916084cm]{classengine_1_1classificationmenu_1_1ClassificationMenu}
+\end{center}
+\end{figure}
+\subsection*{\-Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classengine_1_1classificationmenu_1_1ClassificationMenu_ac472dd85391a4c770f6d2d14e1da6db0}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1classificationmenu_1_1ClassificationMenu_ae23552e8659e8f81a366047544d84157}{set\-\_\-players\-\_\-position}
+\begin{DoxyCompactList}\small\item\em \-Establece la lista de los jugadores y sus posiciones. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1classificationmenu_1_1ClassificationMenu_ac3c291e0806bc66a646c4261899514a4}{draw}
+\begin{DoxyCompactList}\small\item\em \-Muestra la posición de los jugadores en pantalla. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_a4bd98c00e75838ed9a5fe1c08bd7fc91}{
+def \hyperlink{classengine_1_1classificationmenu_1_1ClassificationMenu_a4bd98c00e75838ed9a5fe1c08bd7fc91}{treat\-\_\-option}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_a4bd98c00e75838ed9a5fe1c08bd7fc91}
+
+\begin{DoxyCompactList}\small\item\em \-Controla la opción elegida y que hacer según el caso. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_ad0d5f0ed0e47608144e9296b1f861d36}{
+{\bfseries classification\-\_\-bar}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_ad0d5f0ed0e47608144e9296b1f861d36}
+
+\item 
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_aee1c2f162e31c0c2b314a295255c4460}{
+{\bfseries classification\-\_\-winner}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_aee1c2f162e31c0c2b314a295255c4460}
+
+\item 
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_a52daae4d57ba8202724d45c5f36bed0c}{
+{\bfseries classification\-\_\-player}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_a52daae4d57ba8202724d45c5f36bed0c}
+
+\item 
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_a180b2eb2776df739de7f0adb423d3966}{
+{\bfseries big\-\_\-font}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_a180b2eb2776df739de7f0adb423d3966}
+
+\item 
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_a2accae6bc3cb34e79438f481b829a0a6}{
+{\bfseries tiny\-\_\-font}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_a2accae6bc3cb34e79438f481b829a0a6}
+
+\item 
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_a4025446bc1ba5bd67c5882fecee9fe48}{
+{\bfseries players\-\_\-position}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_a4025446bc1ba5bd67c5882fecee9fe48}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Descripción detallada}
+\-Muestra las posiciones de los corredores tras una carrera. 
+
+\subsection{\-Documentación del constructor y destructor}
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_ac472dd85391a4c770f6d2d14e1da6db0}{
+\index{engine\-::classificationmenu\-::\-Classification\-Menu@{engine\-::classificationmenu\-::\-Classification\-Menu}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!engine::classificationmenu::ClassificationMenu@{engine\-::classificationmenu\-::\-Classification\-Menu}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::classificationmenu\-::\-Classification\-Menu\-::\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{father, }
+\item[{}]{xml\-\_\-path}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_ac472dd85391a4c770f6d2d14e1da6db0}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em father} & \-Modo de juego al que pertenece \\
+\hline
+{\em xml\-\_\-path} & \-Ruta del archivo xml con la configuración básica \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplementado en \hyperlink{classengine_1_1classificationmenu_1_1ChampionShipMenu_ab6a6f2a446ee26f87fc9a7a4f64ef26c}{engine\-::classificationmenu\-::\-Champion\-Ship\-Menu} y \hyperlink{classengine_1_1classificationmenu_1_1TimedMenu_a386dad87e34322279943cc2f25d15b06}{engine\-::classificationmenu\-::\-Timed\-Menu}.
+
+
+
+\subsection{\-Documentación de las funciones miembro}
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_ac3c291e0806bc66a646c4261899514a4}{
+\index{engine\-::classificationmenu\-::\-Classification\-Menu@{engine\-::classificationmenu\-::\-Classification\-Menu}!draw@{draw}}
+\index{draw@{draw}!engine::classificationmenu::ClassificationMenu@{engine\-::classificationmenu\-::\-Classification\-Menu}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::classificationmenu\-::\-Classification\-Menu\-::draw (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{screen}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_ac3c291e0806bc66a646c4261899514a4}
+
+
+\-Muestra la posición de los jugadores en pantalla. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em screen} & \-Superficie destino \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplementado de \hyperlink{classengine_1_1basicmenu_1_1BasicMenu_a9aa29d8e353d2d3329597f5fbbf125b3}{engine\-::basicmenu\-::\-Basic\-Menu}.
+
+
+
+\-Reimplementado en \hyperlink{classengine_1_1classificationmenu_1_1ChampionShipMenu_a95851e106380aebfd46863fccbb1f273}{engine\-::classificationmenu\-::\-Champion\-Ship\-Menu} y \hyperlink{classengine_1_1classificationmenu_1_1TimedMenu_af63713ab80dfade211cf1d54e66088d2}{engine\-::classificationmenu\-::\-Timed\-Menu}.
+
+\hypertarget{classengine_1_1classificationmenu_1_1ClassificationMenu_ae23552e8659e8f81a366047544d84157}{
+\index{engine\-::classificationmenu\-::\-Classification\-Menu@{engine\-::classificationmenu\-::\-Classification\-Menu}!set\-\_\-players\-\_\-position@{set\-\_\-players\-\_\-position}}
+\index{set\-\_\-players\-\_\-position@{set\-\_\-players\-\_\-position}!engine::classificationmenu::ClassificationMenu@{engine\-::classificationmenu\-::\-Classification\-Menu}}
+\subsubsection[{set\-\_\-players\-\_\-position}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::classificationmenu\-::\-Classification\-Menu\-::set\-\_\-players\-\_\-position (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{positions}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1classificationmenu_1_1ClassificationMenu_ae23552e8659e8f81a366047544d84157}
+
+
+\-Establece la lista de los jugadores y sus posiciones. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em positions} & \-Lista con la posicion de los jugadores \\
+\hline
+\end{DoxyParams}
+
+
+\-La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/jose/\-Dropbox/programacion/zycars/trunk/engine/\hyperlink{classificationmenu_8py}{classificationmenu.\-py}\end{DoxyCompactItemize}

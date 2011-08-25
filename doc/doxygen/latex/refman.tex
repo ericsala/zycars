@@ -1,0 +1,168 @@
+\documentclass[a4paper]{book}
+\usepackage{makeidx}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{ifthen}
+\usepackage[table]{xcolor}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{mathptmx}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{sectsty}
+\usepackage[titles]{tocloft}
+\usepackage{doxygen}
+\lstset{language=C++,inputencoding=utf8,basicstyle=\footnotesize,breaklines=true,breakatwhitespace=true,tabsize=8,numbers=left }
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\familydefault}{\sfdefault}
+\hfuzz=15pt
+\setlength{\emergencystretch}{15pt}
+\hbadness=750
+\tolerance=750
+\begin{document}
+\hypersetup{pageanchor=false,citecolor=blue}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large \-Zycars }\\
+\vspace*{1cm}
+{\large \-Generado por Doxygen 1.7.5.1}\\
+\vspace*{0.5cm}
+{\small Jueves, 25 de Agosto de 2011 18:38:25}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true,citecolor=blue}
+\chapter{\-Zycars v1.0}
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{Índice de clases}
+\input{hierarchy}
+\chapter{Índice de clases}
+\input{annotated}
+\chapter{\-Indice de archivos}
+\input{files}
+\chapter{\-Documentación de las clases}
+\input{classengine_1_1gamecontrol_1_1Advice}
+\input{classengine_1_1animation_1_1Animation}
+\input{classengine_1_1astar_1_1Astar}
+\input{classengine_1_1item_1_1Ball}
+\input{classengine_1_1basiccar_1_1BasicCar}
+\input{classengine_1_1basicmenu_1_1BasicMenu}
+\input{classengine_1_1button_1_1Button}
+\input{classengine_1_1charactermenu_1_1CarFeatures}
+\input{classengine_1_1modes_1_1ChampionShip}
+\input{classengine_1_1classificationmenu_1_1ChampionShipCompleted}
+\input{classengine_1_1classificationmenu_1_1ChampionShipMenu}
+\input{classengine_1_1charactermenu_1_1CharacterMenu}
+\input{classengine_1_1checkbox_1_1CheckBox}
+\input{classengine_1_1checkpoint_1_1CheckPoint}
+\input{classengine_1_1checkpoint_1_1CheckPoints}
+\input{classengine_1_1circuit_1_1Circuit}
+\input{classengine_1_1circuitmenu_1_1CircuitMenu}
+\input{classengine_1_1classificationmenu_1_1ClassificationMenu}
+\input{classengine_1_1collisionmanager_1_1CollisionManager}
+\input{classengine_1_1log_1_1ColorFormatter}
+\input{classengine_1_1config_1_1Config}
+\input{classengine_1_1countdown_1_1CountDown}
+\input{classengine_1_1mainmenu_1_1CreditsMenu}
+\input{classengine_1_1cursor_1_1Cursor}
+\input{classengine_1_1modes_1_1FastRace}
+\input{classengine_1_1game_1_1Game}
+\input{classengine_1_1gameanimation_1_1GameAnimation}
+\input{classengine_1_1gamecontrol_1_1GameControl}
+\input{classengine_1_1gameobject_1_1GameObject}
+\input{classengine_1_1charactermenu_1_1GroupOption}
+\input{classengine_1_1basiccar_1_1Hud}
+\input{classengine_1_1ia_1_1IA}
+\input{classengine_1_1imagebutton_1_1ImageButton}
+\input{classengine_1_1animation_1_1ImageGrid}
+\input{classengine_1_1intro_1_1Intro}
+\input{classengine_1_1item_1_1Item}
+\input{classengine_1_1itembox_1_1ItemBox}
+\input{classengine_1_1gameobject_1_1Line}
+\input{classengine_1_1log_1_1Log}
+\input{classengine_1_1mainmenu_1_1MainMenu}
+\input{classengine_1_1item_1_1Missile}
+\input{classengine_1_1modes_1_1Mode}
+\input{classengine_1_1astar_1_1Nodo}
+\input{classengine_1_1item_1_1Oil}
+\input{classengine_1_1optionmenu_1_1OptionMenu}
+\input{classengine_1_1particle_1_1Particle}
+\input{classengine_1_1pausemenu_1_1PauseMenu}
+\input{classengine_1_1playercar_1_1PlayerCar}
+\input{classengine_1_1ia_1_1Point}
+\input{classengine_1_1gamecontrol_1_1PositionBoard}
+\input{classengine_1_1log_1_1Singleton}
+\input{classengine_1_1slider_1_1Slider}
+\input{classengine_1_1start_1_1Start}
+\input{classengine_1_1state_1_1State}
+\input{classengine_1_1particle_1_1SystemParticle}
+\input{classengine_1_1circuit_1_1Tile}
+\input{classengine_1_1classificationmenu_1_1TimedMenu}
+\input{classengine_1_1modes_1_1TimedRace}
+\input{classengine_1_1timer_1_1Timer}
+\input{classengine_1_1circuitmenu_1_1Times}
+\chapter{\-Documentación de archivos}
+\input{animation_8py}
+\input{basicmenu_8py}
+\input{button_8py}
+\input{charactermenu_8py}
+\input{checkbox_8py}
+\input{checkpoint_8py}
+\input{circuitmenu_8py}
+\input{classificationmenu_8py}
+\input{collisionmanager_8py}
+\input{config_8py}
+\input{countdown_8py}
+\input{cursor_8py}
+\input{game_8py}
+\input{gameanimation_8py}
+\input{gamecontrol_8py}
+\input{gameobject_8py}
+\input{ia_8py}
+\input{imagebutton_8py}
+\input{intro_8py}
+\input{item_8py}
+\input{itembox_8py}
+\input{log_8py}
+\input{mainmenu_8py}
+\input{modes_8py}
+\input{optionmenu_8py}
+\input{particle_8py}
+\input{pausemenu_8py}
+\input{playercar_8py}
+\input{slider_8py}
+\input{start_8py}
+\input{state_8py}
+\input{timer_8py}
+\printindex
+\end{document}

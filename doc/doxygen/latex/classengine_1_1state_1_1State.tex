@@ -1,0 +1,104 @@
+\hypertarget{classengine_1_1state_1_1State}{
+\section{\-Referencia de la \-Clase engine\-:\-:state\-:\-:\-State}
+\label{classengine_1_1state_1_1State}\index{engine\-::state\-::\-State@{engine\-::state\-::\-State}}
+}
+
+
+\-Clase virtual pura que sirve como base de implementación de los distintos estados que esta compuesto el juego.  
+
+
+\-Diagrama de herencias de engine\-:\-:state\-:\-:\-State\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.578275cm]{classengine_1_1state_1_1State}
+\end{center}
+\end{figure}
+\subsection*{\-Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classengine_1_1state_1_1State_ab0693f83bb6522fe8cc4cbe5dd089f65}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Constructor. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1state_1_1State_afd0801bc3828eb26d0331269deaf4ca8}{update}
+\begin{DoxyCompactList}\small\item\em \-Método que actualiza logicamente el estado. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1state_1_1State_a26fb497a55923aef2cf9f30252b0d1c5}{draw}
+\begin{DoxyCompactList}\small\item\em \-Método que dibuja el estado sobre la superficie dada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classengine_1_1state_1_1State_a0c6ca144a142bcb9170b7b563d41ab1d}{
+{\bfseries game}}
+\label{classengine_1_1state_1_1State_a0c6ca144a142bcb9170b7b563d41ab1d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Descripción detallada}
+\-Clase virtual pura que sirve como base de implementación de los distintos estados que esta compuesto el juego. 
+
+\subsection{\-Documentación del constructor y destructor}
+\hypertarget{classengine_1_1state_1_1State_ab0693f83bb6522fe8cc4cbe5dd089f65}{
+\index{engine\-::state\-::\-State@{engine\-::state\-::\-State}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!engine::state::State@{engine\-::state\-::\-State}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::state\-::\-State\-::\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{game}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1state_1_1State_ab0693f83bb6522fe8cc4cbe5dd089f65}
+
+
+\-Constructor. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em screen} & \-Referencia al game. \\
+\hline
+\end{DoxyParams}
+
+
+\-Reimplementado en \hyperlink{classengine_1_1basicmenu_1_1BasicMenu_a05a00539132bce6476cdb33980decca3}{engine\-::basicmenu\-::\-Basic\-Menu}.
+
+
+
+\subsection{\-Documentación de las funciones miembro}
+\hypertarget{classengine_1_1state_1_1State_a26fb497a55923aef2cf9f30252b0d1c5}{
+\index{engine\-::state\-::\-State@{engine\-::state\-::\-State}!draw@{draw}}
+\index{draw@{draw}!engine::state::State@{engine\-::state\-::\-State}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::state\-::\-State\-::draw (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{screen}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1state_1_1State_a26fb497a55923aef2cf9f30252b0d1c5}
+
+
+\-Método que dibuja el estado sobre la superficie dada. 
+
+\-Debe ser implementado por los descentiendes de state. 
+
+\-Reimplementado en \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a137905fbe1021930896898dc603a108a}{engine\-::gamecontrol\-::\-Game\-Control}, \hyperlink{classengine_1_1classificationmenu_1_1ChampionShipCompleted_ab04a78dd51ac629f29299c4b6e749e32}{engine\-::classificationmenu\-::\-Champion\-Ship\-Completed}, \hyperlink{classengine_1_1circuitmenu_1_1CircuitMenu_a64eff349a0a62c5693da4b0648c1e8ff}{engine\-::circuitmenu\-::\-Circuit\-Menu}, \hyperlink{classengine_1_1charactermenu_1_1CharacterMenu_a0707e4c6ee419ea0e7dab0472e1e5158}{engine\-::charactermenu\-::\-Character\-Menu}, \hyperlink{classengine_1_1modes_1_1ChampionShip_ae1ce7fadaa086c9adc2371c9f3169cb0}{engine\-::modes\-::\-Champion\-Ship}, \hyperlink{classengine_1_1classificationmenu_1_1ChampionShipMenu_a95851e106380aebfd46863fccbb1f273}{engine\-::classificationmenu\-::\-Champion\-Ship\-Menu}, \hyperlink{classengine_1_1classificationmenu_1_1TimedMenu_af63713ab80dfade211cf1d54e66088d2}{engine\-::classificationmenu\-::\-Timed\-Menu}, \hyperlink{classengine_1_1optionmenu_1_1OptionMenu_af775ea59647f142335f95a1964556290}{engine\-::optionmenu\-::\-Option\-Menu}, \hyperlink{classengine_1_1mainmenu_1_1CreditsMenu_ad3ab7d12bd8f402ca2cb50305b8a0bcb}{engine\-::mainmenu\-::\-Credits\-Menu}, \hyperlink{classengine_1_1intro_1_1Intro_a0eb57fc90b5654163b7a460170416365}{engine\-::intro\-::\-Intro}, \hyperlink{classengine_1_1modes_1_1Mode_a73b75c100896e1713f3f9940fe7e9e5e}{engine\-::modes\-::\-Mode}, \hyperlink{classengine_1_1basicmenu_1_1BasicMenu_a9aa29d8e353d2d3329597f5fbbf125b3}{engine\-::basicmenu\-::\-Basic\-Menu}, \hyperlink{classengine_1_1classificationmenu_1_1ClassificationMenu_ac3c291e0806bc66a646c4261899514a4}{engine\-::classificationmenu\-::\-Classification\-Menu}, \hyperlink{classengine_1_1pausemenu_1_1PauseMenu_a84d5606933ae103b4377c108fdb62d79}{engine\-::pausemenu\-::\-Pause\-Menu} y \hyperlink{classengine_1_1mainmenu_1_1MainMenu_a160098220ba56608c008715babbe76b9}{engine\-::mainmenu\-::\-Main\-Menu}.
+
+\hypertarget{classengine_1_1state_1_1State_afd0801bc3828eb26d0331269deaf4ca8}{
+\index{engine\-::state\-::\-State@{engine\-::state\-::\-State}!update@{update}}
+\index{update@{update}!engine::state::State@{engine\-::state\-::\-State}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::state\-::\-State\-::update (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1state_1_1State_afd0801bc3828eb26d0331269deaf4ca8}
+
+
+\-Método que actualiza logicamente el estado. 
+
+\-Debe ser implementado por los descendientes de state. 
+
+\-Reimplementado en \hyperlink{classengine_1_1gamecontrol_1_1GameControl_a00a70a7c19d5b19d7103b2d7b23e94c7}{engine\-::gamecontrol\-::\-Game\-Control}, \hyperlink{classengine_1_1circuitmenu_1_1CircuitMenu_a9c371c5d0b8e07aae3f5e1102cba35ed}{engine\-::circuitmenu\-::\-Circuit\-Menu}, \hyperlink{classengine_1_1modes_1_1ChampionShip_adbf857a2cf894ce87ae61918cbfb4594}{engine\-::modes\-::\-Champion\-Ship}, \hyperlink{classengine_1_1optionmenu_1_1OptionMenu_a2425697d48a5d8c844f003ad6637b2aa}{engine\-::optionmenu\-::\-Option\-Menu}, \hyperlink{classengine_1_1intro_1_1Intro_a2f466b95367cf3773ed388c6c17a1879}{engine\-::intro\-::\-Intro}, \hyperlink{classengine_1_1modes_1_1Mode_a0eae2319565b5eaccb2a7ce45692bcf5}{engine\-::modes\-::\-Mode} y \hyperlink{classengine_1_1basicmenu_1_1BasicMenu_acf0d3dae92e2c935ed2a90a736c2bf2a}{engine\-::basicmenu\-::\-Basic\-Menu}.
+
+
+
+\-La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/jose/\-Dropbox/programacion/zycars/trunk/engine/\hyperlink{state_8py}{state.\-py}\end{DoxyCompactItemize}

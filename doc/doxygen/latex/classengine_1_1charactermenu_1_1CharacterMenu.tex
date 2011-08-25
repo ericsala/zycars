@@ -1,0 +1,118 @@
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu}{
+\section{\-Referencia de la \-Clase engine\-:\-:charactermenu\-:\-:\-Character\-Menu}
+\label{classengine_1_1charactermenu_1_1CharacterMenu}\index{engine\-::charactermenu\-::\-Character\-Menu@{engine\-::charactermenu\-::\-Character\-Menu}}
+}
+
+
+\hyperlink{classengine_1_1charactermenu_1_1CharacterMenu}{\-Character\-Menu} es la clase que representará la elección de un personaje deteminado.  
+
+
+\-Diagrama de herencias de engine\-:\-:charactermenu\-:\-:\-Character\-Menu\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classengine_1_1charactermenu_1_1CharacterMenu}
+\end{center}
+\end{figure}
+\subsection*{\-Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classengine_1_1charactermenu_1_1CharacterMenu_aca7691e8e40c17ff8a08a3f3221238ac}{\-\_\-\-\_\-init\-\_\-\-\_\-}
+\begin{DoxyCompactList}\small\item\em \-Constructor de \hyperlink{classengine_1_1charactermenu_1_1CharacterMenu}{\-Character\-Menu}. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_a0707e4c6ee419ea0e7dab0472e1e5158}{
+def \hyperlink{classengine_1_1charactermenu_1_1CharacterMenu_a0707e4c6ee419ea0e7dab0472e1e5158}{draw}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_a0707e4c6ee419ea0e7dab0472e1e5158}
+
+\begin{DoxyCompactList}\small\item\em \-Método que dibuja los elementos del menú en pantalla. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_a56e81b26f6c157fe4f65f50fe35e6416}{
+def \hyperlink{classengine_1_1charactermenu_1_1CharacterMenu_a56e81b26f6c157fe4f65f50fe35e6416}{treat\-\_\-option}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_a56e81b26f6c157fe4f65f50fe35e6416}
+
+\begin{DoxyCompactList}\small\item\em \-Método que se llama cuando se pulsa algun boton. \end{DoxyCompactList}\item 
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_ab62329ed3c3439dbd524079c3c56236b}{
+def \hyperlink{classengine_1_1charactermenu_1_1CharacterMenu_ab62329ed3c3439dbd524079c3c56236b}{update\-\_\-car\-\_\-features}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_ab62329ed3c3439dbd524079c3c56236b}
+
+\begin{DoxyCompactList}\small\item\em \-Método para actualizar las características del coche. \end{DoxyCompactList}\item 
+def \hyperlink{classengine_1_1charactermenu_1_1CharacterMenu_a1d3b6f2180882a3dd45138dbba0e5f55}{get\-\_\-rivals}
+\begin{DoxyCompactList}\small\item\em \-Calcula todos los rivales para el jugador seleccionado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_a3ac7609eaf5efe78e8fc7647f826e224}{
+{\bfseries car\-\_\-features}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_a3ac7609eaf5efe78e8fc7647f826e224}
+
+\item 
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_abc8b5680b1321d3d17e473f7ad8e8236}{
+{\bfseries group\-\_\-option}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_abc8b5680b1321d3d17e473f7ad8e8236}
+
+\item 
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_a814c909a5b1d378ca7c0d0c161e608aa}{
+{\bfseries cars}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_a814c909a5b1d378ca7c0d0c161e608aa}
+
+\item 
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_af6433fd48cc534e500cc7e522d92aae7}{
+{\bfseries new\-\_\-pressed}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_af6433fd48cc534e500cc7e522d92aae7}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Descripción detallada}
+\hyperlink{classengine_1_1charactermenu_1_1CharacterMenu}{\-Character\-Menu} es la clase que representará la elección de un personaje deteminado. 
+
+\subsection{\-Documentación del constructor y destructor}
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_aca7691e8e40c17ff8a08a3f3221238ac}{
+\index{engine\-::charactermenu\-::\-Character\-Menu@{engine\-::charactermenu\-::\-Character\-Menu}!\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-init\-\_\-\-\_\-@{\-\_\-\-\_\-init\-\_\-\-\_\-}!engine::charactermenu::CharacterMenu@{engine\-::charactermenu\-::\-Character\-Menu}}
+\subsubsection[{\-\_\-\-\_\-init\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::charactermenu\-::\-Character\-Menu\-::\-\_\-\-\_\-init\-\_\-\-\_\- (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{game, }
+\item[{}]{path\-\_\-xml}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_aca7691e8e40c17ff8a08a3f3221238ac}
+
+
+\-Constructor de \hyperlink{classengine_1_1charactermenu_1_1CharacterMenu}{\-Character\-Menu}. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em game} & referencia a game \\
+\hline
+{\em path\-\_\-xml} & ruta del archivo xml con los distintos elementos \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Documentación de las funciones miembro}
+\hypertarget{classengine_1_1charactermenu_1_1CharacterMenu_a1d3b6f2180882a3dd45138dbba0e5f55}{
+\index{engine\-::charactermenu\-::\-Character\-Menu@{engine\-::charactermenu\-::\-Character\-Menu}!get\-\_\-rivals@{get\-\_\-rivals}}
+\index{get\-\_\-rivals@{get\-\_\-rivals}!engine::charactermenu::CharacterMenu@{engine\-::charactermenu\-::\-Character\-Menu}}
+\subsubsection[{get\-\_\-rivals}]{\setlength{\rightskip}{0pt plus 5cm}def engine\-::charactermenu\-::\-Character\-Menu\-::get\-\_\-rivals (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{selected}
+\end{DoxyParamCaption}
+)}}
+\label{classengine_1_1charactermenu_1_1CharacterMenu_a1d3b6f2180882a3dd45138dbba0e5f55}
+
+
+\-Calcula todos los rivales para el jugador seleccionado. 
+
+
+\begin{DoxyParams}{\-Parámetros}
+{\em selected} & \-Jugador seleccionado por el usuario \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Devuelve}
+\-Lista con los rivales para el jugador 
+\end{DoxyReturn}
+
+
+\-La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+/home/jose/\-Dropbox/programacion/zycars/trunk/engine/\hyperlink{charactermenu_8py}{charactermenu.\-py}\end{DoxyCompactItemize}
