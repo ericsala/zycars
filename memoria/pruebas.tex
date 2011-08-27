@@ -6,7 +6,7 @@ escenario simulando como interactúan muchísimos
 elementos entre sí. Pero las pruebas son algo necesario si deseamos un software con una calidad aceptable.
 
 \paragraph{}
-Prácticamente todos los módulos que componen la aplicación han sido probados individualmente, como pueden ser aquellos módulos 
+Todos los módulos que componen la aplicación han sido probados individualmente, como pueden ser aquellos módulos 
 encargados de la gestión de colisiones, la inteligencia artificial, gestión de las carreras.
 
 \paragraph{}
@@ -45,6 +45,16 @@ módulo, teniendo en cuenta aquellos que fueran más predispuesto a fallos.
 \paragraph{}
 De esta forma todas las sentencias se ejecutaban como mínimo una vez y los posibles fallos se encontraban de una forma más sencilla.
 Por lo que también eran más fácil localizar donde estaba el problema y afrontar la solución de este.
+
+\subsection{Análisis del código con Pylint.}
+
+\paragraph{}
+Una vez que se comprobaba el correcto funcionamiento del módulo implementado, se le pasaba el analizador de código pylint, con el 
+fin de que el código siguiera un estándar uniforme y que estuviera exento de cualquier tipo de errores o signos de mala calidad.
+
+\paragraph{}
+Pylint proporciona una nota de 1 a 10 al código analizado. Se intentó que todos y cada uno de los módulos tuvieran al menos
+una nota mínima de 7. Finalmente se obtuvo una nota de 8.25 en todo el código conjunto de la aplicación.
 
 \section{Pruebas de integración}
 
