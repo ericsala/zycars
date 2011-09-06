@@ -17,13 +17,17 @@
             \end{itemize}
         \end{block}
 
+        \begin{center}
+                \includegraphics[scale=0.25]{imagenes/logo_xml.png}
+        \end{center}
+
 \end{frame}
 
 \begin{frame}
     \frametitle{Formato de circuitos}
 
     \begin{block}{Mapas de tiles}
-        Tile: imagen cuadrada, rectangular o hexagonal, utilizada para generar imágenes de mayor complejidad.\\
+        Tile: imagen cuadrada usada para generar imágenes de mayor complejidad.\\
         Usor del editor de mapas Tiled.
     \end{block}   
     
@@ -36,7 +40,7 @@
     %\end{block}   
 
         \begin{center}
-                \includegraphics[scale=0.25]{imagenes/captura_tiled.png}
+                \includegraphics[scale=0.28]{imagenes/captura_tiled.png}
         \end{center}
 
 
@@ -45,21 +49,24 @@
 \begin{frame}
     \frametitle{Formato de circuitos}
 
-        \begin{block}{Inconveniente}
-            No permite indicar de forma sencilla que tiles eran atravesables, colisionables o de cualquier otro tipo.
-        \end{block}
-        
     \begin{columns}
-    
-        \column{150px}
-        \begin{block}{Solución}
-        Una imagen extra con las mismas características, donde los tiles sera de un único color, en función del tipo
-        que estos sean.
-        \end{block}
 
         \column{150px}
+
+        \begin{block}{Inconveniente}
+            %No permite indicar de forma sencilla que tiles eran atravesables, colisionables o de cualquier otro tipo.
+            No permite indicar los tipos de los tiles.
+        \end{block}
+    
+        \begin{block}{Solución}
+        %Una imagen extra con las mismas características, donde los tiles sera de un único color, en función del tipo
+        %que estos sean.
+        Usar una imagen extra.
+        \end{block}
+
+        \column{180px}
         \begin{center}
-                \includegraphics[scale=0.15]{imagenes/tileset-collisionmap.png}
+                \includegraphics[scale=0.18]{imagenes/tileset-collisionmap.png}
         \end{center}
         
     \end{columns}
@@ -96,12 +103,15 @@
         \end{itemize}
     \end{block}
     
-    \begin{block}{Colisión entre vehículos e ítems}
-    Dos tipos de ítems:
+    \begin{block}{Colisión con ítems de ataque}
       \begin{itemize}
-            \item Ítem de ataque a distancia: se destruye el ítem y
-            se cambia el estado del coche que colisiona
-            \item Obstáculos: cambia el estado del coche en función del tipo de obstáculo (atravesable o no)
+            \item Se destruye el ítem y se cambia el estado del coche que colisiona
+        \end{itemize}
+    \end{block}
+    
+    \begin{block}{Colisión con obstáculos}
+      \begin{itemize}
+            \item Cambia el estado del coche en función del tipo de obstáculo (atravesable o no)
         \end{itemize}
     \end{block}
 
@@ -123,6 +133,13 @@
                 \item Lanzamiento de ítems: también debe poder usar los ítems que reciba de las bolas de ítems
             \end{itemize}
         \end{block}
+        
+        \begin{center}
+                \includegraphics[scale=0.5]{imagenes/ia2.png}
+        \end{center}
+        
+
+        
 \end{frame}
 
 \begin{frame}
@@ -204,4 +221,37 @@
                 \includegraphics[scale=0.5]{imagenes/ia_segmentos.png}
         \end{center}
 
+        \begin{center}
+                \includegraphics[scale=0.5]{imagenes/ia_lanzar.png}
+        \end{center}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Recopilación}
+
+    \begin{columns}
+    
+        \column{200px}
+        \begin{block}{Zycars}
+            \begin{itemize}
+                \item Multiplataforma
+                \item 12 circuitos
+                \item 3 modos de juego
+                \item 3 campeonatos
+                \item 7 personajes
+                \item 6 ítems
+                \item Circuitos ampliables con tiled
+                \item Personajes ampliables
+                \item Dificultad adecuada
+            \end{itemize}
+        %uno desde el centro delcoche hacia unos píxeles por delante su posición y otro desde el centro uno píxeles atrás de la posición.
+        \end{block}
+
+        \column{100px}
+        \begin{center}
+                \includegraphics[scale=0.5]{imagenes/character2.png}
+        \end{center}
+    
+    \end{columns}
+        
 \end{frame}
